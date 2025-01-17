@@ -26,7 +26,7 @@ jobs:
 
       - uses: actions/setup-node@48b90677b6048efbc723b11a94acb950d3f1ac36
         with:
-          node-version: 18
+          node-version: '18.x'
 
       - name: Cypress run
         uses: cypress-io/github-action@v6
