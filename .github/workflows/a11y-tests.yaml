@@ -29,5 +29,5 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          build: sudo npm run build:eleventy
+          build: npm run build:eleventy
           start: npm run watch:eleventy
