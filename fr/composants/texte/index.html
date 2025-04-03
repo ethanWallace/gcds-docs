@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="/gcds-docs/styles/style.css">
     <script src="/gcds-docs/scripts/code-showcase.js"></script>
     <script src="/gcds-docs/scripts/code-copy.js"></script>
+    <script src="/gcds-docs/scripts/component-preview.js"></script>
     <link rel="icon" type="image/x-icon" sizes="96x96" href="/gcds-docs/favicon.ico">
 
     <!-- Icons Font Awesome (to access icons, import Font Awesome) -->
@@ -854,30 +855,24 @@
     
       
       
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
 
         
 
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
       
     
       
@@ -1117,7 +1112,7 @@
 
 
 <gcds-top-nav slot="menu" label="Menu principal" alignment="right">
-  <gcds-nav-link slot="home" href="/gcds-docs/fr" class="home-link link-inherit link-no-underline" slot="left">Système de design GC</gcds-nav-link>
+  <gcds-nav-link slot="home" href="/fr">Système de design GC</gcds-nav-link>
   
     <gcds-nav-link
       href="/gcds-docs/fr/composants/"
@@ -1144,15 +1139,14 @@
       Modèles de page
     </gcds-nav-link>
   
-
-  
-    <gcds-nav-link
-      href="/gcds-docs/fr/simpliquer/"
-      
-    >
-      S&#39;impliquer
-    </gcds-nav-link>
-  
+<gcds-nav-group
+    menu-label="Contact"
+    open-trigger="Contact"
+  >
+    <gcds-nav-link href="/fr/contactez">Contactez-nous</gcds-nav-link>
+    <gcds-nav-link href="/fr/simpliquer">Impliquez-vous</gcds-nav-link>
+    <gcds-nav-link href="/fr/inscrivez-vous-a-une-demonstration">Trouvez une démo</gcds-nav-link>
+  </gcds-nav-group>
 </gcds-top-nav>
   
 
@@ -1186,10 +1180,10 @@
       <main id="mc" class="container-xl mx-auto xl:px-0 sm:px-600 px-225 general-layout" data-pagefind-body>
         
   
-    <h1 id="texte-brgcdstext" class="mb-300">Texte <br><code>&lt;gcds-text&gt;</code></h1>
-<p class="mb-300"><em>Autres noms : bloc de texte, version, légende, corps du texte, paragraphe.</em></p>
-<p class="mb-300">Le composant texte est un paragraphe stylisé et formaté qui affiche du contenu écrit de manière accessible.</p>
-<p class="mb-300"><ul class="d-flex flex-wrap gap-300">
+    <h1 id="texte-brgcdstext">Texte <br><code>&lt;gcds-text&gt;</code></h1>
+<p><em>Autres noms : bloc de texte, version, légende, corps du texte, paragraphe.</em></p>
+<p>Le composant texte est un paragraphe stylisé et formaté qui affiche du contenu écrit de manière accessible.</p>
+<p><ul class="d-flex flex-wrap gap-300">
 <li class="github-link">
 <gcds-link external href="https://github.com/cds-snc/gcds-components/tree/main/packages/web/src/components/gcds-text">GitHub</gcds-link>
 </li>
@@ -1197,13 +1191,20 @@
 <gcds-link external href="https://www.figma.com/file/o4SguSZdar2CCFzSkWNrmB/Syst%C3%A8me-de-design-GC?type=design&node-id=114-3353&mode=design&t=1DaL24vHpjRRfHHm-0">Figma</gcds-link>
 </li>
 </ul></p>
-<p class="mb-300"><div class="my-600 b-sm b-default component-preview" id="component-preview">
-<p class="container-full font-semibold px-225 py-150 bb-sm b-default bg-light">
-Aperçu du composant de Texte
-</p>
-<div class="px-225 py-300"></p>
-<p class="mb-300"><gcds-text>Il s'agit d'un texte lié au titre qui décrit plus en détail le sujet ou l'action du titre. Le texte est généralement une ou plusieurs lignes ou paragraphes qui forment le contenu d'une section ou introduisent une liste à puces, un tableau ou tout autre contenu, comme une image ou une vidéo.</gcds-text></p>
-<p class="mb-300"></div>
+<p><div class="my-600 b-sm b-default component-preview">
+<h2 class="container-full font-text font-semibold m-0 px-225 py-150 bb-sm b-default bg-light">
+Aperçu du composant de texte
+</h2>
+<div>
+<iframe
+            title="Aperçu du composant de texte"
+            src="/fr/composants/texte/preview/"
+            style="display: block; margin: 0 auto;"
+            frameBorder="0"
+            width="100%"
+            id="component-preview"
+          ></iframe>
+</div>
 </div></p>
 
     <nav class="tabs mb-300" aria-label="Onglet de consignes">
@@ -1243,69 +1244,79 @@ Aperçu du composant de Texte
     </nav>
   
 
-  <h2 id="problemes-resolus-par-le-composant-texte" class="mt-600 mb-300">Problèmes résolus par le composant texte</h2>
-<p class="mb-300">Utilisez le composant texte pour :</p>
-<ul class="list-disc mb-300"><li><p class="mb-300">Transmettre de l'information en petits ou grands blocs de contenu écrit pour fournir des détails essentiels sur un programme ou un service sans ajouter un degré élevé de structure ou d'accent.</li>
-<li><p class="mb-300">Insérer du contenu écrit après un titre avec une phrase, un paragraphe ou une légende.</li>
-<li><p class="mb-300">Appliquer des tailles de police uniformes, un contraste de couleurs et des espaces blancs optimisés pour l'accessibilité.</li>
-<li><p class="mb-300">Renforcer l'identité de marque avec des styles et des formats de messagerie uniformes sur toutes les pages Web. Par exemple, l'utilisation de la typographie Système de design GC comme norme pour un style de police uniforme.</li>
-<li><p class="mb-300">Diviser le contenu en sections compréhensibles avec des marges verticales et horizontales. La décomposition de votre contenu favorise la lisibilité, simplifie la navigation sur le site et réduit le risque que les gens abandonnent leur tâche.</li>
+  <h2 id="problemes-resolus-par-le-composant-texte">Problèmes résolus par le composant texte</h2>
+<p>Utilisez le composant texte pour :</p>
+<ul class="list-disc mb-300"><li>Transmettre de l'information en petits ou grands blocs de contenu écrit pour fournir des détails essentiels sur un programme ou un service sans ajouter un degré élevé de structure ou d'accent.</li>
+<li>Insérer du contenu écrit après un titre avec une phrase, un paragraphe ou une légende.</li>
+<li>Appliquer des tailles de police uniformes, un contraste de couleurs et des espaces blancs optimisés pour l'accessibilité.</li>
+<li>Renforcer l'identité de marque avec des styles et des formats de messagerie uniformes sur toutes les pages Web. Par exemple, l'utilisation de la typographie Système de design GC comme norme pour un style de police uniforme.</li>
+<li>Diviser le contenu en sections compréhensibles avec des marges verticales et horizontales. La décomposition de votre contenu favorise la lisibilité, simplifie la navigation sur le site et réduit le risque que les gens abandonnent leur tâche.</li>
 </ul>
 <article class="bg-full-width bg-primary text-light pt-600 pb-300 my-600">
-  <h2 class="mt-0 mb-300">Composants connexes</h2>
-<p class="mb-300"><a href="/fr/composants/titre" class="link-light">Titre</a> pour structurer le contenu en créant des niveaux hiérarchiques qui permettent l'organisation visuelle et mentale du contenu de la page à l'aide des styles de Système de design GC.</p>
-<p class="mb-300"><a href="/fr/composants/masquage-accessible" class="link-light">Masquage accessible</a> pour fournir de l'Information accessible par les technologies d'assistance, comme les lecteurs d'écran, mais invisible pour les utilisateur·rice·s voyant·e·s.</p>
+  <h2 class="mt-0">Composants connexes</h2>
+<p><a href="/fr/composants/titre" class="link-light">Titre</a> pour structurer le contenu en créant des niveaux hiérarchiques qui permettent l'organisation visuelle et mentale du contenu de la page à l'aide des styles de Système de design GC.</p>
+<p><a href="/fr/composants/masquage-accessible" class="link-light">Masquage accessible</a> pour fournir de l'Information accessible par les technologies d'assistance, comme les lecteurs d'écran, mais invisible pour les utilisateur·rice·s voyant·e·s.</p>
 </article>
-<h2 id="choisir-un-role-de-texte" class="mt-600 mb-300">Choisir un rôle de texte</h2>
-<p class="mb-300">Un rôle est un sous-type de texte à usage spécifique sur une page.</p>
-<h3 id="primary-principal" class="mt-600 mb-300"><code>primary</code> (Principal)</h3>
-<p class="mb-300">Utilisez le <code>primary</code> <code>text-role</code> pour :</p>
-<ul class="list-disc mb-300"><li><p class="mb-300">La plupart du contenu textuel.</li>
-<li><p class="mb-300">Le contenu qui est l'objet principal de la section.</li>
+<h2 id="choisir-un-role-de-texte">Choisir un rôle de texte</h2>
+<p>Un rôle est un sous-type de texte à usage spécifique sur une page.</p>
+<h3 id="primary-principal"><code>primary</code> (Principal)</h3>
+<p>Utilisez le <code>primary</code> <code>text-role</code> pour :</p>
+<ul class="list-disc mb-300"><li>La plupart du contenu textuel.</li>
+<li>Le contenu qui est l'objet principal de la section.</li>
 </ul>
-<h3 id="secondary-secondaire" class="mt-600 mb-300"><code>secondary</code> (Secondaire)</h3>
-<p class="mb-300">Utilisez le <code>secondary</code> <code>text-role</code> pour :</p>
-<ul class="list-disc mb-300"><li><p class="mb-300">Soutenir un contenu important, mais secondaire par rapport à la tâche principale.</li>
-<li><p class="mb-300">Lorsque l'idée principale de la section peut encore être comprise si le lecteur ignore le texte secondaire.</li>
+<h3 id="secondary-secondaire"><code>secondary</code> (Secondaire)</h3>
+<p>Utilisez le <code>secondary</code> <code>text-role</code> pour :</p>
+<ul class="list-disc mb-300"><li>Soutenir un contenu important, mais secondaire par rapport à la tâche principale.</li>
+<li>Lorsque l'idée principale de la section peut encore être comprise si le lecteur ignore le texte secondaire.</li>
 </ul>
-<h3 id="light-clair" class="mt-600 mb-300"><code>light</code> (Clair)</h3>
-<p class="mb-300">Utilisez le <code>light</code> <code>text-role</code> pour :</p>
-<p class="mb-300">Le contenu qui doit apparaître sur un fond sombre lorsque le rapport de contraste entre le texte clair et l'arrière-plan sombre est conforme aux normes WCAG (Web Content Accessibility Guidelines).</p>
+<h3 id="light-clair"><code>light</code> (Clair)</h3>
+<p>Utilisez le <code>light</code> <code>text-role</code> pour :</p>
+<p>Le contenu qui doit apparaître sur un fond sombre lorsque le rapport de contraste entre le texte clair et l'arrière-plan sombre est conforme aux normes WCAG (Web Content Accessibility Guidelines).</p>
 
 
-  <section data-pagefind-ignore class="pt-75 mt-300 mb-900 bt-sm b-dark ">
-  <h2 class="mt-225 mb-300">
-    Aidez-nous à nous améliorer
-  </h2>
+  <section data-pagefind-ignore class="my-600 bt-sm b-dark ">
+  <h2>Aidez-nous à nous améliorer</h2>
+  <p>Vous avez des questions ou des demandes? Faites-nous part de vos commentaires à l&#39;aide de notre formulaire de contact.</p>
 
-  <p class="mb-300">
-    Avez-vous des questions? Y a-t-il quelque chose que vous changeriez ou ajouteriez? Faites-nous part de vos commentaires pour nous aider à améliorer Système de design GC.
+  
+  <p>
+    Quelque chose ne va pas? Signalez-le sur GitHub en créant un <gcds-link href='https://docs.github.com/fr/get-started/start-your-journey/creating-an-account-on-github' external>compte</gcds-link>. Vous pourrez accéder aux réponses de l'équipe, suivre les progrès réalisés concernant votre problèmes et voir les problèmes signalés par d'autres personnes.
   </p>
+  
 
   <gcds-button
     type="link"
-    button-role="secondary"
+    button-role="primary"
     href="/fr/contactez/#contactez-nous"
+    class="mb-300"
   >
     Fournir des commentaires
+  </gcds-button>
+  <gcds-button
+    type="link"
+    button-role="secondary"
+    href="https://github.com/cds-snc/gcds-components/issues/new/choose"
+  >
+    Report an issue on GitHub
+    <gcds-icon name="external-link" label=" (Ouvre l&#39;emplacement dans un nouvel onglet.)">
+    </gcds-icon>
   </gcds-button>
 </section>
 
 
 
         <gcds-date-modified class="mb-300">
-          2025-01-08
+          2025-04-03
         </gcds-date-modified>
       </main>
 
-
-      <gcds-footer
-        display="full"
-        lang="fr"
-        contextual-heading="Service numérique canadien"
-        contextual-links='{ "Contactez-nous": "/fr/contactez", "Signaler un problème": "https://github.com/cds-snc/gcds-components/issues/new/choose", "À propos": "/fr/a-propos" }'
-        sub-links='{ "Médias sociaux": "https://www.canada.ca/fr/sociaux.html", "Applications mobiles": "https://www.canada.ca/fr/mobile.html", "À propos de Canada.ca": "https://conception.canada.ca/a-propos/", "Avis": "https://www.canada.ca/fr/transparence/avis.html", "Confidentialité": "/fr/avis-de-confidentialite/" }'
-      ></gcds-footer>
+    <gcds-footer
+  display="full"
+  lang="fr"
+  contextual-heading="Système de design GC"
+  contextual-links='{ "À propos": "/fr/a-propos", "Déclaration d&#39;accessibilité": "/fr/accessibilite/", "Accord sur les niveaux de service": "/fr/entente-sur-les-niveaux-de-service/" }'
+  sub-links='{ "Médias sociaux": "https://www.canada.ca/fr/sociaux.html", "Applications mobiles": "https://www.canada.ca/fr/mobile.html", "À propos de Canada.ca": "https://conception.canada.ca/a-propos/", "Conditions d&#39;utilisation": "/fr/conditions-dutilisation", "Confidentialité": "/fr/avis-de-confidentialite/" }'
+></gcds-footer>
 
     </div>
 

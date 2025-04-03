@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="/gcds-docs/styles/style.css">
     <script src="/gcds-docs/scripts/code-showcase.js"></script>
     <script src="/gcds-docs/scripts/code-copy.js"></script>
+    <script src="/gcds-docs/scripts/component-preview.js"></script>
     <link rel="icon" type="image/x-icon" sizes="96x96" href="/gcds-docs/favicon.ico">
 
     <!-- Icons Font Awesome (to access icons, import Font Awesome) -->
@@ -431,36 +432,30 @@
     
       
       
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
 
         
 
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
       
     
       
@@ -1117,7 +1112,7 @@
 
 
 <gcds-top-nav slot="menu" label="Main menu" alignment="right">
-  <gcds-nav-link slot="home" href="/gcds-docs/en" class="home-link link-inherit link-no-underline" slot="left">GC Design system</gcds-nav-link>
+  <gcds-nav-link slot="home" href="/en">GC Design System</gcds-nav-link>
   
     <gcds-nav-link
       href="/gcds-docs/en/components/"
@@ -1144,15 +1139,14 @@
       Page templates
     </gcds-nav-link>
   
-
-  
-    <gcds-nav-link
-      href="/gcds-docs/en/get-involved/"
-      
-    >
-      Get involved
-    </gcds-nav-link>
-  
+<gcds-nav-group
+    menu-label="Contact"
+    open-trigger="Contact"
+  >
+    <gcds-nav-link href="/en/contact">Contact us</gcds-nav-link>
+    <gcds-nav-link href="/en/get-involved">Get involved</gcds-nav-link>
+    <gcds-nav-link href="/en/register-for-a-demo">Find a demo</gcds-nav-link>
+  </gcds-nav-group>
 </gcds-top-nav>
   
 
@@ -1186,10 +1180,10 @@
       <main id="mc" class="container-xl mx-auto xl:px-0 sm:px-600 px-225 general-layout" data-pagefind-body>
         
   
-    <h1 id="language-toggle-brgcdslangtoggle" class="mb-300">Language toggle <br><code>&lt;gcds-lang-toggle&gt;</code></h1>
-<p class="mb-300"><em>Also called: language switch, language selector.</em></p>
-<p class="mb-300">The language toggle is a link to the same content in the other Official Language.</p>
-<p class="mb-300"><ul class="d-flex flex-wrap gap-300">
+    <h1 id="language-toggle-brgcdslangtoggle">Language toggle <br><code>&lt;gcds-lang-toggle&gt;</code></h1>
+<p><em>Also called: language switch, language selector.</em></p>
+<p>The language toggle is a link to the same content in the other Official Language.</p>
+<p><ul class="d-flex flex-wrap gap-300">
 <li class="github-link">
 <gcds-link external href="https://github.com/cds-snc/gcds-components/tree/main/packages/web/src/components/gcds-lang-toggle">GitHub</gcds-link>
 </li>
@@ -1197,13 +1191,20 @@
 <gcds-link external href="https://www.figma.com/file/mh2maMG2NBtk41k1O1UGHV/GC-Design-System?type=design&node-id=1780-5094&mode=design&t=2my46MmKTAF9hApN-0">Figma</gcds-link>
 </li>
 </ul></p>
-<p class="mb-300"><div class="my-600 b-sm b-default component-preview" id="component-preview">
-<p class="container-full font-semibold px-225 py-150 bb-sm b-default bg-light">
+<p><div class="my-600 b-sm b-default component-preview">
+<h2 class="container-full font-text font-semibold m-0 px-225 py-150 bb-sm b-default bg-light">
 Language toggle component preview
-</p>
-<div class="px-225 py-300"></p>
-<p class="mb-300"><gcds-lang-toggle href="#" lang="en"></gcds-lang-toggle></p>
-<p class="mb-300"></div>
+</h2>
+<div>
+<iframe
+            title="Language toggle component preview"
+            src="/en/components/language-toggle/preview/"
+            style="display: block; margin: 0 auto;"
+            frameBorder="0"
+            width="100%"
+            id="component-preview"
+          ></iframe>
+</div>
 </div></p>
 
     <nav class="tabs mb-300" aria-label="Guidance tabs">
@@ -1243,52 +1244,62 @@ Language toggle component preview
     </nav>
   
 
-  <p class="mb-300">Language toggle is a required component for Canada.ca pages.</p>
-<p class="mb-300">Take a look at use cases for the language toggle to see if it fits the problem you're solving for.</p>
-<h2 id="problems-the-language-toggle-solves" class="mt-600 mb-300">Problems the language toggle solves</h2>
-<p class="mb-300">Use the language toggle to:</p>
-<ul class="list-disc mb-300"><li><p class="mb-300">Make sure people are able to switch between languages without losing track of where they were before switching.</li>
-<li><p class="mb-300">Support Official Languages by offering equitable access in French and English.</li>
+  <p>Language toggle is a required component for Canada.ca pages.</p>
+<p>Take a look at use cases for the language toggle to see if it fits the problem you're solving for.</p>
+<h2 id="problems-the-language-toggle-solves">Problems the language toggle solves</h2>
+<p>Use the language toggle to:</p>
+<ul class="list-disc mb-300"><li>Make sure people are able to switch between languages without losing track of where they were before switching.</li>
+<li>Support Official Languages by offering equitable access in French and English.</li>
 </ul>
 <article class="bg-full-width bg-primary text-light pt-600 pb-300 my-600">
-  <h2 class="mt-0 mb-300">Related components</h2>
-<p class="mb-300"><a href="/en/components/header" class="link-light">Header</a> for placing the Government of Canada branded header landmark.</p>
+  <h2 class="mt-0">Related components</h2>
+<p><a href="/en/components/header" class="link-light">Header</a> for placing the Government of Canada branded header landmark.</p>
 </article>
 
 
-  <section data-pagefind-ignore class="pt-75 mt-300 mb-900 bt-sm b-dark ">
-  <h2 class="mt-225 mb-300">
-    Help us improve
-  </h2>
+  <section data-pagefind-ignore class="my-600 bt-sm b-dark ">
+  <h2>Help us improve</h2>
+  <p>Have questions or a request? Give feedback on our contact form.</p>
 
-  <p class="mb-300">
-    Have questions? Something you&#39;d change or you&#39;d like to see? Share your feedback with us to help improve GC Design System.
+  
+  <p>
+    Something's wrong? Raise it through GitHub with an <gcds-link href='https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github' external>account</gcds-link>. You'll have access to the team's direct responses, progress made on your issue, and issues raised by others.
   </p>
+  
 
   <gcds-button
     type="link"
-    button-role="secondary"
+    button-role="primary"
     href="/en/contact/#contact-us"
+    class="mb-300"
   >
     Give feedback
+  </gcds-button>
+  <gcds-button
+    type="link"
+    button-role="secondary"
+    href="https://github.com/cds-snc/gcds-components/issues/new/choose"
+  >
+    Report an issue on GitHub
+    <gcds-icon name="external-link" label=" (Opens destination in a new tab.)">
+    </gcds-icon>
   </gcds-button>
 </section>
 
 
 
         <gcds-date-modified class="mb-300">
-          2025-01-08
+          2025-04-02
         </gcds-date-modified>
       </main>
 
-
-      <gcds-footer
-        display="full"
-        lang="en"
-        contextual-heading="Canadian Digital Service"
-        contextual-links='{ "Contact us": "/en/contact", "Report an issue": "https://github.com/cds-snc/gcds-components/issues/new/choose", "About us": "/en/about-us" }'
-        sub-links='{ "Social media": "https://www.canada.ca/en/social.html", "Mobile applications": "https://www.canada.ca/en/mobile.html", "About Canada.ca": "https://design.canada.ca/about/", "Terms and conditions": "https://www.canada.ca/en/transparency/terms.html", "Privacy": "/en/privacy-notice" }'
-      ></gcds-footer>
+    <gcds-footer
+  display="full"
+  lang="en"
+  contextual-heading="GC Design System"
+  contextual-links='{ "About us": "/en/about-us", "Accessibility statement": "/en/accessibility/", "Service level agreement": "/en/service-level-agreement/" }'
+  sub-links='{ "Social media": "https://www.canada.ca/en/social.html", "Mobile applications": "https://www.canada.ca/en/mobile.html", "About Canada.ca": "https://design.canada.ca/about/", "Terms of use": "/en/terms-of-use", "Privacy": "/en/privacy-notice" }'
+></gcds-footer>
 
     </div>
 

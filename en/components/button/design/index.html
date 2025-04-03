@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="/gcds-docs/styles/style.css">
     <script src="/gcds-docs/scripts/code-showcase.js"></script>
     <script src="/gcds-docs/scripts/code-copy.js"></script>
+    <script src="/gcds-docs/scripts/component-preview.js"></script>
     <link rel="icon" type="image/x-icon" sizes="96x96" href="/gcds-docs/favicon.ico">
 
     <!-- Icons Font Awesome (to access icons, import Font Awesome) -->
@@ -455,45 +456,39 @@
     
       
       
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
 
         
 
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
       
     
       
@@ -1117,7 +1112,7 @@
 
 
 <gcds-top-nav slot="menu" label="Main menu" alignment="right">
-  <gcds-nav-link slot="home" href="/gcds-docs/en" class="home-link link-inherit link-no-underline" slot="left">GC Design system</gcds-nav-link>
+  <gcds-nav-link slot="home" href="/en">GC Design System</gcds-nav-link>
   
     <gcds-nav-link
       href="/gcds-docs/en/components/"
@@ -1144,15 +1139,14 @@
       Page templates
     </gcds-nav-link>
   
-
-  
-    <gcds-nav-link
-      href="/gcds-docs/en/get-involved/"
-      
-    >
-      Get involved
-    </gcds-nav-link>
-  
+<gcds-nav-group
+    menu-label="Contact"
+    open-trigger="Contact"
+  >
+    <gcds-nav-link href="/en/contact">Contact us</gcds-nav-link>
+    <gcds-nav-link href="/en/get-involved">Get involved</gcds-nav-link>
+    <gcds-nav-link href="/en/register-for-a-demo">Find a demo</gcds-nav-link>
+  </gcds-nav-group>
 </gcds-top-nav>
   
 
@@ -1186,10 +1180,10 @@
       <main id="mc" class="container-xl mx-auto xl:px-0 sm:px-600 px-225 general-layout" data-pagefind-body>
         
   
-    <h1 id="button-brgcdsbutton" class="mb-300">Button <br><code>&lt;gcds-button&gt;</code></h1>
-<p class="mb-300"><em>Also called: call to action, CTA.</em></p>
-<p class="mb-300">The button is an interactive object that highlights an important or common action.</p>
-<p class="mb-300"><ul class="d-flex flex-wrap gap-300">
+    <h1 id="button-brgcdsbutton">Button <br><code>&lt;gcds-button&gt;</code></h1>
+<p><em>Also called: call to action, CTA.</em></p>
+<p>The button is an interactive object that emphasizes an action.</p>
+<p><ul class="d-flex flex-wrap gap-300">
 <li class="github-link">
 <gcds-link external href="https://github.com/cds-snc/gcds-components/tree/main/packages/web/src/components/gcds-button">GitHub</gcds-link>
 </li>
@@ -1197,15 +1191,20 @@
 <gcds-link external href="https://www.figma.com/file/mh2maMG2NBtk41k1O1UGHV/Canadian-Digital-Service%E2%80%A8---GC-Design-System?type=design&node-id=817-4607&mode=design&t=qwNFRgCKhnoUtRXO-0">Figma</gcds-link>
 </li>
 </ul></p>
-<p class="mb-300"><div class="my-600 b-sm b-default component-preview" id="component-preview">
-<p class="container-full font-semibold px-225 py-150 bb-sm b-default bg-light">
+<p><div class="my-600 b-sm b-default component-preview">
+<h2 class="container-full font-text font-semibold m-0 px-225 py-150 bb-sm b-default bg-light">
 Button component preview
-</p>
-<div class="px-225 py-300"></p>
-<p class="mb-300"><gcds-button class="me-300" button-role="primary">Submit</gcds-button>
-<gcds-button class="me-300" button-role="secondary">Cancel</gcds-button>
-<gcds-button class="me-300" button-role="danger">Delete</gcds-button></p>
-<p class="mb-300"></div>
+</h2>
+<div>
+<iframe
+            title="Button component preview"
+            src="/en/components/button/preview/"
+            style="display: block; margin: 0 auto;"
+            frameBorder="0"
+            width="100%"
+            id="component-preview"
+          ></iframe>
+</div>
 </div></p>
 
     <nav class="tabs mb-300" aria-label="Guidance tabs">
@@ -1245,61 +1244,70 @@ Button component preview
     </nav>
   
 
-  <h2 id="button-anatomy" class="mt-600 mb-300">Button anatomy</h2>
+  <h2 id="button-anatomy">Button anatomy</h2>
 <ol class="anatomy-list">
-  <li>The <strong>container</strong> gives the button its visually prominent appearance.</li>
-  <li>The <strong>label</strong> states the action that will follow when someone interacts with the button. Label text is left aligned, with any icon at the right-most point. Text is in sentence case (only the initial letter is capitalized).</li>
-  <li>The <strong>icon</strong> is optional and can be a helpful visual aid when used sparingly and predictably. When there's an icon, align button text to the left.  Avoid using an icon without text.</li>
+  <li>The <strong>container</strong> gives the button its visual prominence.</li>
+  <li>The <strong>label</strong> states the action that’ll happen when someone interacts with the button. Text is in sentence case, where only the first letter is capitalized.</li>
 </ol>
-<img class="b-sm b-default p-300" src="/images/en/components/anatomy/gcds-button-anatomy.svg" alt="Button anatomy showing the Button label branching to the container and arrow icon." />
-<h2 id="design-and-accessibility-for-buttons" class="mt-600 mb-300">Design and accessibility for buttons</h2>
-<h3 id="make-the-button-findable" class="mt-600 mb-300">Make the button findable</h3>
-<ul class="list-disc mb-300"><li><p class="mb-300">Place buttons in a regular and predictable way.</li>
-<li><p class="mb-300">Avoid making a person needlessly scroll, tab, or type by providing the path to the next action early.</li>
-<li><p class="mb-300">Check the button border's visibility against the surface where you're placing it.</li>
-<li><p class="mb-300">Limit the number of buttons on a page. Reserve buttons for the most important actions.</li>
+<img class="b-sm b-default p-300" src="/images/en/components/anatomy/gcds-button-anatomy.svg" alt="Button anatomy: A label reads “Button label” surrounded by a blue container." />
+<h2 id="design-and-accessibility-for-buttons">Design and accessibility for buttons</h2>
+<h3 id="make-the-button-findable">Make the button findable</h3>
+<ul class="list-disc mb-300"><li>Limit the number of buttons on a page. Reserve buttons for the most important actions.</li>
+<li>Place buttons in a regular and predictable way.</li>
+<li>Avoid making a person needlessly scroll, tab, or type by providing the path to the next action early.</li>
+<li>Check the button border’s visibility against the surface where you’re placing it.</li>
 </ul>
-<h3 id="write-short-specific-and-descriptive-button-labels" class="mt-600 mb-300">Write short, specific, and descriptive button labels</h3>
-<ul class="list-disc mb-300"><li><p class="mb-300">Keep label text visible by stating the button's specific action in minimal words, using sentence case.</li>
-<li><p class="mb-300">Make the button's action obvious with a short, specific label in a call to action format, like &quot;Start application&quot; or &quot;Save a copy&quot;.</li>
-<li><p class="mb-300">Avoid re-using label text on the same page or using labels that sound a lot alike. A person using assistive technology will hear the label text repeated in rapid succession without cues to tell which button's for which action.</li>
-<li><p class="mb-300">Stay away from verb phrases or expressions that may be unfamiliar to non-fluent speakers.</li>
+<h3 id="write-short-specific-and-descriptive-button-labels">Write short, specific, and descriptive button labels</h3>
+<ul class="list-disc mb-300"><li>Make the button’s action obvious with a short, specific label that has a verb, or a verb and a noun, like “Submit” or “Get estimate”.</li>
+<li>Use sentence case.</li>
+<li>Use unique and specific accompanying text to prevent repetition for screen readers.</li>
+<li>Use literal phrases. Avoid expressions that may be unfamiliar to non-fluent speakers.</li>
 </ul>
 
 
-  <section data-pagefind-ignore class="pt-75 mt-300 mb-900 bt-sm b-dark ">
-  <h2 class="mt-225 mb-300">
-    Help us improve
-  </h2>
+  <section data-pagefind-ignore class="my-600 bt-sm b-dark ">
+  <h2>Help us improve</h2>
+  <p>Have questions or a request? Give feedback on our contact form.</p>
 
-  <p class="mb-300">
-    Have questions? Something you&#39;d change or you&#39;d like to see? Share your feedback with us to help improve GC Design System.
+  
+  <p>
+    Something's wrong? Raise it through GitHub with an <gcds-link href='https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github' external>account</gcds-link>. You'll have access to the team's direct responses, progress made on your issue, and issues raised by others.
   </p>
+  
 
   <gcds-button
     type="link"
-    button-role="secondary"
+    button-role="primary"
     href="/en/contact/#contact-us"
+    class="mb-300"
   >
     Give feedback
+  </gcds-button>
+  <gcds-button
+    type="link"
+    button-role="secondary"
+    href="https://github.com/cds-snc/gcds-components/issues/new/choose"
+  >
+    Report an issue on GitHub
+    <gcds-icon name="external-link" label=" (Opens destination in a new tab.)">
+    </gcds-icon>
   </gcds-button>
 </section>
 
 
 
         <gcds-date-modified class="mb-300">
-          2025-01-08
+          2025-04-02
         </gcds-date-modified>
       </main>
 
-
-      <gcds-footer
-        display="full"
-        lang="en"
-        contextual-heading="Canadian Digital Service"
-        contextual-links='{ "Contact us": "/en/contact", "Report an issue": "https://github.com/cds-snc/gcds-components/issues/new/choose", "About us": "/en/about-us" }'
-        sub-links='{ "Social media": "https://www.canada.ca/en/social.html", "Mobile applications": "https://www.canada.ca/en/mobile.html", "About Canada.ca": "https://design.canada.ca/about/", "Terms and conditions": "https://www.canada.ca/en/transparency/terms.html", "Privacy": "/en/privacy-notice" }'
-      ></gcds-footer>
+    <gcds-footer
+  display="full"
+  lang="en"
+  contextual-heading="GC Design System"
+  contextual-links='{ "About us": "/en/about-us", "Accessibility statement": "/en/accessibility/", "Service level agreement": "/en/service-level-agreement/" }'
+  sub-links='{ "Social media": "https://www.canada.ca/en/social.html", "Mobile applications": "https://www.canada.ca/en/mobile.html", "About Canada.ca": "https://design.canada.ca/about/", "Terms of use": "/en/terms-of-use", "Privacy": "/en/privacy-notice" }'
+></gcds-footer>
 
     </div>
 

@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="/gcds-docs/styles/style.css">
     <script src="/gcds-docs/scripts/code-showcase.js"></script>
     <script src="/gcds-docs/scripts/code-copy.js"></script>
+    <script src="/gcds-docs/scripts/component-preview.js"></script>
     <link rel="icon" type="image/x-icon" sizes="96x96" href="/gcds-docs/favicon.ico">
 
     <!-- Icons Font Awesome (to access icons, import Font Awesome) -->
@@ -503,27 +504,21 @@
     
       
       
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
 
         
 
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
       
     
       
@@ -1117,7 +1112,7 @@
 
 
 <gcds-top-nav slot="menu" label="Main menu" alignment="right">
-  <gcds-nav-link slot="home" href="/gcds-docs/en" class="home-link link-inherit link-no-underline" slot="left">GC Design system</gcds-nav-link>
+  <gcds-nav-link slot="home" href="/en">GC Design System</gcds-nav-link>
   
     <gcds-nav-link
       href="/gcds-docs/en/components/"
@@ -1144,15 +1139,14 @@
       Page templates
     </gcds-nav-link>
   
-
-  
-    <gcds-nav-link
-      href="/gcds-docs/en/get-involved/"
-      
-    >
-      Get involved
-    </gcds-nav-link>
-  
+<gcds-nav-group
+    menu-label="Contact"
+    open-trigger="Contact"
+  >
+    <gcds-nav-link href="/en/contact">Contact us</gcds-nav-link>
+    <gcds-nav-link href="/en/get-involved">Get involved</gcds-nav-link>
+    <gcds-nav-link href="/en/register-for-a-demo">Find a demo</gcds-nav-link>
+  </gcds-nav-group>
 </gcds-top-nav>
   
 
@@ -1179,9 +1173,9 @@
     <div class="content-wrapper">
       <main id="mc" class="container-xl mx-auto xl:px-0 sm:px-600 px-225 general-layout" >
         
-<h1 id="components" class="mb-300">Components</h1>
-<p class="mb-300">GC Design System components are user interface building blocks that address different user objectives. Each comes with reusable code, best practice advice, and accessibility tips.</p>
-<p class="mb-300"><ul class="d-flex flex-wrap gap-300">
+<h1 id="components">Components</h1>
+<p>GC Design System components are user interface building blocks that address different user objectives. Each comes with reusable code, best practice advice, and accessibility tips.</p>
+<p><ul class="d-flex flex-wrap gap-300">
 <li class="github-link">
 <gcds-link external href="https://github.com/cds-snc/gcds-components">GitHub</gcds-link>
 </li>
@@ -1189,8 +1183,8 @@
 <gcds-link external href="https://www.figma.com/design/mh2maMG2NBtk41k1O1UGHV/GC-Design-System?t=PG2QugKV1npEMJX5-0">Figma</gcds-link>
 </li>
 </ul></p>
-<h2 id="browse-components" class="mt-600 mb-300">Browse components</h2>
-<p class="mb-300">We're sharing components as we build them.</p>
+<h2 id="browse-components">Browse components</h2>
+<p>We're sharing components as we build them.</p>
 
 
 
@@ -1231,7 +1225,7 @@
           img-alt="A dark blue box with a white box inside of it represents a button with a label."
           role="listitem"
         >
-          <gcds-text >An interactive object that highlights an action.</gcds-text>
+          <gcds-text >An interactive object that emphasizes an action.</gcds-text>
           
             <gcds-text text-role="secondary" size="small" margin-bottom="0">
               <em>Other names: call to action, CTA.</em>
@@ -1585,7 +1579,6 @@
         </gcds-card>
       
       
-      
         <gcds-card
           card-title="Radio group"
           href="/en/components/radio-group/"
@@ -1788,67 +1781,57 @@
 
 
 
-<h2 id="component-tags" class="mt-600 mb-300">Component tags</h2>
+<h2 id="component-tags">Component tags</h2>
 
 
-<p class="mb-300">Canada.ca required components help you meet federal identity standards for the Government of Canada in any product.</p>
+<p>Canada.ca required components help you meet federal identity standards for the Government of Canada in any product.</p>
 
-<p class="mb-300">Experimental components point out new features we&#39;re trying out and think you might like to use.</p>
+<p>Experimental components point out new features we&#39;re trying out and think you might like to use.</p>
 
 
 
+<section data-pagefind-ignore class="my-600 bt-sm b-dark ">
+  <h2>Help us improve</h2>
+  <p>Have questions or a request? Give feedback on our contact form.</p>
 
   
-  
-  
-
-
-<section class="pt-75 mt-300">
-  <h2 class="mt-225 mb-300">
-    Looking for another component?
-  </h2>
-
-  <p class="mb-300">
-    Share your feedback with us to help improve GC Design System or you can check out what's coming soon.
+  <p>
+    Something's wrong? Raise it through GitHub with an <gcds-link href='https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github' external>account</gcds-link>. You'll have access to the team's direct responses, progress made on your issue, and issues raised by others.
   </p>
+  
 
-  <ul class="mb-900">
-    <li class="md:d-inline sm:d-block me-150">
-      <gcds-button
-        type="link"
-        button-role="primary"
-        href="/en/contact/#contact-us"
-      >
-        Give feedback
-      </gcds-button>
-    </li>
-
-    <li class="md:d-inline sm:d-block mt-100 md:mt-0">
-      <gcds-button
-        type="link"
-        button-role="secondary"
-        href="/en/get-involved/"
-        lang="en"
-      >
-        Get involved
-      </gcds-button>
-    </li>
-  </ul>
+  <gcds-button
+    type="link"
+    button-role="primary"
+    href="/en/contact/#contact-us"
+    class="mb-300"
+  >
+    Give feedback
+  </gcds-button>
+  <gcds-button
+    type="link"
+    button-role="secondary"
+    href="https://github.com/cds-snc/gcds-components/issues/new/choose"
+  >
+    Report an issue on GitHub
+    <gcds-icon name="external-link" label=" (Opens destination in a new tab.)">
+    </gcds-icon>
+  </gcds-button>
 </section>
 
+
         <gcds-date-modified class="mb-300">
-          2025-01-08
+          2025-04-02
         </gcds-date-modified>
       </main>
 
-
-      <gcds-footer
-        display="full"
-        lang="en"
-        contextual-heading="Canadian Digital Service"
-        contextual-links='{ "Contact us": "/en/contact", "Report an issue": "https://github.com/cds-snc/gcds-components/issues/new/choose", "About us": "/en/about-us" }'
-        sub-links='{ "Social media": "https://www.canada.ca/en/social.html", "Mobile applications": "https://www.canada.ca/en/mobile.html", "About Canada.ca": "https://design.canada.ca/about/", "Terms and conditions": "https://www.canada.ca/en/transparency/terms.html", "Privacy": "/en/privacy-notice" }'
-      ></gcds-footer>
+    <gcds-footer
+  display="full"
+  lang="en"
+  contextual-heading="GC Design System"
+  contextual-links='{ "About us": "/en/about-us", "Accessibility statement": "/en/accessibility/", "Service level agreement": "/en/service-level-agreement/" }'
+  sub-links='{ "Social media": "https://www.canada.ca/en/social.html", "Mobile applications": "https://www.canada.ca/en/mobile.html", "About Canada.ca": "https://design.canada.ca/about/", "Terms of use": "/en/terms-of-use", "Privacy": "/en/privacy-notice" }'
+></gcds-footer>
 
     </div>
 

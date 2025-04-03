@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="/gcds-docs/styles/style.css">
     <script src="/gcds-docs/scripts/code-showcase.js"></script>
     <script src="/gcds-docs/scripts/code-copy.js"></script>
+    <script src="/gcds-docs/scripts/component-preview.js"></script>
     <link rel="icon" type="image/x-icon" sizes="96x96" href="/gcds-docs/favicon.ico">
 
     <!-- Icons Font Awesome (to access icons, import Font Awesome) -->
@@ -482,36 +483,30 @@
     
       
       
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
 
         
 
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
       
     
       
@@ -1117,7 +1112,7 @@
 
 
 <gcds-top-nav slot="menu" label="Main menu" alignment="right">
-  <gcds-nav-link slot="home" href="/gcds-docs/en" class="home-link link-inherit link-no-underline" slot="left">GC Design system</gcds-nav-link>
+  <gcds-nav-link slot="home" href="/en">GC Design System</gcds-nav-link>
   
     <gcds-nav-link
       href="/gcds-docs/en/components/"
@@ -1144,15 +1139,14 @@
       Page templates
     </gcds-nav-link>
   
-
-  
-    <gcds-nav-link
-      href="/gcds-docs/en/get-involved/"
-      
-    >
-      Get involved
-    </gcds-nav-link>
-  
+<gcds-nav-group
+    menu-label="Contact"
+    open-trigger="Contact"
+  >
+    <gcds-nav-link href="/en/contact">Contact us</gcds-nav-link>
+    <gcds-nav-link href="/en/get-involved">Get involved</gcds-nav-link>
+    <gcds-nav-link href="/en/register-for-a-demo">Find a demo</gcds-nav-link>
+  </gcds-nav-group>
 </gcds-top-nav>
   
 
@@ -1186,10 +1180,10 @@
       <main id="mc" class="container-xl mx-auto xl:px-0 sm:px-600 px-225 general-layout" data-pagefind-body>
         
   
-    <h1 id="date-input-brgcdsdateinput" class="mb-300">Date input <br><code>&lt;gcds-date-input&gt;</code></h1>
-<p class="mb-300"><em>Also called: dates, dateinput, date, memorable date.</em></p>
-<p class="mb-300">A date input is a space to enter a known date.</p>
-<p class="mb-300"><ul class="d-flex flex-wrap gap-300">
+    <h1 id="date-input-brgcdsdateinput">Date input <br><code>&lt;gcds-date-input&gt;</code></h1>
+<p><em>Also called: dates, dateinput, date, memorable date.</em></p>
+<p>A date input is a space to enter a known date.</p>
+<p><ul class="d-flex flex-wrap gap-300">
 <li class="github-link">
 <gcds-link external href="https://github.com/cds-snc/gcds-components/tree/main/packages/web/src/components/gcds-date-input">GitHub</gcds-link>
 </li>
@@ -1197,14 +1191,20 @@
 <gcds-link external href="https://www.figma.com/design/mh2maMG2NBtk41k1O1UGHV/GC-Design-System?node-id=14220-878&node-type=canvas&t=TkjGZOzzUOp5XV3K-0">Figma</gcds-link>
 </li>
 </ul></p>
-<p class="mb-300"><div class="my-600 b-sm b-default component-preview" id="component-preview">
-<p class="container-full font-semibold px-225 py-150 bb-sm b-default bg-light">
+<p><div class="my-600 b-sm b-default component-preview">
+<h2 class="container-full font-text font-semibold m-0 px-225 py-150 bb-sm b-default bg-light">
 Date input component preview
-</p>
-<div class="px-225 py-300"></p>
-<gcds-date-input format="full" legend="Legend" name="example-default" hint="Day can be 1 or 2 digits. Year must be 4 digits.">
-</gcds-date-input>
-<p class="mb-300"></div>
+</h2>
+<div>
+<iframe
+            title="Date input component preview"
+            src="/en/components/date-input/preview/"
+            style="display: block; margin: 0 auto;"
+            frameBorder="0"
+            width="100%"
+            id="component-preview"
+          ></iframe>
+</div>
 </div></p>
 
     <nav class="tabs mb-300" aria-label="Guidance tabs">
@@ -1244,7 +1244,7 @@ Date input component preview
     </nav>
   
 
-  <h2 id="date-input-anatomy" class="mt-600 mb-300">Date input anatomy</h2>
+  <h2 id="date-input-anatomy">Date input anatomy</h2>
 <ol class="anatomy-list">
   <li>The <strong>fieldset legend</strong> states the information a person should enter in the date input field. Text is left-aligned and in sentence case (only the initial letter is capitalized). For the date input component, the fieldset is typically labelled as "date" or with the specific date type sought. The hint text shows the format of the date.</li>
   <li>The <strong>month label</strong> identifies the month select field.</li>
@@ -1255,48 +1255,56 @@ Date input component preview
   <li>The <strong>year input</strong> field is limited to 4 digits.</li>
 </ol>
 <img class="b-sm b-default p-300" src="/images/en/components/anatomy/gcds-date-input-anatomy.svg" alt="A date input anatomy represented by 6 elements: the fieldset legend, the month label, the month select field, the day label, the day input field, the year label, and the year input field." />
-<h2 id="design-and-accessibility-for-date-inputs" class="mt-600 mb-300">Design and accessibility for date inputs</h2>
-<h3 id="support-task-success-with-hint-text" class="mt-600 mb-300">Support task success with hint text</h3>
-<ul class="list-disc mb-300"><li><p class="mb-300">Use the hint text in the fieldset legend to help a person understand the format they can use to enter the date. For example, showing a single digit number without a leading zero, like September 7, rather than September 07 shows that a leading zero is not needed.</li>
-</ul>
-<h3 id="write-specific-error-messages" class="mt-600 mb-300">Write specific error messages</h3>
-<ul class="list-disc mb-300"><li><p class="mb-300">Write error messages for each field of the date input. Error messages must provide information on what is missing or on incorrect formatting. For example, if the year was input using 2 digits, state that the year should be 4 digits.</li>
-</ul>
+<h2 id="design-and-accessibility-for-date-inputs">Design and accessibility for date inputs</h2>
+<h3 id="support-task-success-with-hint-text">Support task success with hint text</h3>
+<p>Use the hint text in the fieldset legend to help a person understand the format they can use to enter the date. For example, showing a single digit number without a leading zero, like September 7, rather than September 07 shows that a leading zero is not needed.</p>
+<h3 id="write-specific-error-messages">Write specific error messages</h3>
+<p>Write error messages for each field of the date input. Error messages must provide information on what is missing or on incorrect formatting. For example, if the year was input using 2 digits, state that the year should be 4 digits.</p>
 
 
-  <section data-pagefind-ignore class="pt-75 mt-300 mb-900 bt-sm b-dark ">
-  <h2 class="mt-225 mb-300">
-    Help us improve
-  </h2>
+  <section data-pagefind-ignore class="my-600 bt-sm b-dark ">
+  <h2>Help us improve</h2>
+  <p>Have questions or a request? Give feedback on our contact form.</p>
 
-  <p class="mb-300">
-    Have questions? Something you&#39;d change or you&#39;d like to see? Share your feedback with us to help improve GC Design System.
+  
+  <p>
+    Something's wrong? Raise it through GitHub with an <gcds-link href='https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github' external>account</gcds-link>. You'll have access to the team's direct responses, progress made on your issue, and issues raised by others.
   </p>
+  
 
   <gcds-button
     type="link"
-    button-role="secondary"
+    button-role="primary"
     href="/en/contact/#contact-us"
+    class="mb-300"
   >
     Give feedback
+  </gcds-button>
+  <gcds-button
+    type="link"
+    button-role="secondary"
+    href="https://github.com/cds-snc/gcds-components/issues/new/choose"
+  >
+    Report an issue on GitHub
+    <gcds-icon name="external-link" label=" (Opens destination in a new tab.)">
+    </gcds-icon>
   </gcds-button>
 </section>
 
 
 
         <gcds-date-modified class="mb-300">
-          2025-01-08
+          2025-04-02
         </gcds-date-modified>
       </main>
 
-
-      <gcds-footer
-        display="full"
-        lang="en"
-        contextual-heading="Canadian Digital Service"
-        contextual-links='{ "Contact us": "/en/contact", "Report an issue": "https://github.com/cds-snc/gcds-components/issues/new/choose", "About us": "/en/about-us" }'
-        sub-links='{ "Social media": "https://www.canada.ca/en/social.html", "Mobile applications": "https://www.canada.ca/en/mobile.html", "About Canada.ca": "https://design.canada.ca/about/", "Terms and conditions": "https://www.canada.ca/en/transparency/terms.html", "Privacy": "/en/privacy-notice" }'
-      ></gcds-footer>
+    <gcds-footer
+  display="full"
+  lang="en"
+  contextual-heading="GC Design System"
+  contextual-links='{ "About us": "/en/about-us", "Accessibility statement": "/en/accessibility/", "Service level agreement": "/en/service-level-agreement/" }'
+  sub-links='{ "Social media": "https://www.canada.ca/en/social.html", "Mobile applications": "https://www.canada.ca/en/mobile.html", "About Canada.ca": "https://design.canada.ca/about/", "Terms of use": "/en/terms-of-use", "Privacy": "/en/privacy-notice" }'
+></gcds-footer>
 
     </div>
 

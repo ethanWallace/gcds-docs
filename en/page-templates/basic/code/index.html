@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="/gcds-docs/styles/style.css">
     <script src="/gcds-docs/scripts/code-showcase.js"></script>
     <script src="/gcds-docs/scripts/code-copy.js"></script>
+    <script src="/gcds-docs/scripts/component-preview.js"></script>
     <link rel="icon" type="image/x-icon" sizes="96x96" href="/gcds-docs/favicon.ico">
 
     <!-- Icons Font Awesome (to access icons, import Font Awesome) -->
@@ -695,27 +696,21 @@
     
       
       
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
 
         
 
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
       
     
       
@@ -1117,7 +1112,7 @@
 
 
 <gcds-top-nav slot="menu" label="Main menu" alignment="right">
-  <gcds-nav-link slot="home" href="/gcds-docs/en" class="home-link link-inherit link-no-underline" slot="left">GC Design system</gcds-nav-link>
+  <gcds-nav-link slot="home" href="/en">GC Design System</gcds-nav-link>
   
     <gcds-nav-link
       href="/gcds-docs/en/components/"
@@ -1144,15 +1139,14 @@
       Page templates
     </gcds-nav-link>
   
-
-  
-    <gcds-nav-link
-      href="/gcds-docs/en/get-involved/"
-      
-    >
-      Get involved
-    </gcds-nav-link>
-  
+<gcds-nav-group
+    menu-label="Contact"
+    open-trigger="Contact"
+  >
+    <gcds-nav-link href="/en/contact">Contact us</gcds-nav-link>
+    <gcds-nav-link href="/en/get-involved">Get involved</gcds-nav-link>
+    <gcds-nav-link href="/en/register-for-a-demo">Find a demo</gcds-nav-link>
+  </gcds-nav-group>
 </gcds-top-nav>
   
 
@@ -1191,8 +1185,8 @@
     <div class="content-wrapper">
       <main id="mc" class="container-xl mx-auto xl:px-0 sm:px-600 px-225 general-layout" data-pagefind-body>
         
-<h1 id="basic-page-code" class="mb-300">Basic page code</h1>
-<p class="mb-300">Copy this code to use the basic page template.</p>
+<h1 id="basic-page-code">Basic page code</h1>
+<p>Copy this code to use the basic page template.</p>
 <pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- TODO: Remove all comments before deploying your code to production. --></span>
 <span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">dir</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ltr<span class="token punctuation">"</span></span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -1328,19 +1322,49 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
 
 
+<section data-pagefind-ignore class="my-600 bt-sm b-dark ">
+  <h2>Help us improve</h2>
+  <p>Have questions or a request? Give feedback on our contact form.</p>
+
+  
+  <p>
+    Something's wrong? Raise it through GitHub with an <gcds-link href='https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github' external>account</gcds-link>. You'll have access to the team's direct responses, progress made on your issue, and issues raised by others.
+  </p>
+  
+
+  <gcds-button
+    type="link"
+    button-role="primary"
+    href="/en/contact/#contact-us"
+    class="mb-300"
+  >
+    Give feedback
+  </gcds-button>
+  <gcds-button
+    type="link"
+    button-role="secondary"
+    href="https://github.com/cds-snc/gcds-components/issues/new/choose"
+  >
+    Report an issue on GitHub
+    <gcds-icon name="external-link" label=" (Opens destination in a new tab.)">
+    </gcds-icon>
+  </gcds-button>
+</section>
+
+
+
         <gcds-date-modified class="mb-300">
-          2025-01-08
+          2025-04-02
         </gcds-date-modified>
       </main>
 
-
-      <gcds-footer
-        display="full"
-        lang="en"
-        contextual-heading="Canadian Digital Service"
-        contextual-links='{ "Contact us": "/en/contact", "Report an issue": "https://github.com/cds-snc/gcds-components/issues/new/choose", "About us": "/en/about-us" }'
-        sub-links='{ "Social media": "https://www.canada.ca/en/social.html", "Mobile applications": "https://www.canada.ca/en/mobile.html", "About Canada.ca": "https://design.canada.ca/about/", "Terms and conditions": "https://www.canada.ca/en/transparency/terms.html", "Privacy": "/en/privacy-notice" }'
-      ></gcds-footer>
+    <gcds-footer
+  display="full"
+  lang="en"
+  contextual-heading="GC Design System"
+  contextual-links='{ "About us": "/en/about-us", "Accessibility statement": "/en/accessibility/", "Service level agreement": "/en/service-level-agreement/" }'
+  sub-links='{ "Social media": "https://www.canada.ca/en/social.html", "Mobile applications": "https://www.canada.ca/en/mobile.html", "About Canada.ca": "https://design.canada.ca/about/", "Terms of use": "/en/terms-of-use", "Privacy": "/en/privacy-notice" }'
+></gcds-footer>
 
     </div>
 

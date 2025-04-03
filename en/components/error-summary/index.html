@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="/gcds-docs/styles/style.css">
     <script src="/gcds-docs/scripts/code-showcase.js"></script>
     <script src="/gcds-docs/scripts/code-copy.js"></script>
+    <script src="/gcds-docs/scripts/component-preview.js"></script>
     <link rel="icon" type="image/x-icon" sizes="96x96" href="/gcds-docs/favicon.ico">
 
     <!-- Icons Font Awesome (to access icons, import Font Awesome) -->
@@ -1004,24 +1005,18 @@
     
       
       
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
 
         
 
+      
+    
+      
+      
+    
+      
+      
+    
+      
       
     
       
@@ -1117,7 +1112,7 @@
 
 
 <gcds-top-nav slot="menu" label="Main menu" alignment="right">
-  <gcds-nav-link slot="home" href="/gcds-docs/en" class="home-link link-inherit link-no-underline" slot="left">GC Design system</gcds-nav-link>
+  <gcds-nav-link slot="home" href="/en">GC Design System</gcds-nav-link>
   
     <gcds-nav-link
       href="/gcds-docs/en/components/"
@@ -1144,15 +1139,14 @@
       Page templates
     </gcds-nav-link>
   
-
-  
-    <gcds-nav-link
-      href="/gcds-docs/en/get-involved/"
-      
-    >
-      Get involved
-    </gcds-nav-link>
-  
+<gcds-nav-group
+    menu-label="Contact"
+    open-trigger="Contact"
+  >
+    <gcds-nav-link href="/en/contact">Contact us</gcds-nav-link>
+    <gcds-nav-link href="/en/get-involved">Get involved</gcds-nav-link>
+    <gcds-nav-link href="/en/register-for-a-demo">Find a demo</gcds-nav-link>
+  </gcds-nav-group>
 </gcds-top-nav>
   
 
@@ -1186,10 +1180,10 @@
       <main id="mc" class="container-xl mx-auto xl:px-0 sm:px-600 px-225 general-layout" data-pagefind-body>
         
   
-    <h1 id="error-summary-brgcdserrorsummary" class="mb-300">Error summary <br><code>&lt;gcds-error-summary&gt;</code></h1>
-<p class="mb-300"><em>Also called: error list.</em></p>
-<p class="mb-300">An error summary is a list of user errors in a form.</p>
-<p class="mb-300"><ul class="d-flex flex-wrap gap-300">
+    <h1 id="error-summary-brgcdserrorsummary">Error summary <br><code>&lt;gcds-error-summary&gt;</code></h1>
+<p><em>Also called: error list.</em></p>
+<p>An error summary is a list of user errors in a form.</p>
+<p><ul class="d-flex flex-wrap gap-300">
 <li class="github-link">
 <gcds-link external href="https://github.com/cds-snc/gcds-components/tree/main/packages/web/src/components/gcds-error-summary">GitHub</gcds-link>
 </li>
@@ -1197,18 +1191,20 @@
 <gcds-link external href="https://www.figma.com/file/mh2maMG2NBtk41k1O1UGHV/GC-Design-System?type=design&node-id=1579-4801&mode=design&t=nZvCaWxei92XepSm-0">Figma</gcds-link>
 </li>
 </ul></p>
-<p class="mb-300"><div class="my-600 b-sm b-default component-preview" id="component-preview">
-<p class="container-full font-semibold px-225 py-150 bb-sm b-default bg-light">
+<p><div class="my-600 b-sm b-default component-preview">
+<h2 class="container-full font-text font-semibold m-0 px-225 py-150 bb-sm b-default bg-light">
 Error summary component preview
-</p>
-<div class="px-225 py-300"></p>
-<p class="mb-300"><gcds-error-summary error-links='{
-  "error-href-1": "Error summary item.",
-  "error-href-2": "Error summary item.",
-  "error-href-3": "Error summary item."
-}'>
-</gcds-error-summary></p>
-<p class="mb-300"></div>
+</h2>
+<div>
+<iframe
+            title="Error summary component preview"
+            src="/en/components/error-summary/preview/"
+            style="display: block; margin: 0 auto;"
+            frameBorder="0"
+            width="100%"
+            id="component-preview"
+          ></iframe>
+</div>
 </div></p>
 
     <nav class="tabs mb-300" aria-label="Guidance tabs">
@@ -1248,52 +1244,62 @@ Error summary component preview
     </nav>
   
 
-  <p class="mb-300">Take a look at what problems error summaries solve to see if they fit the problem you're solving for.</p>
-<p class="mb-300">GC Design System form components come with default error handling. When a person tries to submit a form, any errors to required components will prompt an error summary.</p>
-<h2 id="problems-that-error-summaries-solve" class="mt-600 mb-300">Problems that error summaries solve</h2>
-<p class="mb-300">Use an error summary to interrupt a person who's submitting a form when there is a problem or a series of problems to:</p>
-<ul class="list-disc mb-300"><li><p class="mb-300">Make errors obvious so a person knows about them and how to address them.</li>
-<li><p class="mb-300">List <gcds-link href="/en/components/error-message">error messages</gcds-link> when a person needs to add information or make a correction to two or more components before they can submit a form.</li>
+  <p>Take a look at what problems error summaries solve to see if they fit the problem you're solving for.</p>
+<p>GC Design System form components come with default error handling. When a person tries to submit a form, any errors to required components will prompt an error summary.</p>
+<h2 id="problems-that-error-summaries-solve">Problems that error summaries solve</h2>
+<p>Use an error summary to interrupt a person who's submitting a form when there is a problem or a series of problems to:</p>
+<ul class="list-disc mb-300"><li>Make errors obvious so a person knows about them and how to address them.</li>
+<li>List <gcds-link href="/en/components/error-message">error messages</gcds-link> when a person needs to add information or make a correction to two or more components before they can submit a form.</li>
 </ul>
 <article class="bg-full-width bg-primary text-light pt-600 pb-300 my-600">
-  <h2 class="mt-0 mb-300">Related components</h2>
-<p class="mb-300"><a href="/en/components/error-message" class="link-light">Error message</a> for describing a problem blocking a user action, related to a single component.</p>
+  <h2 class="mt-0">Related components</h2>
+<p><a href="/en/components/error-message" class="link-light">Error message</a> for describing a problem blocking a user action, related to a single component.</p>
 </article>
 
 
-  <section data-pagefind-ignore class="pt-75 mt-300 mb-900 bt-sm b-dark ">
-  <h2 class="mt-225 mb-300">
-    Help us improve
-  </h2>
+  <section data-pagefind-ignore class="my-600 bt-sm b-dark ">
+  <h2>Help us improve</h2>
+  <p>Have questions or a request? Give feedback on our contact form.</p>
 
-  <p class="mb-300">
-    Have questions? Something you&#39;d change or you&#39;d like to see? Share your feedback with us to help improve GC Design System.
+  
+  <p>
+    Something's wrong? Raise it through GitHub with an <gcds-link href='https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github' external>account</gcds-link>. You'll have access to the team's direct responses, progress made on your issue, and issues raised by others.
   </p>
+  
 
   <gcds-button
     type="link"
-    button-role="secondary"
+    button-role="primary"
     href="/en/contact/#contact-us"
+    class="mb-300"
   >
     Give feedback
+  </gcds-button>
+  <gcds-button
+    type="link"
+    button-role="secondary"
+    href="https://github.com/cds-snc/gcds-components/issues/new/choose"
+  >
+    Report an issue on GitHub
+    <gcds-icon name="external-link" label=" (Opens destination in a new tab.)">
+    </gcds-icon>
   </gcds-button>
 </section>
 
 
 
         <gcds-date-modified class="mb-300">
-          2025-01-08
+          2025-04-03
         </gcds-date-modified>
       </main>
 
-
-      <gcds-footer
-        display="full"
-        lang="en"
-        contextual-heading="Canadian Digital Service"
-        contextual-links='{ "Contact us": "/en/contact", "Report an issue": "https://github.com/cds-snc/gcds-components/issues/new/choose", "About us": "/en/about-us" }'
-        sub-links='{ "Social media": "https://www.canada.ca/en/social.html", "Mobile applications": "https://www.canada.ca/en/mobile.html", "About Canada.ca": "https://design.canada.ca/about/", "Terms and conditions": "https://www.canada.ca/en/transparency/terms.html", "Privacy": "/en/privacy-notice" }'
-      ></gcds-footer>
+    <gcds-footer
+  display="full"
+  lang="en"
+  contextual-heading="GC Design System"
+  contextual-links='{ "About us": "/en/about-us", "Accessibility statement": "/en/accessibility/", "Service level agreement": "/en/service-level-agreement/" }'
+  sub-links='{ "Social media": "https://www.canada.ca/en/social.html", "Mobile applications": "https://www.canada.ca/en/mobile.html", "About Canada.ca": "https://design.canada.ca/about/", "Terms of use": "/en/terms-of-use", "Privacy": "/en/privacy-notice" }'
+></gcds-footer>
 
     </div>
 

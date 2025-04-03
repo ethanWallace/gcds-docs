@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="/gcds-docs/styles/style.css">
     <script src="/gcds-docs/scripts/code-showcase.js"></script>
     <script src="/gcds-docs/scripts/code-copy.js"></script>
+    <script src="/gcds-docs/scripts/component-preview.js"></script>
     <link rel="icon" type="image/x-icon" sizes="96x96" href="/gcds-docs/favicon.ico">
 
     <!-- Icons Font Awesome (to access icons, import Font Awesome) -->
@@ -47,12 +48,6 @@
   
   
     
-    
-      
-      
-    
-      
-      
     
       
       
@@ -1117,7 +1112,7 @@
 
 
 <gcds-top-nav slot="menu" label="Main menu" alignment="right">
-  <gcds-nav-link slot="home" href="/gcds-docs/en" class="home-link link-inherit link-no-underline" slot="left">GC Design system</gcds-nav-link>
+  <gcds-nav-link slot="home" href="/en">GC Design System</gcds-nav-link>
   
     <gcds-nav-link
       href="/gcds-docs/en/components/"
@@ -1144,15 +1139,14 @@
       Page templates
     </gcds-nav-link>
   
-
-  
-    <gcds-nav-link
-      href="/gcds-docs/en/get-involved/"
-      
-    >
-      Get involved
-    </gcds-nav-link>
-  
+<gcds-nav-group
+    menu-label="Contact"
+    open-trigger="Contact"
+  >
+    <gcds-nav-link href="/en/contact">Contact us</gcds-nav-link>
+    <gcds-nav-link href="/en/get-involved">Get involved</gcds-nav-link>
+    <gcds-nav-link href="/en/register-for-a-demo">Find a demo</gcds-nav-link>
+  </gcds-nav-group>
 </gcds-top-nav>
   
 
@@ -1179,14 +1173,14 @@
     <div class="content-wrapper">
       <main id="mc" class="container-xl mx-auto xl:px-0 sm:px-600 px-225 general-layout" data-pagefind-body>
         
-<h1 id="styles" class="mb-300">Styles</h1>
-<p class="mb-300">Design tokens make up the foundations of GC Design System.</p>
-<p class="mb-300">Our tokens capture brand and design decisions in code for basic style elements like colours, typography, and spacing.</p>
-<h2 id="design-tokens-support-consistency-and-communication" class="mt-600 mb-300">Design tokens support consistency and communication</h2>
-<p class="mb-300">We're using design tokens to:</p>
-<ul class="list-disc mb-300"><li><p class="mb-300"><strong>Create a consistent visual experience</strong> by scaling design and brand decisions across components.</li>
-<li><p class="mb-300"><strong>Communicate meaning consistently</strong> to establish a predictable and trustworthy experience for the people using your services.</li>
-<li><p class="mb-300"><strong>Improve communication between design and development</strong> by defining each style decision with a name and visual representation.</li>
+<h1 id="styles">Styles</h1>
+<p>Design tokens make up the foundations of GC Design System.</p>
+<p>Our tokens capture brand and design decisions in code for basic style elements like colours, typography, and spacing.</p>
+<h2 id="design-tokens-support-consistency-and-communication">Design tokens support consistency and communication</h2>
+<p>We're using design tokens to:</p>
+<ul class="list-disc mb-300"><li><strong>Create a consistent visual experience</strong> by scaling design and brand decisions across components.</li>
+<li><strong>Communicate meaning consistently</strong> to establish a predictable and trustworthy experience for the people using your services.</li>
+<li><strong>Improve communication between design and development</strong> by defining each style decision with a name and visual representation.</li>
 </ul>
 <gcds-button type="link" button-role="secondary" href="/en/styles/design-tokens">
   Explore tokens
@@ -1249,39 +1243,49 @@
 
 
 
-<section data-pagefind-ignore class="pt-75 mt-300 mb-900 bt-sm b-dark ">
-  <h2 class="mt-225 mb-300">
-    Help us improve
-  </h2>
+<section data-pagefind-ignore class="my-600 bt-sm b-dark ">
+  <h2>Help us improve</h2>
+  <p>Have questions or a request? Give feedback on our contact form.</p>
 
-  <p class="mb-300">
-    Have questions? Something you&#39;d change or you&#39;d like to see? Share your feedback with us to help improve GC Design System.
+  
+  <p>
+    Something's wrong? Raise it through GitHub with an <gcds-link href='https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github' external>account</gcds-link>. You'll have access to the team's direct responses, progress made on your issue, and issues raised by others.
   </p>
+  
 
   <gcds-button
     type="link"
-    button-role="secondary"
+    button-role="primary"
     href="/en/contact/#contact-us"
+    class="mb-300"
   >
     Give feedback
+  </gcds-button>
+  <gcds-button
+    type="link"
+    button-role="secondary"
+    href="https://github.com/cds-snc/gcds-components/issues/new/choose"
+  >
+    Report an issue on GitHub
+    <gcds-icon name="external-link" label=" (Opens destination in a new tab.)">
+    </gcds-icon>
   </gcds-button>
 </section>
 
 
 
         <gcds-date-modified class="mb-300">
-          2025-01-08
+          2025-04-02
         </gcds-date-modified>
       </main>
 
-
-      <gcds-footer
-        display="full"
-        lang="en"
-        contextual-heading="Canadian Digital Service"
-        contextual-links='{ "Contact us": "/en/contact", "Report an issue": "https://github.com/cds-snc/gcds-components/issues/new/choose", "About us": "/en/about-us" }'
-        sub-links='{ "Social media": "https://www.canada.ca/en/social.html", "Mobile applications": "https://www.canada.ca/en/mobile.html", "About Canada.ca": "https://design.canada.ca/about/", "Terms and conditions": "https://www.canada.ca/en/transparency/terms.html", "Privacy": "/en/privacy-notice" }'
-      ></gcds-footer>
+    <gcds-footer
+  display="full"
+  lang="en"
+  contextual-heading="GC Design System"
+  contextual-links='{ "About us": "/en/about-us", "Accessibility statement": "/en/accessibility/", "Service level agreement": "/en/service-level-agreement/" }'
+  sub-links='{ "Social media": "https://www.canada.ca/en/social.html", "Mobile applications": "https://www.canada.ca/en/mobile.html", "About Canada.ca": "https://design.canada.ca/about/", "Terms of use": "/en/terms-of-use", "Privacy": "/en/privacy-notice" }'
+></gcds-footer>
 
     </div>
 

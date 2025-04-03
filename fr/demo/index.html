@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="/gcds-docs/styles/style.css">
     <script src="/gcds-docs/scripts/code-showcase.js"></script>
     <script src="/gcds-docs/scripts/code-copy.js"></script>
+    <script src="/gcds-docs/scripts/component-preview.js"></script>
     <link rel="icon" type="image/x-icon" sizes="96x96" href="/gcds-docs/favicon.ico">
 
     <!-- Icons Font Awesome (to access icons, import Font Awesome) -->
@@ -869,30 +870,24 @@
     
       
       
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
 
         
 
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
       
     
       
@@ -1117,7 +1112,7 @@
 
 
 <gcds-top-nav slot="menu" label="Menu principal" alignment="right">
-  <gcds-nav-link slot="home" href="/gcds-docs/fr" class="home-link link-inherit link-no-underline" slot="left">Système de design GC</gcds-nav-link>
+  <gcds-nav-link slot="home" href="/fr">Système de design GC</gcds-nav-link>
   
     <gcds-nav-link
       href="/gcds-docs/fr/composants/"
@@ -1144,15 +1139,14 @@
       Modèles de page
     </gcds-nav-link>
   
-
-  
-    <gcds-nav-link
-      href="/gcds-docs/fr/simpliquer/"
-      
-    >
-      S&#39;impliquer
-    </gcds-nav-link>
-  
+<gcds-nav-group
+    menu-label="Contact"
+    open-trigger="Contact"
+  >
+    <gcds-nav-link href="/fr/contactez">Contactez-nous</gcds-nav-link>
+    <gcds-nav-link href="/fr/simpliquer">Impliquez-vous</gcds-nav-link>
+    <gcds-nav-link href="/fr/inscrivez-vous-a-une-demonstration">Trouvez une démo</gcds-nav-link>
+  </gcds-nav-group>
 </gcds-top-nav>
   
 
@@ -1170,14 +1164,14 @@
     <div class="content-wrapper">
       <main id="mc" class="container-xl mx-auto xl:px-0 sm:px-600 px-225 general-layout" >
         
-<section class="py-900">
-  <h1 class="container-full text-center mb-600">Démonstration de Système de design GC</h1>
+<section class="pb-600">
+  <h1 class="container-full">Démonstration de Système de design GC</h1>
 
   <h2>Composants</h2>
 
   
 
-  <h3 class="container-full mt-600 mb-300 bb-sm">Alertes</h3>
+  <h3 class="container-full bb-sm">Alertes</h3>
   <gcds-alert heading="Titre de notification" alert-role="success" container="xl">
     <p>Emplacement du texte explicatif.</p>
   </gcds-alert>
@@ -1193,7 +1187,7 @@
 
   
 
-  <h3 class="container-full mt-600 mb-300 bb-sm">Chemin de navigation</h3>
+  <h3 class="container-full bb-sm">Chemin de navigation</h3>
 
   <gcds-breadcrumbs slot="breadcrumb">
     <gcds-breadcrumbs-item href="/fr">
@@ -1206,7 +1200,7 @@
 
   
 
-  <h3 class="container-full mt-600 mb-300 bb-sm">Boutons</h3>
+  <h3 class="container-full bb-sm">Boutons</h3>
   <gcds-button button-role="primary">
     Principal
   </gcds-button>
@@ -1233,7 +1227,7 @@
 
   
 
-  <h3 class="container-full mt-600 mb-300 bb-sm">Boîtes</h3>
+  <h3 class="container-full bb-sm">Boîtes</h3>
   <gcds-container container="full">
     <div class="p-200 b-sm">Je suis une boîte réactive. Ma taille est seulement limitée par la taille de la boîte parent.</div>
   </gcds-container>
@@ -1248,19 +1242,19 @@
 
   
 
-  <h3 class="container-full mt-600 mb-300 bb-sm">Date de modification</h3>
+  <h3 class="container-full bb-sm">Date de modification</h3>
   <gcds-date-modified>2023-01-26</gcds-date-modified>
 
   
 
-  <h3 class="container-full mt-600 mb-300 bb-sm">Détails</h3>
+  <h3 class="container-full bb-sm">Détails</h3>
   <gcds-details details-title="Apprenez-en plus sur ce sujet">
     <p>Le lien Détails permet de développer ou de réduire la section du contenu. Le contenu est dissimulé par défaut.</p>
   </gcds-details>
 
   
 
-  <h3 class="container-full mt-600 mb-300 bb-sm">Pied de page</h3>
+  <h3 class="container-full bb-sm">Pied de page</h3>
   <gcds-footer
     display="full"
     contextual-heading="Navigation contextuelle"
@@ -1346,7 +1340,7 @@
 
   
 
-  <h3 class="container-full mt-600 mb-300 bb-sm">Grille</h3>
+  <h3 class="container-full bb-sm">Grille</h3>
   <gcds-grid
     tag="article"
     columns-desktop="1fr 1fr 1fr 1fr"
@@ -1361,7 +1355,7 @@
 
   
 
-  <h3 class="container-full mt-600 mb-300 bb-sm">En-tête</h3>
+  <h3 class="container-full bb-sm">En-tête</h3>
   <gcds-header
     lang="fr"
     lang-href="#"
@@ -1389,7 +1383,7 @@
 
   
 
-  <h3 class="container-full mt-600 mb-300 bb-sm">Icônes</h3>
+  <h3 class="container-full bb-sm">Icônes</h3>
   <gcds-icon name="tree" size="text-small" margin-right="200"></gcds-icon>
   <gcds-icon name="tree" size="text" margin-right="200"></gcds-icon>
   <gcds-icon name="tree" size="h6" margin-right="200"></gcds-icon>
@@ -1399,7 +1393,7 @@
   <gcds-icon name="tree" size="h2" margin-right="200"></gcds-icon>
   <gcds-icon name="tree" size="h1" margin-right="200"></gcds-icon>
 
-  <h4 class="mt-600 mb-300">Icônes de largeur fixe (ratio carré)</h4>
+  <h4>Icônes de largeur fixe (ratio carré)</h4>
   <gcds-icon name="tree" size="text-small" fixed-width></gcds-icon>
   <gcds-icon name="tree" size="text" fixed-width></gcds-icon>
   <gcds-icon name="tree" size="h6" fixed-width></gcds-icon>
@@ -1409,7 +1403,7 @@
   <gcds-icon name="tree" size="h2" fixed-width></gcds-icon>
   <gcds-icon name="tree" size="h1" fixed-width></gcds-icon>
 
-  <h4 class="mt-600 mb-300">Icônes de largeur variable (largeur automatique)</h4>
+  <h4>Icônes de largeur variable (largeur automatique)</h4>
   <gcds-icon name="tree" size="text-small"></gcds-icon>
   <gcds-icon name="tree" size="text"></gcds-icon>
   <gcds-icon name="tree" size="h6"></gcds-icon>
@@ -1421,7 +1415,7 @@
 
   
 
-  <h3 class="container-full mt-600 mb-300 bb-sm">Pagination</h3>
+  <h3 class="container-full bb-sm">Pagination</h3>
 
   <p>Pagination sous forme de liste :</p>
   <gcds-pagination
@@ -1446,7 +1440,7 @@
 
   
 
-  <h3 class="container-full mt-600 mb-300 bb-sm">Bannière de statut</h3>
+  <h3 class="container-full bb-sm">Bannière de statut</h3>
   <gcds-phase-banner banner-role="primary">
     <gcds-icon name="tree" size="sm" slot="banner-icon-left"></gcds-icon>
     <p slot="banner-text">Annonce palpitante.</p>
@@ -1455,18 +1449,17 @@
 
 
         <gcds-date-modified class="mb-300">
-          2025-01-08
+          2025-04-03
         </gcds-date-modified>
       </main>
 
-
-      <gcds-footer
-        display="full"
-        lang="fr"
-        contextual-heading="Service numérique canadien"
-        contextual-links='{ "Contactez-nous": "/fr/contactez", "Signaler un problème": "https://github.com/cds-snc/gcds-components/issues/new/choose", "À propos": "/fr/a-propos" }'
-        sub-links='{ "Médias sociaux": "https://www.canada.ca/fr/sociaux.html", "Applications mobiles": "https://www.canada.ca/fr/mobile.html", "À propos de Canada.ca": "https://conception.canada.ca/a-propos/", "Avis": "https://www.canada.ca/fr/transparence/avis.html", "Confidentialité": "/fr/avis-de-confidentialite/" }'
-      ></gcds-footer>
+    <gcds-footer
+  display="full"
+  lang="fr"
+  contextual-heading="Système de design GC"
+  contextual-links='{ "À propos": "/fr/a-propos", "Déclaration d&#39;accessibilité": "/fr/accessibilite/", "Accord sur les niveaux de service": "/fr/entente-sur-les-niveaux-de-service/" }'
+  sub-links='{ "Médias sociaux": "https://www.canada.ca/fr/sociaux.html", "Applications mobiles": "https://www.canada.ca/fr/mobile.html", "À propos de Canada.ca": "https://conception.canada.ca/a-propos/", "Conditions d&#39;utilisation": "/fr/conditions-dutilisation", "Confidentialité": "/fr/avis-de-confidentialite/" }'
+></gcds-footer>
 
     </div>
 

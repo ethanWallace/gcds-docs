@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="/gcds-docs/styles/style.css">
     <script src="/gcds-docs/scripts/code-showcase.js"></script>
     <script src="/gcds-docs/scripts/code-copy.js"></script>
+    <script src="/gcds-docs/scripts/component-preview.js"></script>
     <link rel="icon" type="image/x-icon" sizes="96x96" href="/gcds-docs/favicon.ico">
 
     <!-- Icons Font Awesome (to access icons, import Font Awesome) -->
@@ -1093,12 +1094,6 @@
       
       
     
-      
-      
-    
-      
-      
-    
   
 
   
@@ -1117,7 +1112,7 @@
 
 
 <gcds-top-nav slot="menu" label="Menu principal" alignment="right">
-  <gcds-nav-link slot="home" href="/gcds-docs/fr" class="home-link link-inherit link-no-underline" slot="left">Système de design GC</gcds-nav-link>
+  <gcds-nav-link slot="home" href="/fr">Système de design GC</gcds-nav-link>
   
     <gcds-nav-link
       href="/gcds-docs/fr/composants/"
@@ -1144,15 +1139,14 @@
       Modèles de page
     </gcds-nav-link>
   
-
-  
-    <gcds-nav-link
-      href="/gcds-docs/fr/simpliquer/"
-      
-    >
-      S&#39;impliquer
-    </gcds-nav-link>
-  
+<gcds-nav-group
+    menu-label="Contact"
+    open-trigger="Contact"
+  >
+    <gcds-nav-link href="/fr/contactez">Contactez-nous</gcds-nav-link>
+    <gcds-nav-link href="/fr/simpliquer">Impliquez-vous</gcds-nav-link>
+    <gcds-nav-link href="/fr/inscrivez-vous-a-une-demonstration">Trouvez une démo</gcds-nav-link>
+  </gcds-nav-group>
 </gcds-top-nav>
   
 
@@ -1186,10 +1180,10 @@
       <main id="mc" class="container-xl mx-auto xl:px-0 sm:px-600 px-225 general-layout" data-pagefind-body>
         
   
-    <h1 id="groupe-de-boutons-radio-brgcdsradiogroup" class="mb-300">Groupe de boutons radio <br><code>&lt;gcds-radio-group&gt;</code></h1>
-<p class="mb-300"><em>Autres noms : radio button, radio.</em></p>
-<p class="mb-300">Le groupe de boutons radio est un ensemble d’options permettant une sélection unique.</p>
-<p class="mb-300"><ul class="d-flex flex-wrap gap-300">
+    <h1 id="groupe-de-boutons-radio-brgcdsradiogroup">Groupe de boutons radio <br><code>&lt;gcds-radio-group&gt;</code></h1>
+<p><em>Autres noms : radio button, radio.</em></p>
+<p>Le groupe de boutons radio est un ensemble d’options permettant une sélection unique.</p>
+<p><ul class="d-flex flex-wrap gap-300">
 <li class="github-link">
 <gcds-link external href="https://github.com/cds-snc/gcds-components/tree/main/packages/web/src/components/gcds-radio-group">GitHub</gcds-link>
 </li>
@@ -1197,16 +1191,20 @@
 <gcds-link external href="https://www.figma.com/file/mh2maMG2NBtk41k1O1UGHV/Canadian-Digital-Service%E2%80%A8---GC-Design-System?node-id=818%3A3759&t=ciEmm7GYyGAY73zZ-0">Figma</gcds-link>
 </li>
 </ul></p>
-<p class="mb-300"><div class="my-600 b-sm b-default component-preview" id="component-preview">
-<p class="container-full font-semibold px-225 py-150 bb-sm b-default bg-light">
+<p><div class="my-600 b-sm b-default component-preview">
+<h2 class="container-full font-text font-semibold m-0 px-225 py-150 bb-sm b-default bg-light">
 Aperçu du composant du groupe de boutons radio
-</p>
-<div class="px-225 pt-300 pb-150"></p>
-<gcds-fieldset fieldset-id="fieldset" legend="Légende" hint="Texte explicatif/Exemple de message.">
-<gcds-radio-group name="radio" options='[{"id":"form-radio-1","label":"Libellé 1","hint":"Ceci est une description ou un exemple à titre de clarification."},{"id":"form-radio-2","label":"Libellé 2","hint":"Ceci est une description ou un exemple à titre de clarification."}]'>
-</gcds-radio-group>
-</gcds-fieldset>
-<p class="mb-300"></div>
+</h2>
+<div>
+<iframe
+            title="Aperçu du composant du groupe de boutons radio"
+            src="/fr/composants/groupe-de-boutons-radio/preview/"
+            style="display: block; margin: 0 auto;"
+            frameBorder="0"
+            width="100%"
+            id="component-preview"
+          ></iframe>
+</div>
 </div></p>
 
     <nav class="tabs mb-300" aria-label="Onglet de consignes">
@@ -1246,7 +1244,7 @@ Aperçu du composant du groupe de boutons radio
     </nav>
   
 
-  <h2 id="structure-du-groupe-de-boutons-radio-avec-jeu-de-champs" class="mt-600 mb-300">Structure du groupe de boutons radio — avec jeu de champs</h2>
+  <h2 id="structure-du-groupe-de-boutons-radio-avec-jeu-de-champs">Structure du groupe de boutons radio — avec jeu de champs</h2>
 <ol class="anatomy-list">
   <li>La <strong>légende du jeu de champ</strong> agit comme un titre pour discerner les boutons radio groupés. Le texte de la légende est aligné à gauche avec la première lettre en majuscule.</li>
   <li>Le <strong>texte explicatif du jeu de champ</strong> précise les exigences spécifiques pour chaque regroupement de boutons radio afin de favoriser la réussite de la tâche.</li>
@@ -1256,53 +1254,63 @@ Aperçu du composant du groupe de boutons radio
   <li>Le <strong>texte explicatif du bouton radio</strong> donne plus de renseignements sur le choix.</li>
 </ol>
 <img class="b-sm b-default p-300" src="/images/fr/components/anatomy/gcds-radio-group-anatomy.svg" alt="Structure du groupe de boutons radio accompagnée des étiquettes « Légende du jeu de champ », « Texte explicatif du jeu de champ », « Coche », « Libellé du bouton radio », « Bouton radio » et « Texte explicatif du bouton radio »."/>
-<h2 id="accessibilite-et-design-des-boutons-radio" class="mt-600 mb-300">Accessibilité et design des boutons radio</h2>
-<h3 id="rendez-les-groupes-de-boutons-radio-visibles-et-les-options-claires" class="mt-600 mb-300">Rendez les groupes de boutons radio visibles et les options claires</h3>
-<ul class="list-disc mb-300"><li><p class="mb-300">Limitez le nombre d'options à 6 ou 7.</li>
-<li><p class="mb-300">Limitez le texte de chaque option à quelques mots ou à une courte phrase et ajoutez du texte explicatif pour plus de contexte.</li>
-<li><p class="mb-300">En règle générale, il est préférable de classer les options par ordre alphabétique. Dans certains cas, il peut être utile de classer les options de la plus commune à la moins commune.</li>
-<li><p class="mb-300">Lorsque possible, ajoutez une option telle que « Aucun » ou « Aucun des éléments ci-dessus » pour éviter de forcer une sélection inexacte. Si une personne sélectionne une option par accident dans un groupe de boutons radio, elle ne pourra pas la désélectionner ou annuler sa sélection.</li>
+<h2 id="accessibilite-et-design-des-boutons-radio">Accessibilité et design des boutons radio</h2>
+<h3 id="rendez-les-groupes-de-boutons-radio-visibles-et-les-options-claires">Rendez les groupes de boutons radio visibles et les options claires</h3>
+<ul class="list-disc mb-300"><li>Limitez le nombre d'options à 6 ou 7.</li>
+<li>Limitez le texte de chaque option à quelques mots ou à une courte phrase et ajoutez du texte explicatif pour plus de contexte.</li>
+<li>En règle générale, il est préférable de classer les options par ordre alphabétique. Dans certains cas, il peut être utile de classer les options de la plus commune à la moins commune.</li>
+<li>Lorsque possible, ajoutez une option telle que « Aucun » ou « Aucun des éléments ci-dessus » pour éviter de forcer une sélection inexacte. Si une personne sélectionne une option par accident dans un groupe de boutons radio, elle ne pourra pas la désélectionner ou annuler sa sélection.</li>
 </ul>
-<h3 id="aidez-les-gens-a-comprendre-comment-utiliser-les-groupes-de-boutons-radio" class="mt-600 mb-300">Aidez les gens à comprendre comment utiliser les groupes de boutons radio</h3>
-<ul class="list-disc mb-300"><li><p class="mb-300">Ne partez pas du principe qu’une personne saura utiliser un groupe de boutons radio.</li>
-<li><p class="mb-300">Utilisez le texte explicatif du <a href="/fr/composants/jeu-de-champs">jeu de champs</a> pour indiquer aux personnes peu habituées aux groupes de boutons radio qu’elles ne peuvent choisir qu’une seule option. Par exemple, « Sélectionnez l’option la plus pertinente ».</li>
-<li><p class="mb-300">Évitez de présélectionner une option dans le groupe de boutons radio. Cela augmente le risque qu’une personne saute une question ou soumette une mauvaise réponse.</li>
+<h3 id="aidez-les-gens-a-comprendre-comment-utiliser-les-groupes-de-boutons-radio">Aidez les gens à comprendre comment utiliser les groupes de boutons radio</h3>
+<ul class="list-disc mb-300"><li>Ne partez pas du principe qu’une personne saura utiliser un groupe de boutons radio.</li>
+<li>Utilisez le texte explicatif du <a href="/fr/composants/jeu-de-champs">jeu de champs</a> pour indiquer aux personnes peu habituées aux groupes de boutons radio qu’elles ne peuvent choisir qu’une seule option. Par exemple, « Sélectionnez l’option la plus pertinente ».</li>
+<li>Évitez de présélectionner une option dans le groupe de boutons radio. Cela augmente le risque qu’une personne saute une question ou soumette une mauvaise réponse.</li>
 </ul>
 
 
-  <section data-pagefind-ignore class="pt-75 mt-300 mb-900 bt-sm b-dark ">
-  <h2 class="mt-225 mb-300">
-    Aidez-nous à nous améliorer
-  </h2>
+  <section data-pagefind-ignore class="my-600 bt-sm b-dark ">
+  <h2>Aidez-nous à nous améliorer</h2>
+  <p>Vous avez des questions ou des demandes? Faites-nous part de vos commentaires à l&#39;aide de notre formulaire de contact.</p>
 
-  <p class="mb-300">
-    Avez-vous des questions? Y a-t-il quelque chose que vous changeriez ou ajouteriez? Faites-nous part de vos commentaires pour nous aider à améliorer Système de design GC.
+  
+  <p>
+    Quelque chose ne va pas? Signalez-le sur GitHub en créant un <gcds-link href='https://docs.github.com/fr/get-started/start-your-journey/creating-an-account-on-github' external>compte</gcds-link>. Vous pourrez accéder aux réponses de l'équipe, suivre les progrès réalisés concernant votre problèmes et voir les problèmes signalés par d'autres personnes.
   </p>
+  
 
   <gcds-button
     type="link"
-    button-role="secondary"
+    button-role="primary"
     href="/fr/contactez/#contactez-nous"
+    class="mb-300"
   >
     Fournir des commentaires
+  </gcds-button>
+  <gcds-button
+    type="link"
+    button-role="secondary"
+    href="https://github.com/cds-snc/gcds-components/issues/new/choose"
+  >
+    Report an issue on GitHub
+    <gcds-icon name="external-link" label=" (Ouvre l&#39;emplacement dans un nouvel onglet.)">
+    </gcds-icon>
   </gcds-button>
 </section>
 
 
 
         <gcds-date-modified class="mb-300">
-          2025-01-08
+          2025-04-02
         </gcds-date-modified>
       </main>
 
-
-      <gcds-footer
-        display="full"
-        lang="fr"
-        contextual-heading="Service numérique canadien"
-        contextual-links='{ "Contactez-nous": "/fr/contactez", "Signaler un problème": "https://github.com/cds-snc/gcds-components/issues/new/choose", "À propos": "/fr/a-propos" }'
-        sub-links='{ "Médias sociaux": "https://www.canada.ca/fr/sociaux.html", "Applications mobiles": "https://www.canada.ca/fr/mobile.html", "À propos de Canada.ca": "https://conception.canada.ca/a-propos/", "Avis": "https://www.canada.ca/fr/transparence/avis.html", "Confidentialité": "/fr/avis-de-confidentialite/" }'
-      ></gcds-footer>
+    <gcds-footer
+  display="full"
+  lang="fr"
+  contextual-heading="Système de design GC"
+  contextual-links='{ "À propos": "/fr/a-propos", "Déclaration d&#39;accessibilité": "/fr/accessibilite/", "Accord sur les niveaux de service": "/fr/entente-sur-les-niveaux-de-service/" }'
+  sub-links='{ "Médias sociaux": "https://www.canada.ca/fr/sociaux.html", "Applications mobiles": "https://www.canada.ca/fr/mobile.html", "À propos de Canada.ca": "https://conception.canada.ca/a-propos/", "Conditions d&#39;utilisation": "/fr/conditions-dutilisation", "Confidentialité": "/fr/avis-de-confidentialite/" }'
+></gcds-footer>
 
     </div>
 

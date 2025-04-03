@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="/gcds-docs/styles/style.css">
     <script src="/gcds-docs/scripts/code-showcase.js"></script>
     <script src="/gcds-docs/scripts/code-copy.js"></script>
+    <script src="/gcds-docs/scripts/component-preview.js"></script>
     <link rel="icon" type="image/x-icon" sizes="96x96" href="/gcds-docs/favicon.ico">
 
     <!-- Icons Font Awesome (to access icons, import Font Awesome) -->
@@ -1093,12 +1094,6 @@
       
       
     
-      
-      
-    
-      
-      
-    
   
 
   
@@ -1117,7 +1112,7 @@
 
 
 <gcds-top-nav slot="menu" label="Menu principal" alignment="right">
-  <gcds-nav-link slot="home" href="/gcds-docs/fr" class="home-link link-inherit link-no-underline" slot="left">Système de design GC</gcds-nav-link>
+  <gcds-nav-link slot="home" href="/fr">Système de design GC</gcds-nav-link>
   
     <gcds-nav-link
       href="/gcds-docs/fr/composants/"
@@ -1144,15 +1139,14 @@
       Modèles de page
     </gcds-nav-link>
   
-
-  
-    <gcds-nav-link
-      href="/gcds-docs/fr/simpliquer/"
-      
-    >
-      S&#39;impliquer
-    </gcds-nav-link>
-  
+<gcds-nav-group
+    menu-label="Contact"
+    open-trigger="Contact"
+  >
+    <gcds-nav-link href="/fr/contactez">Contactez-nous</gcds-nav-link>
+    <gcds-nav-link href="/fr/simpliquer">Impliquez-vous</gcds-nav-link>
+    <gcds-nav-link href="/fr/inscrivez-vous-a-une-demonstration">Trouvez une démo</gcds-nav-link>
+  </gcds-nav-group>
 </gcds-top-nav>
   
 
@@ -1186,10 +1180,10 @@
       <main id="mc" class="container-xl mx-auto xl:px-0 sm:px-600 px-225 general-layout" data-pagefind-body>
         
   
-    <h1 id="boitebrgcdscontainer" class="mb-300">Boîte<br><code>&lt;gcds-container&gt;</code></h1>
-<p class="mb-300"><em>Autres noms : conteneur, encadré.</em></p>
-<p class="mb-300">Il s’agit d’un modèle de boîte simple associé à une largeur de contenu fixe.</p>
-<p class="mb-300"><ul class="d-flex flex-wrap gap-300">
+    <h1 id="boitebrgcdscontainer">Boîte<br><code>&lt;gcds-container&gt;</code></h1>
+<p><em>Autres noms : conteneur, encadré.</em></p>
+<p>Il s’agit d’un modèle de boîte simple associé à une largeur de contenu fixe.</p>
+<p><ul class="d-flex flex-wrap gap-300">
 <li class="github-link">
 <gcds-link external href="https://github.com/cds-snc/gcds-components/tree/main/packages/web/src/components/gcds-container">GitHub</gcds-link>
 </li>
@@ -1197,21 +1191,20 @@
 <gcds-link external href="https://www.figma.com/file/o4SguSZdar2CCFzSkWNrmB/Syst%C3%A8me-de-design-GC?type=design&node-id=114-2006&mode=design&t=1DaL24vHpjRRfHHm-0">Figma</gcds-link>
 </li>
 </ul></p>
-<p class="mb-300"><div class="my-600 b-sm b-default component-preview" id="component-preview">
-<p class="container-full font-semibold px-225 py-150 bb-sm b-default bg-light">
+<p><div class="my-600 b-sm b-default component-preview">
+<h2 class="container-full font-text font-semibold m-0 px-225 py-150 bb-sm b-default bg-light">
 Aperçu du composant de la boîte
-</p>
-<div class="px-225 py-300"></p>
-<gcds-container border margin="175" padding="175" size="lg">
-Grande boîte
-</gcds-container>
-<gcds-container border margin="175" padding="175" size="md">
-Boîte moyenne
-</gcds-container>
-<gcds-container border margin="175" padding="175" size="sm">
-Petite boîte
-</gcds-container>
-<p class="mb-300"></div>
+</h2>
+<div>
+<iframe
+            title="Aperçu du composant de la boîte"
+            src="/fr/composants/boite/preview/"
+            style="display: block; margin: 0 auto;"
+            frameBorder="0"
+            width="100%"
+            id="component-preview"
+          ></iframe>
+</div>
 </div></p>
 
     <nav class="tabs mb-300" aria-label="Onglet de consignes">
@@ -1251,20 +1244,20 @@ Petite boîte
     </nav>
   
 
-  <h2 id="structure-dune-boite" class="mt-600 mb-300">Structure d’une boîte</h2>
+  <h2 id="structure-dune-boite">Structure d’une boîte</h2>
 <ol class="anatomy-list">
   <li>Le <strong>boîte</strong> regroupe du contenu dans un espace limité pouvant contenir du texte, des images et d’autres composants. La largeur peut être ajustée, notamment pour limiter la longueur d’une ligne de texte.</li>
   <li>La <strong>bordure optionnelle</strong> entoure la boîte en indiquant la largeur.</li>
 </ol>
 <img class="b-sm b-default p-300" src="/images/en/components/anatomy/gcds-container-anatomy.svg" alt="Le composant de boîte avec des numéros indiquant les différentes parties de la structure de la boîte." />
-<h2 id="design-et-accessibilite-des-boites" class="mt-600 mb-300">Design et accessibilité des boîtes</h2>
-<h3 id="limiter-la-largeur-du-contenu" class="mt-600 mb-300">Limiter la largeur du contenu</h3>
-<ul class="list-disc mb-300"><li><p class="mb-300">Veillez à ce que vos lignes de texte ne dépassent pas 65 caractères pour obtenir une longueur de lecture acceptable.</li>
-<li><p class="mb-300">Limitez la largeur de la boîte pour éviter que les grands écrans n’affichent des lignes de texte trop longues et difficiles à lire.</li>
-<li><p class="mb-300">Évitez de dépasser la largeur maximale de 71,25 rem (1140 px).</li>
+<h2 id="design-et-accessibilite-des-boites">Design et accessibilité des boîtes</h2>
+<h3 id="limiter-la-largeur-du-contenu">Limiter la largeur du contenu</h3>
+<ul class="list-disc mb-300"><li>Veillez à ce que vos lignes de texte ne dépassent pas 65 caractères pour obtenir une longueur de lecture acceptable.</li>
+<li>Limitez la largeur de la boîte pour éviter que les grands écrans n’affichent des lignes de texte trop longues et difficiles à lire.</li>
+<li>Évitez de dépasser la largeur maximale de 71,25 rem (1140 px).</li>
 </ul>
-<h3 id="ajouter-une-taille-de-boite" class="mt-600 mb-300">Ajouter une taille de boîte</h3>
-<p class="mb-300">La propriété <code>size</code> définit la taille d’une boîte. Six tailles sont disponibles :</p>
+<h3 id="ajouter-une-taille-de-boite">Ajouter une taille de boîte</h3>
+<p>La propriété <code>size</code> définit la taille d’une boîte. Six tailles sont disponibles :</p>
 <table>
 <thead>
 <tr>
@@ -1307,42 +1300,52 @@ Petite boîte
 </tbody>
 </table>
 <br/>
-<p class="mb-300">La taille de la boîte par défaut est <code>full</code>, ce qui signifie que la boîte occupera la largeur totale de la boîte parente.</p>
+<p>La taille de la boîte par défaut est <code>full</code>, ce qui signifie que la boîte occupera la largeur totale de la boîte parente.</p>
 
 
-  <section data-pagefind-ignore class="pt-75 mt-300 mb-900 bt-sm b-dark ">
-  <h2 class="mt-225 mb-300">
-    Aidez-nous à nous améliorer
-  </h2>
+  <section data-pagefind-ignore class="my-600 bt-sm b-dark ">
+  <h2>Aidez-nous à nous améliorer</h2>
+  <p>Vous avez des questions ou des demandes? Faites-nous part de vos commentaires à l&#39;aide de notre formulaire de contact.</p>
 
-  <p class="mb-300">
-    Avez-vous des questions? Y a-t-il quelque chose que vous changeriez ou ajouteriez? Faites-nous part de vos commentaires pour nous aider à améliorer Système de design GC.
+  
+  <p>
+    Quelque chose ne va pas? Signalez-le sur GitHub en créant un <gcds-link href='https://docs.github.com/fr/get-started/start-your-journey/creating-an-account-on-github' external>compte</gcds-link>. Vous pourrez accéder aux réponses de l'équipe, suivre les progrès réalisés concernant votre problèmes et voir les problèmes signalés par d'autres personnes.
   </p>
+  
 
   <gcds-button
     type="link"
-    button-role="secondary"
+    button-role="primary"
     href="/fr/contactez/#contactez-nous"
+    class="mb-300"
   >
     Fournir des commentaires
+  </gcds-button>
+  <gcds-button
+    type="link"
+    button-role="secondary"
+    href="https://github.com/cds-snc/gcds-components/issues/new/choose"
+  >
+    Report an issue on GitHub
+    <gcds-icon name="external-link" label=" (Ouvre l&#39;emplacement dans un nouvel onglet.)">
+    </gcds-icon>
   </gcds-button>
 </section>
 
 
 
         <gcds-date-modified class="mb-300">
-          2025-01-08
+          2025-04-02
         </gcds-date-modified>
       </main>
 
-
-      <gcds-footer
-        display="full"
-        lang="fr"
-        contextual-heading="Service numérique canadien"
-        contextual-links='{ "Contactez-nous": "/fr/contactez", "Signaler un problème": "https://github.com/cds-snc/gcds-components/issues/new/choose", "À propos": "/fr/a-propos" }'
-        sub-links='{ "Médias sociaux": "https://www.canada.ca/fr/sociaux.html", "Applications mobiles": "https://www.canada.ca/fr/mobile.html", "À propos de Canada.ca": "https://conception.canada.ca/a-propos/", "Avis": "https://www.canada.ca/fr/transparence/avis.html", "Confidentialité": "/fr/avis-de-confidentialite/" }'
-      ></gcds-footer>
+    <gcds-footer
+  display="full"
+  lang="fr"
+  contextual-heading="Système de design GC"
+  contextual-links='{ "À propos": "/fr/a-propos", "Déclaration d&#39;accessibilité": "/fr/accessibilite/", "Accord sur les niveaux de service": "/fr/entente-sur-les-niveaux-de-service/" }'
+  sub-links='{ "Médias sociaux": "https://www.canada.ca/fr/sociaux.html", "Applications mobiles": "https://www.canada.ca/fr/mobile.html", "À propos de Canada.ca": "https://conception.canada.ca/a-propos/", "Conditions d&#39;utilisation": "/fr/conditions-dutilisation", "Confidentialité": "/fr/avis-de-confidentialite/" }'
+></gcds-footer>
 
     </div>
 

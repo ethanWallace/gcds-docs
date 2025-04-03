@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="/gcds-docs/styles/style.css">
     <script src="/gcds-docs/scripts/code-showcase.js"></script>
     <script src="/gcds-docs/scripts/code-copy.js"></script>
+    <script src="/gcds-docs/scripts/component-preview.js"></script>
     <link rel="icon" type="image/x-icon" sizes="96x96" href="/gcds-docs/favicon.ico">
 
     <!-- Icons Font Awesome (to access icons, import Font Awesome) -->
@@ -1064,21 +1065,15 @@
     
       
       
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
 
         
 
+      
+    
+      
+      
+    
+      
       
     
       
@@ -1117,7 +1112,7 @@
 
 
 <gcds-top-nav slot="menu" label="Main menu" alignment="right">
-  <gcds-nav-link slot="home" href="/gcds-docs/en" class="home-link link-inherit link-no-underline" slot="left">GC Design system</gcds-nav-link>
+  <gcds-nav-link slot="home" href="/en">GC Design System</gcds-nav-link>
   
     <gcds-nav-link
       href="/gcds-docs/en/components/"
@@ -1144,15 +1139,14 @@
       Page templates
     </gcds-nav-link>
   
-
-  
-    <gcds-nav-link
-      href="/gcds-docs/en/get-involved/"
-      
-    >
-      Get involved
-    </gcds-nav-link>
-  
+<gcds-nav-group
+    menu-label="Contact"
+    open-trigger="Contact"
+  >
+    <gcds-nav-link href="/en/contact">Contact us</gcds-nav-link>
+    <gcds-nav-link href="/en/get-involved">Get involved</gcds-nav-link>
+    <gcds-nav-link href="/en/register-for-a-demo">Find a demo</gcds-nav-link>
+  </gcds-nav-group>
 </gcds-top-nav>
   
 
@@ -1170,14 +1164,14 @@
     <div class="content-wrapper">
       <main id="mc" class="container-xl mx-auto xl:px-0 sm:px-600 px-225 general-layout" >
         
-<section class="py-900">
-  <h1 class="container-full text-center mb-600">GC Design System Demo</h1>
+<section class="pb-600">
+  <h1 class="container-full">GC Design System Demo</h1>
 
   <h2>Components</h2>
 
   
 
-  <h3 class="container-full mt-600 mb-300 bb-sm">Alerts</h3>
+  <h3 class="container-full bb-sm">Alerts</h3>
   <gcds-alert heading="Main notification title" alert-role="success" container="xl">
     <p>Description text goes here.</p>
   </gcds-alert>
@@ -1193,7 +1187,7 @@
 
   
 
-  <h3 class="container-full mt-600 mb-300 bb-sm">Breadcrumbs</h3>
+  <h3 class="container-full bb-sm">Breadcrumbs</h3>
 
   <gcds-breadcrumbs slot="breadcrumb">
     <gcds-breadcrumbs-item href="/en">
@@ -1206,7 +1200,7 @@
 
   
 
-  <h3 class="container-full mt-600 mb-300 bb-sm">Buttons</h3>
+  <h3 class="container-full bb-sm">Buttons</h3>
   <gcds-button button-role="primary">
     Primary
   </gcds-button>
@@ -1233,7 +1227,7 @@
 
   
 
-  <h3 class="container-full mt-600 mb-300 bb-sm">Containers</h3>
+  <h3 class="container-full bb-sm">Containers</h3>
   <gcds-container container="full">
     <div class="p-200 b-sm">I&#39;m a responsive container. My size is only limited by the size of my parent container.</div>
   </gcds-container>
@@ -1248,19 +1242,19 @@
 
   
 
-  <h3 class="container-full mt-600 mb-300 bb-sm">Date modified</h3>
+  <h3 class="container-full bb-sm">Date modified</h3>
   <gcds-date-modified>2023-01-26</gcds-date-modified>
 
   
 
-  <h3 class="container-full mt-600 mb-300 bb-sm">Details</h3>
+  <h3 class="container-full bb-sm">Details</h3>
   <gcds-details details-title="Learn more about this topic">
     <p>The details link will expand and collapse the summary section. In its default state, the summary is hidden.</p>
   </gcds-details>
 
   
 
-  <h3 class="container-full mt-600 mb-300 bb-sm">Footer</h3>
+  <h3 class="container-full bb-sm">Footer</h3>
   <gcds-footer
     display="full"
     contextual-heading="Contextual navigation"
@@ -1346,7 +1340,7 @@
 
   
 
-  <h3 class="container-full mt-600 mb-300 bb-sm">Grid</h3>
+  <h3 class="container-full bb-sm">Grid</h3>
   <gcds-grid
     tag="article"
     columns-desktop="1fr 1fr 1fr 1fr"
@@ -1361,7 +1355,7 @@
 
   
 
-  <h3 class="container-full mt-600 mb-300 bb-sm">Header</h3>
+  <h3 class="container-full bb-sm">Header</h3>
   <gcds-header
     lang="en"
     lang-href="#"
@@ -1389,7 +1383,7 @@
 
   
 
-  <h3 class="container-full mt-600 mb-300 bb-sm">Icons</h3>
+  <h3 class="container-full bb-sm">Icons</h3>
   <gcds-icon name="tree" size="text-small" margin-right="200"></gcds-icon>
   <gcds-icon name="tree" size="text" margin-right="200"></gcds-icon>
   <gcds-icon name="tree" size="h6" margin-right="200"></gcds-icon>
@@ -1399,7 +1393,7 @@
   <gcds-icon name="tree" size="h2" margin-right="200"></gcds-icon>
   <gcds-icon name="tree" size="h1" margin-right="200"></gcds-icon>
 
-  <h4 class="mt-600 mb-300">Fixed width icons (square ratio)</h4>
+  <h4>Fixed width icons (square ratio)</h4>
   <gcds-icon name="tree" size="text-small" fixed-width></gcds-icon>
   <gcds-icon name="tree" size="text" fixed-width></gcds-icon>
   <gcds-icon name="tree" size="h6" fixed-width></gcds-icon>
@@ -1409,7 +1403,7 @@
   <gcds-icon name="tree" size="h2" fixed-width></gcds-icon>
   <gcds-icon name="tree" size="h1" fixed-width></gcds-icon>
 
-  <h4 class="mt-600 mb-300">Variable width icons (auto width)</h4>
+  <h4>Variable width icons (auto width)</h4>
   <gcds-icon name="tree" size="text-small"></gcds-icon>
   <gcds-icon name="tree" size="text"></gcds-icon>
   <gcds-icon name="tree" size="h6"></gcds-icon>
@@ -1421,7 +1415,7 @@
 
   
 
-  <h3 class="container-full mt-600 mb-300 bb-sm">Pagination</h3>
+  <h3 class="container-full bb-sm">Pagination</h3>
 
   <p>List pagination:</p>
   <gcds-pagination
@@ -1446,7 +1440,7 @@
 
   
 
-  <h3 class="container-full mt-600 mb-300 bb-sm">Phase banner</h3>
+  <h3 class="container-full bb-sm">Phase banner</h3>
   <gcds-phase-banner banner-role="primary">
     <gcds-icon name="tree" size="sm" slot="banner-icon-left"></gcds-icon>
     <p slot="banner-text">Exciting announcement.</p>
@@ -1455,18 +1449,17 @@
 
 
         <gcds-date-modified class="mb-300">
-          2025-01-08
+          2025-04-03
         </gcds-date-modified>
       </main>
 
-
-      <gcds-footer
-        display="full"
-        lang="en"
-        contextual-heading="Canadian Digital Service"
-        contextual-links='{ "Contact us": "/en/contact", "Report an issue": "https://github.com/cds-snc/gcds-components/issues/new/choose", "About us": "/en/about-us" }'
-        sub-links='{ "Social media": "https://www.canada.ca/en/social.html", "Mobile applications": "https://www.canada.ca/en/mobile.html", "About Canada.ca": "https://design.canada.ca/about/", "Terms and conditions": "https://www.canada.ca/en/transparency/terms.html", "Privacy": "/en/privacy-notice" }'
-      ></gcds-footer>
+    <gcds-footer
+  display="full"
+  lang="en"
+  contextual-heading="GC Design System"
+  contextual-links='{ "About us": "/en/about-us", "Accessibility statement": "/en/accessibility/", "Service level agreement": "/en/service-level-agreement/" }'
+  sub-links='{ "Social media": "https://www.canada.ca/en/social.html", "Mobile applications": "https://www.canada.ca/en/mobile.html", "About Canada.ca": "https://design.canada.ca/about/", "Terms of use": "/en/terms-of-use", "Privacy": "/en/privacy-notice" }'
+></gcds-footer>
 
     </div>
 
