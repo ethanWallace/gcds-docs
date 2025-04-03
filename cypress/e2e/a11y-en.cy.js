@@ -50,13 +50,10 @@ describe(`A11Y test English documentation site`, () => {
           cy.scanDeadLinks();
         }
         if (page.url.includes("page-templates/basic/preview")) {
-          try {
-              // Read file synchronously
-              const data = fs.readFileSync('_site/en/page-templates/basic/preview/index.html', 'utf8');
-              cy.log(data);
-          } catch (err) {
-              console.error('Error reading file:', err);
-          }
+          cy.task('readHtmlFile', '_site/en/page-templates/basic/preview/index.html').then((content) => {
+            cy.log(content); // Logs in Cypress UI
+            console.log(content); // Logs in terminal
+          });
         }
       });
     });
