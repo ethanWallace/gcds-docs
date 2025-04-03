@@ -1,5 +1,6 @@
 /// <reference types="cypress" />
 
+const fs = require('fs');
 const enLinks = require('../../src/en/en.json');
 
 const pagesEn = [];
@@ -47,6 +48,15 @@ describe(`A11Y test English documentation site`, () => {
         // skip theme and topic menu since links are pulled from external source
         if (!page.url.includes('theme-and-topic-menu')) {
           cy.scanDeadLinks();
+        }
+        if (page.url.includes("page-templates/basic/preview")) {
+          fs.readFile('_site/en/page-templates/preview/index.html', 'utf8', (err, data) => {
+            if (err) {
+                console.error('Error reading file:', err);
+                return;
+            }
+            console.log(data);
+        });
         }
       });
     });
