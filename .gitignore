@@ -10,7 +10,7 @@ public/
 _site/
 
 # Output folder for page templates
-src/_includes/partials/templates/en/
-src/_includes/partials/templates/fr/
+# src/_includes/partials/templates/en/
+# src/_includes/partials/templates/fr/
 
 cypress/screenshots/
