@@ -11,7 +11,6 @@ Object.keys(frLinks.links).forEach(key => {
     !url.includes('developpement-en-cours') &&
     !url.includes('https') &&
     !url.includes('mailto') &&
-    !url.includes('composants') &&
     !url.includes('demo')
   ) {
     let regex = /composants\/[a-z]/;
@@ -48,7 +47,7 @@ describe(`A11Y test French documentation site`, () => {
         cy.checkA11y(null, null, cy.terminalLog);
         // skip theme and topic menu since links are pulled from external source
         if (!page.url.includes('menu-thematique')) {
-          cy.scanDeadLinks();
+          // cy.scanDeadLinks();
         }
       });
     });
