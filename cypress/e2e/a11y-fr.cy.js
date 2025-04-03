@@ -48,7 +48,7 @@ describe(`A11Y test French documentation site`, () => {
         cy.checkA11y(null, null, cy.terminalLog);
         // skip theme and topic menu since links are pulled from external source
         if (!page.url.includes('menu-thematique')) {
-          // cy.scanDeadLinks();
+          cy.scanDeadLinks();
         }
       });
     });
