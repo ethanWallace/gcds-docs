@@ -50,13 +50,13 @@ describe(`A11Y test English documentation site`, () => {
           cy.scanDeadLinks();
         }
         if (page.url.includes("page-templates/basic/preview")) {
-          fs.readFile('_site/en/page-templates/preview/index.html', 'utf8', (err, data) => {
-            if (err) {
-                console.error('Error reading file:', err);
-                return;
-            }
-            console.log(data);
-        });
+          try {
+              // Read file synchronously
+              const data = fs.readFileSync('_site/en/page-templates/basic/preview/index.html', 'utf8');
+              console.log(data);
+          } catch (err) {
+              console.error('Error reading file:', err);
+          }
         }
       });
     });
