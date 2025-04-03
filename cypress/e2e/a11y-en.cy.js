@@ -44,15 +44,16 @@ describe(`A11Y test English documentation site`, () => {
       cy.visit(page.url, { timeout: 30000 });
       cy.get('.hydrated').then(() => {
         cy.injectAxe();
-        cy.checkA11y(null, null, cy.terminalLog);
+        cy.checkA11y(null, null);
         // skip theme and topic menu since links are pulled from external source
         if (!page.url.includes('theme-and-topic-menu')) {
           cy.scanDeadLinks();
         }
-        if (page.url.includes("page-templates/basic/preview")) {
-          cy.task('readHtmlFile', '_site/en/page-templates/basic/preview/index.html').then((content) => {
-            cy.log(content); // Logs in Cypress UI
-            console.log(content); // Logs in terminal
+
+        if (page.name === 'page Templates Basic Preview') {
+          cy.document().then((doc) => {
+            const htmlContent = doc.documentElement.outerHTML;
+            cy.task('log', htmlContent); // Logs in Cypress UI
           });
         }
       });

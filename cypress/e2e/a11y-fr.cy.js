@@ -49,6 +49,13 @@ describe(`A11Y test French documentation site`, () => {
         if (!page.url.includes('menu-thematique')) {
           cy.scanDeadLinks();
         }
+
+        if (page.name === 'page Templates Basic Preview') {
+          cy.document().then((doc) => {
+            const htmlContent = doc.documentElement.outerHTML;
+            cy.task('log', htmlContent); // Logs in Cypress UI
+          });
+        }
       });
     });
   }
