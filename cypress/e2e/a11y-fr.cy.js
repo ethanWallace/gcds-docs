@@ -45,7 +45,7 @@ describe(`A11Y test French documentation site`, () => {
       cy.get('.hydrated').then(() => {
         if (page.name === 'page Templates Basic Preview') {
           cy.document().then((doc) => {
-            const htmlContent = doc.documentElement.innerHTMl;
+            const htmlContent = doc.documentElement.innerHTML;
             cy.task('log', htmlContent); // Logs in Cypress UI
             let scripts = doc.documentElement.querySelectorAll('script');
             scripts.forEach(script => cy.task('log', script.innerText))
