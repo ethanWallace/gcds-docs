@@ -42,7 +42,15 @@ describe(`A11Y test French documentation site`, () => {
   for (const page of pagesFr) {
     it(`${page.name}: ${page.url}`, () => {
       cy.visit(page.url, { timeout: 30000 });
-      cy.get('.hydrated').then(() => {
+      cy.get('gcds-header.hydrated').then(() => {
+        if (page.name === 'page Templates Basic Preview') {
+          cy.document().then((doc) => {
+            const htmlContent = doc.documentElement.innerHTML;
+            cy.task('log', htmlContent); // Logs in Cypress UI
+            let scripts = doc.documentElement.querySelectorAll('script');
+            scripts.forEach(script => cy.task('log', script.innerText))
+          });
+        }
         cy.injectAxe();
         cy.checkA11y(null, null, cy.terminalLog);
         // skip theme and topic menu since links are pulled from external source

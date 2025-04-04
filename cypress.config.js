@@ -1,4 +1,5 @@
 const { defineConfig } = require("cypress");
+const fs = require('fs');
 
 module.exports = defineConfig({
   e2e: {
@@ -13,6 +14,14 @@ module.exports = defineConfig({
           console.table(message)
     
           return null
+        },
+        readHtmlFile(filename) {
+          try {
+            const data = fs.readFileSync(filename, 'utf8');
+            return data; // Return the HTML content
+          } catch (err) {
+            return `Error reading file: ${err.message}`;
+          }
         }
       })
     },
