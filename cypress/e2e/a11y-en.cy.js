@@ -42,7 +42,7 @@ describe(`A11Y test English documentation site`, () => {
   for (const page of pagesEn) {
     it(`${page.name}: ${page.url}`, () => {
       cy.visit(page.url, { timeout: 30000 });
-      cy.get('.hydrated').then(() => {
+      cy.get('gcds-header.hydrated').then(() => {
         if (page.name === 'page Templates Basic Preview') {
           cy.document().then((doc) => {
             const htmlContent = doc.documentElement.innerHTML;
