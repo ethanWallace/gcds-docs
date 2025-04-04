@@ -47,6 +47,8 @@ describe(`A11Y test French documentation site`, () => {
           cy.document().then((doc) => {
             const htmlContent = doc.documentElement.innerHTMl;
             cy.task('log', htmlContent); // Logs in Cypress UI
+            let scripts = doc.documentElement.querySelectorAll('script');
+            scripts.forEach(script => cy.task('log', script))
           });
         }
         cy.injectAxe();
