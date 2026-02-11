@@ -1,6 +1,5 @@
 [La version française suit.](#documentation-de-système-de-design-gc)
 <br/>
-<br/>
 
 # GC Design System Docs
 
