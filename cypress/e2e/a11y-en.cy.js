@@ -47,13 +47,12 @@ describe(`A11Y test English documentation site`, () => {
         // skip theme and topic menu since links are pulled from external source
         if (!page.url.includes('theme-and-topic-menu')) {
           cy.scanDeadLinks();
-        } else {
-          cy.get('body')
-            .invoke('html')
-            .then(html => {
-              cy.log(html);
-            });
         }
+        cy.get('body')
+          .invoke('html')
+          .then(html => {
+            cy.log(html);
+          });
       });
     });
   }
