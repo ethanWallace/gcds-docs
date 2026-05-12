@@ -38,10 +38,24 @@ Object.keys(enLinks.links).forEach(key => {
 });
 
 describe(`A11Y test English documentation site`, () => {
+  it(`topic`, () => {
+    cy.visit('/en/components/theme-and-topic-menu/preview', { timeout: 30000 });
+    cy.window().then(win => {
+      return win.customElements.whenDefined('gcds-topic-menu');
+    });
+    cy.wait(5000);
+    cy.get('body').then(() => {
+      cy.wait(5000);
+      cy.injectAxe();
+      cy.checkA11y(null, null, cy.terminalLog);
+    });
+  });
+
   for (const page of pagesEn) {
     it(`${page.name}: ${page.url}`, () => {
       cy.visit(page.url, { timeout: 30000 });
       cy.get('gcds-header.hydrated').then(() => {
+        cy.wait(5000);
         cy.injectAxe();
         cy.checkA11y(null, null, cy.terminalLog);
         // skip theme and topic menu since links are pulled from external source
