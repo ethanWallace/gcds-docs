@@ -23,7 +23,7 @@ export class GcdsSrOnly {
     }
     render() {
         const Tag = this.tag;
-        return (h(Host, { key: '007ca59b715103f7a106650bb40a74724e8532f3' }, h(Tag, { key: '6f4c944c09c4d1fbd620a2ddbd6b638634844307' }, h("slot", { key: '32d15621851a85f0378455d397190bc4782d86f0' }))));
+        return (h(Host, { key: '3383ec4736158a1272001467347592c58d1d125b' }, h(Tag, { key: '30db2f8f3c3715b31330f6fbbce8b5ad87481a65' }, h("slot", { key: '4df7666a95decef3d6a53e410c3236a1a40f8dd2' }))));
     }
     static get is() { return "gcds-sr-only"; }
     static get encapsulation() { return "shadow"; }

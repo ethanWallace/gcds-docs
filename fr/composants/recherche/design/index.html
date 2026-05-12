@@ -1543,6 +1543,12 @@
       
       
     
+      
+      
+    
+      
+      
+    
   
 
   
@@ -1578,7 +1584,7 @@
   </gcds-breadcrumbs>
 
   
-<gcds-search search-id="search" slot="search" placeholder="Système de design GC" action="/fr/recherche">
+<gcds-search search-id="search" slot="search" placeholder="Système de design GC" action="/fr/recherche" data-placeholder-long="Système de design GC" data-placeholder-short="SDGC">
 </gcds-search>
 
 
@@ -1610,11 +1616,11 @@
 
 
 <gcds-side-nav label="Système de design GC" class="side-nav lg:position-sticky box-border overflow-x-visible align-self-start px-75">
-  <gcds-nav-link href="/fr">Accueil</gcds-nav-link>
+  <gcds-nav-link slot="home" href="/fr">Système de design GC</gcds-nav-link>
   <gcds-nav-link href="/fr/demarrer" >Démarrer</gcds-nav-link>
 
   
-  
+
   <gcds-nav-group
     menu-label="Modèles de page"
     open-trigger="Modèles de page"
@@ -1637,7 +1643,7 @@
 </gcds-nav-group>
 
   
-  
+
   <gcds-nav-group
     menu-label="Composants"
     open-trigger="Composants"
@@ -2648,7 +2654,7 @@
     <gcds-nav-link href="/fr/styles">Aperçu des styles</gcds-nav-link>
     <gcds-nav-link href="/fr/styles/unites-de-style" >Unités de style</gcds-nav-link>
     <gcds-nav-link href="/fr/styles/couleur" >Unités de style de couleur</gcds-nav-link>
-    <gcds-nav-link href="/fr/styles/espacement" >Unités de style d&#39;espacement</gcds-nav-link>
+    <gcds-nav-link href="/fr/styles/espacement" >Unités de style d’espacement</gcds-nav-link>
     <gcds-nav-link href="/fr/styles/typographie" >Unités de style typographie</gcds-nav-link>
   </gcds-nav-group>
 
@@ -2666,9 +2672,9 @@
     
   
   >
-    <gcds-nav-link href="/fr/contactez" >Contactez-nous</gcds-nav-link>
-    <gcds-nav-link href="/fr/simpliquer" >Impliquez-vous</gcds-nav-link>
-    <gcds-nav-link href="/fr/inscrivez-vous-a-une-demonstration" >Trouvez une démo</gcds-nav-link>
+    <gcds-nav-link href="/fr/contactez" >Nous contacter</gcds-nav-link>
+    <gcds-nav-link href="/fr/simpliquer" >S’impliquer</gcds-nav-link>
+    <gcds-nav-link href="/fr/inscrivez-vous-a-une-demonstration" >Trouver une démo</gcds-nav-link>
   </gcds-nav-group>
 </gcds-side-nav>
         <main id="mc" class="general-layout" data-pagefind-body>
@@ -2764,13 +2770,17 @@ Aperçu du composant de recherche
   <ul class="list-disc">
     <li>Utilisez l’indexation par défaut de la recherche du GC.</li>
     <li>Définissez l’indexation pour tout le contenu de Canada.ca ou à l’échelle d’un organisme ou d’un programme.</li>
-    <li>Pour la recherche à l’échelle du site Canada.ca, maintenez le texte de l’espace réservé par défaut « <span lang="en">Search Canada.ca</span> » en anglais et « Rechercher dans Canada.ca » en français.</li>
-    <li>Pour la recherche à l’échelle d’un organisme, d’un programme ou d’un produit, utilisez le texte de l’espace réservé suivant :
-      <ul class="ms-300">
-        <li>« <span lang="en">Search [institution/program/product] </span>» en anglais</li>
-        <li>« Rechercher dans [institution/programme/produit] » en français</li>
-      </ul>
-    </li>
+  </ul>
+  <gcds-text>Pour la recherche à l’échelle du site Canada.ca</gcds-text>
+  <ul class="list-disc">
+    <li>Maintenez le texte de l’espace réservé par défaut « <span lang="en">Search Canada.ca</span> » en anglais.</li>
+    <li>Maintenez le texte de l’espace réservé par défaut « Rechercher dans Canada.ca » en français.</li>
+  </ul>
+  <gcds-text>Pour la recherche à l’échelle d’un organisme, d’un programme ou d’un produit utilisez le texte de l’espace réservé suivant :</gcds-text>
+  <ul class="list-disc">
+    <li>Maintenez le texte de l’espace réservé « <span lang="en">Search [institution/program/product] </span>» en anglais.</li>
+    <li>Maintenez le texte de l’espace réservé« Rechercher dans [institution/programme/produit] » en français.</li>
+    <li>Évitez les acronymes, sauf s'ils sont nécessaires pour raccourcir le texte à des fins d'accessibilité visuelle.</li>
   </ul>
   <gcds-text margin-bottom="0"><strong>Remarque :</strong> Par exception, les pages destinées uniquement à un public de la fonction publique peuvent appliquer une indexation de recherche personnalisée dans certains contextes précis.</gcds-text>
 </gcds-details>
@@ -2815,7 +2825,7 @@ Aperçu du composant de recherche
 
 
           <gcds-date-modified class="mb-300">
-            2026-03-05
+            2026-05-11
           </gcds-date-modified>
         </main>
       </gcds-grid>

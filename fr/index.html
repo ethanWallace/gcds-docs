@@ -1543,6 +1543,12 @@
       
       
     
+      
+      
+    
+      
+      
+    
   
 
   
@@ -1563,7 +1569,7 @@
   </gcds-breadcrumbs>
 
   
-<gcds-search search-id="search" slot="search" placeholder="Système de design GC" action="/fr/recherche">
+<gcds-search search-id="search" slot="search" placeholder="Système de design GC" action="/fr/recherche" data-placeholder-long="Système de design GC" data-placeholder-short="SDGC">
 </gcds-search>
 
 
@@ -1595,11 +1601,11 @@
 
 
 <gcds-side-nav label="Système de design GC" class="side-nav lg:position-sticky box-border overflow-x-visible align-self-start px-75">
-  <gcds-nav-link href="/fr">Accueil</gcds-nav-link>
+  <gcds-nav-link slot="home" href="/fr">Système de design GC</gcds-nav-link>
   <gcds-nav-link href="/fr/demarrer" >Démarrer</gcds-nav-link>
 
   
-  
+
   <gcds-nav-group
     menu-label="Modèles de page"
     open-trigger="Modèles de page"
@@ -1622,7 +1628,7 @@
 </gcds-nav-group>
 
   
-  
+
   <gcds-nav-group
     menu-label="Composants"
     open-trigger="Composants"
@@ -2633,7 +2639,7 @@
     <gcds-nav-link href="/fr/styles">Aperçu des styles</gcds-nav-link>
     <gcds-nav-link href="/fr/styles/unites-de-style" >Unités de style</gcds-nav-link>
     <gcds-nav-link href="/fr/styles/couleur" >Unités de style de couleur</gcds-nav-link>
-    <gcds-nav-link href="/fr/styles/espacement" >Unités de style d&#39;espacement</gcds-nav-link>
+    <gcds-nav-link href="/fr/styles/espacement" >Unités de style d’espacement</gcds-nav-link>
     <gcds-nav-link href="/fr/styles/typographie" >Unités de style typographie</gcds-nav-link>
   </gcds-nav-group>
 
@@ -2651,9 +2657,9 @@
     
   
   >
-    <gcds-nav-link href="/fr/contactez" >Contactez-nous</gcds-nav-link>
-    <gcds-nav-link href="/fr/simpliquer" >Impliquez-vous</gcds-nav-link>
-    <gcds-nav-link href="/fr/inscrivez-vous-a-une-demonstration" >Trouvez une démo</gcds-nav-link>
+    <gcds-nav-link href="/fr/contactez" >Nous contacter</gcds-nav-link>
+    <gcds-nav-link href="/fr/simpliquer" >S’impliquer</gcds-nav-link>
+    <gcds-nav-link href="/fr/inscrivez-vous-a-une-demonstration" >Trouver une démo</gcds-nav-link>
   </gcds-nav-group>
 </gcds-side-nav>
         <main id="mc" class="general-layout" data-pagefind-body>
@@ -2663,17 +2669,17 @@
   Démarrer
 </gcds-button>
 <gcds-button type="link" href="/fr/inscrivez-vous-a-une-demonstration" button-role="secondary">
-  Participez à une démo
+  Participer à une démo
 </gcds-button>
 <section class="bt-sm mt-500">
 <h2 id="choisissez-systeme-de-design-gc">Choisissez Système de design GC</h2>
 <p>Système de design GC aide les fonctionnaires à concevoir des sites Web et des produits du gouvernement du Canada. Créez plus rapidement, sans compromettre ni l’identité de marque, ni l’accessibilité, ni le bilinguisme. Trouvez du code prêt pour la production, des ressources de design et de la documentation en un seul et même endroit.</p>
 <h3 id="pour-en-savoir-plus">Pour en savoir plus</h3>
-<p>Renseignez-vous <gcds-link href="/fr/a-propos">sur le SNC</gcds-link>, nos <gcds-link href="/fr/accessibilite/">tests réguliers en matière d’accessibilité</gcds-link> et sur les manières dont vous pouvez améliorer l’accessibilité de vos produits et sites Web.</p>
+<p>Renseignez-vous <gcds-link href="/fr/a-propos">à propos de Système de design GC</gcds-link>, <gcds-link href="/fr/sdgc-en-usage">des équipes qui l’utilisent</gcds-link>, de nos <gcds-link href="/fr/accessibilite/">tests réguliers en matière d’accessibilité</gcds-link> et des façons d’améliorer l’accessibilité de vos produits et sites Web.</p>
 <h3 id="simpliquer">S’impliquer</h3>
 <p>Nous adaptons continuellement notre produit pour mieux répondre à vos besoins et vous offrir plus d’options.</p>
 <gcds-button type="link" href="/fr/simpliquer" button-role="secondary">
-  S’impliquer 
+  S’impliquer
 </gcds-button>
 </section>
 <section class="bt-sm mt-500">
@@ -2716,7 +2722,7 @@
 <p><strong>Dernières versions</strong> :</p>
 <ul class="list-disc mb-300"><li>Nouveau : Paquets stables v1.0.0 pour les <gcds-link href="https://github.com/cds-snc/gcds-components" external>composants</gcds-link> et les <gcds-link href="https://github.com/cds-snc/gcds-tokens" external>unités de style</gcds-link></li>
 <li>Mise à jour : Échelle de couleurs élargie avec de nouvelles <gcds-link href="/fr/styles/couleur">unités de style de base</gcds-link></li>
-<li>Nouveau : <gcds-link href="https://www.figma.com/community/file/1602785216717583156/gcds-token-library" external>Bibliothèque d’unités de style</gcds-link> dans Figma</li>
+<li>Nouveau : <gcds-link href="https://www.figma.com/community/file/1602785216717583156/gcds-token-library" external>Bibliothèque Figma</gcds-link> distincte pour les unités de style</li>
 </ul>
 </section>
 <section class="bt-sm mt-500">
@@ -2725,15 +2731,15 @@
 </section>
 <section class="bt-sm mt-500">
 <h2 id="contacteznous">Contactez-nous</h2>
-<p>Si vous avez des questions, si vous voulez vous impliquer ou si <gcds-link href="/fr/simpliquer">vous voulez</gcds-link> vous inscrire à notre liste de diffusion, n’hésitez pas à communiquer avec nous.</p>
+<p>Si vous avez des questions, si vous voulez <gcds-link href="/fr/simpliquer">vous impliquer</gcds-link> ou si vous voulez vous inscrire à notre liste de diffusion, n’hésitez pas à communiquer avec nous.</p>
 <gcds-button type="link" href="/fr/contactez" button-role="secondary">
-  Contactez-nous
+  Nous contacter
 </gcds-button>
 </section>
 
 
           <gcds-date-modified class="mb-300">
-            2026-03-05
+            2026-05-11
           </gcds-date-modified>
         </main>
       </gcds-grid>

@@ -5,6 +5,7 @@ import I18N from "./i18n/i18n";
 /**
  * A side navigation is a vertical list of page links on the left side of the screen.
  *
+ * @slot home - Slot for the home link or site title.
  * @slot default - Slot for the navigation groups and navigation links.
  */
 export class GcdsSideNav {
@@ -42,7 +43,9 @@ export class GcdsSideNav {
         }
     }
     async focusOutListener(e) {
-        if (e.relatedTarget !== null && e.relatedTarget !== this.el && !this.el.contains(e.relatedTarget)) {
+        if (e.relatedTarget !== null &&
+            e.relatedTarget !== this.el &&
+            !this.el.contains(e.relatedTarget)) {
             if (this.navSize == 'mobile') {
                 if (this.mobile.hasAttribute('open')) {
                     await this.mobile.toggleNav();
@@ -51,10 +54,13 @@ export class GcdsSideNav {
         }
     }
     async keyDownListener(e) {
+        var _a;
         if (this.el.contains(document.activeElement)) {
             handleKeyDownNav(e, this.el, this.navItems);
         }
-        if (this.navSize == 'mobile' && this.mobile.open == true && e.key == 'Escape') {
+        if (this.navSize === 'mobile' &&
+            ((_a = this.mobile) === null || _a === void 0 ? void 0 : _a.open) &&
+            e.key === 'Escape') {
             // Close mobile nav on ESC
             await this.mobile.toggleNav();
         }
@@ -117,7 +123,7 @@ export class GcdsSideNav {
     }
     render() {
         const { label, lang } = this;
-        return (h(Host, { key: '8221fa7bc5a7504bc9373dcd791a955ccf7595a8' }, h("nav", { key: 'd03d74cdcf03e78fdfe4ea8f782d44eb0a4c3229', "aria-label": `${label}${I18N[lang].navLabel}`, class: "gcds-side-nav" }, h("h2", { key: '296c2207b09b4ac48f2d753e03ef1f3f7bbb9443', class: "gcds-side-nav__heading" }, label), h("ul", { key: '487bf04ce21f73a22dd12582257463c670025b64' }, h("gcds-nav-group", { key: 'd22d5cad3feca464205e5449175c532ee62756a7', menuLabel: I18N[lang].menuLabel, closeTrigger: I18N[lang].closeTrigger, openTrigger: I18N[lang].menuLabel, class: "gcds-mobile-nav", ref: element => (this.mobile = element), lang: lang }, h("slot", { key: '25f76853bdba7ac0b60c871dc29238d2b9321278' }))))));
+        return (h(Host, { key: 'f442cae66ab5b6c7b82299647ffa270a88cfd3bf' }, h("nav", { key: '0e8fa9b596ac27b198851f5b6f7d56e277ac82e8', "aria-label": `${label}${I18N[lang].navLabel}`, class: "gcds-side-nav" }, h("ul", { key: '2ced3163911bf5007a03a83e3b6c03e13e74a2ba' }, h("gcds-nav-group", { key: '412ce1205e32cc0c01b381134a21afbdb0ab5d14', menuLabel: I18N[lang].menuLabel, closeTrigger: I18N[lang].closeTrigger, openTrigger: I18N[lang].menuLabel, class: "gcds-mobile-nav", ref: element => (this.mobile = element), lang: lang }, h("slot", { key: '59405925a392b28a8397ba62018d805a990cca31', name: "home" }, h("li", { key: '04a61dced77e6f0cbd09a102606e69f0bb1f0ed8', class: "gcds-side-nav__heading" }, label)), h("slot", { key: 'efce195284a2be15e5f1e19c8e20d3fd02515980' }))))));
     }
     static get is() { return "gcds-side-nav"; }
     static get encapsulation() { return "shadow"; }

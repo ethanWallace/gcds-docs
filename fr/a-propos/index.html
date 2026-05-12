@@ -1543,6 +1543,12 @@
       
       
     
+      
+      
+    
+      
+      
+    
   
 
   
@@ -1572,7 +1578,7 @@
   </gcds-breadcrumbs>
 
   
-<gcds-search search-id="search" slot="search" placeholder="Système de design GC" action="/fr/recherche">
+<gcds-search search-id="search" slot="search" placeholder="Système de design GC" action="/fr/recherche" data-placeholder-long="Système de design GC" data-placeholder-short="SDGC">
 </gcds-search>
 
 
@@ -1604,11 +1610,11 @@
 
 
 <gcds-side-nav label="Système de design GC" class="side-nav lg:position-sticky box-border overflow-x-visible align-self-start px-75">
-  <gcds-nav-link href="/fr">Accueil</gcds-nav-link>
+  <gcds-nav-link slot="home" href="/fr">Système de design GC</gcds-nav-link>
   <gcds-nav-link href="/fr/demarrer" >Démarrer</gcds-nav-link>
 
   
-  
+
   <gcds-nav-group
     menu-label="Modèles de page"
     open-trigger="Modèles de page"
@@ -1631,7 +1637,7 @@
 </gcds-nav-group>
 
   
-  
+
   <gcds-nav-group
     menu-label="Composants"
     open-trigger="Composants"
@@ -2642,7 +2648,7 @@
     <gcds-nav-link href="/fr/styles">Aperçu des styles</gcds-nav-link>
     <gcds-nav-link href="/fr/styles/unites-de-style" >Unités de style</gcds-nav-link>
     <gcds-nav-link href="/fr/styles/couleur" >Unités de style de couleur</gcds-nav-link>
-    <gcds-nav-link href="/fr/styles/espacement" >Unités de style d&#39;espacement</gcds-nav-link>
+    <gcds-nav-link href="/fr/styles/espacement" >Unités de style d’espacement</gcds-nav-link>
     <gcds-nav-link href="/fr/styles/typographie" >Unités de style typographie</gcds-nav-link>
   </gcds-nav-group>
 
@@ -2660,9 +2666,9 @@
     
   
   >
-    <gcds-nav-link href="/fr/contactez" >Contactez-nous</gcds-nav-link>
-    <gcds-nav-link href="/fr/simpliquer" >Impliquez-vous</gcds-nav-link>
-    <gcds-nav-link href="/fr/inscrivez-vous-a-une-demonstration" >Trouvez une démo</gcds-nav-link>
+    <gcds-nav-link href="/fr/contactez" >Nous contacter</gcds-nav-link>
+    <gcds-nav-link href="/fr/simpliquer" >S’impliquer</gcds-nav-link>
+    <gcds-nav-link href="/fr/inscrivez-vous-a-une-demonstration" >Trouver une démo</gcds-nav-link>
   </gcds-nav-group>
 </gcds-side-nav>
         <main id="mc" class="general-layout" data-pagefind-body>
@@ -2674,9 +2680,11 @@
 <h2 id="la-place-de-systeme-de-design-gc-parmi-les-autres-systemes-de-conception">La place de Système de design GC parmi les autres systèmes de conception</h2>
 <p>Système de design GC s’inscrit à côté des autres systèmes de conception traditionnellement utilisés au gouvernement. Les équipes peuvent continuer à utiliser les systèmes existants pendant que nous envisageons une approche plus unifiée. Elles peuvent aussi créer des systèmes de design locaux à partir de Système de design GC pour répondre à leurs besoins, ce qui permet de maintenir une apparence et une expérience uniformes.</p>
 <p>Nous partageons ouvertement notre <gcds-link href="/fr/feuille-de-route">feuille de route</gcds-link> pour vous aider à planifier l’adoption de Système de design GC en fonction de vos propres échéanciers et besoins.</p>
-<h2 id="canaux-de-collaboration-et-de-soutien">Canaux de collaboration et de soutien</h2>
-<p>Consultez notre page <a href="/fr/simpliquer">s'impliquer</a> pour savoir sur quoi nous travaillons et comment vous pouvez y contribuer.</p>
-<p>Visitez notre <gcds-link external href="https://github.com/cds-snc/gcds-components/issues/new/choose">référentiel GitHub</gcds-link> pour signaler un problème ou faire une suggestion.</p>
+<h2 id="communaute-et-soutien">Communauté et soutien</h2>
+<ul class="list-disc mb-300"><li>Consultez notre page <a href="/fr/simpliquer">s'impliquer</a> pour savoir sur quoi nous travaillons et comment vous pouvez y contribuer.</li>
+<li>Visitez notre <gcds-link external href="https://github.com/cds-snc/gcds-components/issues/new/choose">référentiel GitHub</gcds-link> pour signaler un problème ou faire une suggestion.</li>
+<li>Découvrez comment certaines <gcds-link href="/fr/sdgc-en-usage">équipes utilisent Système de design GC</gcds-link> à travers le gouvernement.</li>
+</ul>
 <h2 id="des-resultats-plus-rapides-avec-systeme-de-design-gc">Des résultats plus rapides avec Système de design GC</h2>
 <p>Système de design GC vous aide à livrer plus rapidement vos produits dans l'infrastructure de votre choix. Cet outil vous permet de réduire le volume de tâches manuelles et répétitives et de répondre aux exigences du gouvernement du Canada en matière de prestation de services numérique, d'accessibilité et de communication. Utilisez Système de design GC pour offrir des expériences :</p>
 <ul class="list-disc mb-300"><li>Reconnaissables;</li>
@@ -2703,7 +2711,7 @@
 
 
           <gcds-date-modified class="mb-300">
-            2026-03-05
+            2026-05-12
           </gcds-date-modified>
         </main>
       </gcds-grid>
