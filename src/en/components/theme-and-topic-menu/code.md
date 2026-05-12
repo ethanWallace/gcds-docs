@@ -40,10 +40,10 @@ Add the theme and topic menu directly to the <gcds-link href="{{ links.header }}
 
 The `home` attribute sets the homepage styling.
 
-
+{% examplesPreview %}
 <gcds-topic-menu home>
 </gcds-topic-menu>
-
+{% endexamplesPreview %}
 
 <!-- ----- Code builder ----- -->
 
