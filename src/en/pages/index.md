@@ -19,6 +19,9 @@ An official, production-ready design system for the Government of Canada. Build 
   Attend a demo
 </gcds-button>
 
+<gcds-topic-menu home>
+</gcds-topic-menu>
+
 <section class="bt-sm mt-500">
 
 ## Choose GC Design System
