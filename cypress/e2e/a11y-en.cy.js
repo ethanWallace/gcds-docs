@@ -42,7 +42,7 @@ describe(`A11Y test English documentation site`, () => {
     it(`${page.name}: ${page.url}`, () => {
       cy.visit(page.url, { timeout: 30000 });
       cy.get('gcds-header.hydrated').then(() => {
-        cy.wait(1000);
+        cy.wait(5000);
         cy.injectAxe();
         cy.checkA11y(null, null, cy.terminalLog);
         // skip theme and topic menu since links are pulled from external source
