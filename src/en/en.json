@@ -3,6 +3,18 @@
   "links": {
     "home": "/en",
 
-    "topicmenu": "/en/components/theme-and-topic-menu"
+    "topicmenu": "/en/components/theme-and-topic-menu",
+
+    "pageTemplates": "/en/page-templates",
+    "pageTemplatesBasic": "/en/page-templates/basic",
+    "pageTemplatesBasicPreview": "/en/page-templates/basic/preview",
+    "pageTemplatesBasicCode": "/en/page-templates/basic/code",
+    "pageTemplatesBasicGithubLink": "https://github.com/cds-snc/gcds-examples/blob/main/templates/english/basic/basic-page-template.html",
+    "pageTemplatesBasicGithubRaw": "https://raw.githubusercontent.com/cds-snc/gcds-examples/refs/heads/main/templates/english/basic/basic-page-template.html",
+    "pageTemplatesBasicFigma": "https://www.figma.com/design/mh2maMG2NBtk41k1O1UGHV/GC-Design-System?node-id=38694-2062&t=xHo7cPSnhM2N9sx0-0",
+    "pageTemplatesBasicExtOTPPreview": "/en/page-templates/basic/preview-on-this-page",
+    "pageTemplatesBasicExtOTPCode": "/en/page-templates/basic/code-on-this-page",
+    "pageTemplatesBasicExtOTPGithubLink": "https://github.com/cds-snc/gcds-examples/blob/main/templates/english/basic/extensions/basic-page-template-table-of-contents.html",
+    "pageTemplatesBasicExtOTPGithubRaw": "https://raw.githubusercontent.com/cds-snc/gcds-examples/refs/heads/main/templates/english/basic/extensions/basic-page-template-table-of-contents.html"
   }
 }
