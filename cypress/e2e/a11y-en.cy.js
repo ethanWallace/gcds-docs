@@ -42,18 +42,13 @@ describe(`A11Y test English documentation site`, () => {
     it(`${page.name}: ${page.url}`, () => {
       cy.visit(page.url, { timeout: 30000 });
       cy.get('gcds-header.hydrated').then(() => {
+        cy.wait(200);
         cy.injectAxe();
         cy.checkA11y(null, null, cy.terminalLog);
         // skip theme and topic menu since links are pulled from external source
         if (!page.url.includes('theme-and-topic-menu')) {
           cy.scanDeadLinks();
         }
-        cy.get('body')
-          .invoke('html')
-          .then(html => {
-            cy.log(html);
-            console.log(html);
-          });
       });
     });
   }
