@@ -43,6 +43,7 @@ describe(`A11Y test English documentation site`, () => {
     cy.window().then(win => {
       return win.customElements.whenDefined('gcds-topic-menu');
     });
+    cy.wait(5000);
     cy.get('gcds-topic-menu.hydrated').then(() => {
       cy.wait(5000);
       cy.injectAxe();
