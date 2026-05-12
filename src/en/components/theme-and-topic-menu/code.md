@@ -11,6 +11,8 @@ date: 'git Last Modified'
 - [On this page](#on-this-page)
 - [Coding and accessibility for theme and topic menu](#coding-and-accessibility-for-theme-and-topic-menu)
   - [Use the theme and topic menu with other components](#use-the-theme-and-topic-menu-with-other-components)
+  - [In this section](#in-this-section)
+    - [`home`](#home)
 
 ## Coding and accessibility for theme and topic menu
 
@@ -20,7 +22,30 @@ Add the theme and topic menu directly to the <gcds-link href="{{ links.header }}
 
 **Note**: If applying the theme and topic menu to the front page of Canada.ca, use the `home` attribute to render with the correct styling.
 
+<!-- ----- Examples ----- -->
 
+{% examplesContent "en", "examples" %}
+{% endexamplesContent %}
+
+### In this section
+
+- [Optional attributes](#section-optional)
+
+<!-- Optional section -->
+
+{% examplesContent "en", "optional" %}
+{% endexamplesContent %}
+
+#### `home`
+
+The `home` attribute sets the homepage styling.
+
+
+<gcds-topic-menu home>
+</gcds-topic-menu>
+
+
+<!-- ----- Code builder ----- -->
 
 {% include "partials/getcode.njk" %}
 
