@@ -6,4 +6,7 @@ eleventyExcludeFromCollections: true
 templateEngineOverride: njk
 ---
 
+<main>
+<h1>Test</h1>
 <gcds-topic-menu></gcds-topic-menu>
+</main>
