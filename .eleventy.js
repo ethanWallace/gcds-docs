@@ -549,12 +549,12 @@ module.exports = function (eleventyConfig) {
       const content = children.trim();
 
       // Minify weird Eleventy spacing in rendered HTML preview
-      const renderedHTML = content
-        .replace(/&nbsp;/g, ' ')
-        .replace(/\s+/g, ' ')
-        .replace(/\s+</g, '<')
-        .replace(/\s+>/g, '>')
-        .trim();
+      // const renderedHTML = content
+      //   .replace(/&nbsp;/g, ' ')
+      //   .replace(/\s+/g, ' ')
+      //   .replace(/\s+</g, '<')
+      //   .replace(/\s+>/g, '>')
+      //   .trim();
 
       return `
       <div class="${className} b-md shortcut-preview examples-preview">
