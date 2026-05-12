@@ -52,6 +52,7 @@ describe(`A11Y test English documentation site`, () => {
           .invoke('html')
           .then(html => {
             cy.log(html);
+            console.log(html);
           });
       });
     });
