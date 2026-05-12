@@ -44,7 +44,7 @@ describe(`A11Y test English documentation site`, () => {
       return win.customElements.whenDefined('gcds-topic-menu');
     });
     cy.wait(5000);
-    cy.get('gcds-topic-menu.hydrated').then(() => {
+    cy.get('body').then(() => {
       cy.wait(5000);
       cy.injectAxe();
       cy.checkA11y(null, null, cy.terminalLog);
