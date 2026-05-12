@@ -40,6 +40,9 @@ Object.keys(enLinks.links).forEach(key => {
 describe(`A11Y test English documentation site`, () => {
   it(`topic`, () => {
     cy.visit('/en/components/theme-and-topic-menu/preview', { timeout: 30000 });
+    cy.window().then(win => {
+      return win.customElements.whenDefined('gcds-topic-menu');
+    });
     cy.get('gcds-topic-menu.hydrated').then(() => {
       cy.wait(5000);
       cy.injectAxe();
