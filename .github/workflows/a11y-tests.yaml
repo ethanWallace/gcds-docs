@@ -39,10 +39,6 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Install
-        working-directory: ./docs
-        run: npm ci
-
       - name: Cypress run
         uses: cypress-io/github-action@01e3b659a495b41649cdd0aa82e1d1624e26520b # v7.4.4
         env:
