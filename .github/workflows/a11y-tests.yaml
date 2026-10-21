@@ -44,6 +44,7 @@ jobs:
         run: npm ci && npm run build
 
       - name: Verify Astro preview
+        working-directory: ./docs
         run: |
           npm run preview:ci > /tmp/astro-preview.log 2>&1 &
           for i in {1..30}; do
