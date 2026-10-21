@@ -41,36 +41,17 @@ jobs:
 
       - name: Install
         working-directory: ./docs
-        run: npm ci && npm run build
+        run: npm ci
 
-      - name: Start Astro preview
-        working-directory: ./docs
-        run: |
-          npm run preview > /tmp/astro-preview.log 2>&1 &
-          echo $! > /tmp/astro-preview.pid
-
-      - name: Check Astro preview
-        run: |
-          for i in {1..30}; do
-            if curl --fail --silent --show-error \
-              http://127.0.0.1:4321/sitemap-index.xml; then
-              echo "Astro preview is reachable"
-              exit 0
-            fi
-            sleep 2
-          done
-
-          cat /tmp/astro-preview.log
-          exit 1
-
-      # - name: Cypress run
-      #   uses: cypress-io/github-action@f790eee7a50d9505912f50c2095510be7de06aa7 # v6.10.9
-      #   env:
-      #     DEBUG: '@cypress/github-action'
-      #   with:
-      #     working-directory: ./docs
-      #     start: npm run preview
-      #     wait-on: "http://localhost:4321/sitemap-index.xml"
-      #     # wait for 4 minutes for the server to respond
-      #     wait-on-timeout: 240
-      #     spec: ${{ matrix.test.spec }}
+      - name: Cypress run
+        uses: cypress-io/github-action@01e3b659a495b41649cdd0aa82e1d1624e26520b # v7.4.4
+        env:
+          DEBUG: '@cypress/github-action'
+        with:
+          working-directory: ./docs
+          build: npm run build
+          start: npm run preview
+          wait-on: "http://localhost:4321/sitemap-index.xml"
+          # wait for 4 minutes for the server to respond
+          wait-on-timeout: 240
+          spec: ${{ matrix.test.spec }}
