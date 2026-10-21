@@ -52,6 +52,5 @@ jobs:
           build: npm run build
           start: npm run preview
           wait-on: "http://localhost:4321/sitemap-index.xml"
-          # wait for 4 minutes for the server to respond
           wait-on-timeout: 240
           spec: ${{ matrix.test.spec }}
