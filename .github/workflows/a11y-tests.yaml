@@ -39,6 +39,23 @@ jobs:
         with:
           node-version: '22'
 
+      - name: build
+        working-directory: ./docs
+        run: npm ci && npm run build
+
+      - name: Verify Astro preview
+        run: |
+          npm run preview:ci > /tmp/astro-preview.log 2>&1 &
+          for i in {1..30}; do
+            if curl --fail --silent http://127.0.0.1:4321/sitemap-index.xml; then
+              echo "Astro preview is responding"
+              exit 0
+            fi
+            sleep 2
+          done
+          cat /tmp/astro-preview.log
+          exit 1
+
       - name: Cypress run
         uses: cypress-io/github-action@f790eee7a50d9505912f50c2095510be7de06aa7 # v6.10.9
         with:
