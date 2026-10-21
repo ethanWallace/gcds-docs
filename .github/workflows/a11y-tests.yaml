@@ -41,13 +41,12 @@ jobs:
 
       - name: Install
         working-directory: ./docs
-        run: npm ci
+        run: npm ci && npm run build
 
       - name: Cypress run
         uses: cypress-io/github-action@f790eee7a50d9505912f50c2095510be7de06aa7 # v6.10.9
         with:
           working-directory: ./docs
-          build: npm run build
           start: npm run preview:ci
           wait-on: "http://127.0.0.1:4321/sitemap-index.xml"
           # wait for 4 minutes for the server to respond
