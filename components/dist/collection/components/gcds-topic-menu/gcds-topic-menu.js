@@ -331,7 +331,7 @@ export class GcdsTopicMenu {
     }
     render() {
         const { home, lang } = this;
-        return (h(Host, { key: 'f57f3ad6fed21288c1dee157293a55838ed3f621' }, h("nav", { key: 'dca2b15071085e65059b7d885ca95187207c314a', class: "gcds-topic-menu", "aria-labelledby": "gcds-topic-menu__heading" }, h("gcds-sr-only", { key: 'aeec862fe3f79f7b6c6d6b6fc666081af9d13073', id: "gcds-topic-menu__heading", tag: "h2" }, I18N[lang].menuLabelFull), h("button", { key: '6a241941b31045146497c495a6f3055f1fde01e4', "aria-haspopup": "true", "aria-expanded": this.open.toString(), "aria-label": I18N[lang].buttonLabel, onClick: async () => await this.toggleNav(), ref: element => (this.menuButton = element), class: home && 'gcds-topic-menu--home' }, this.lang == 'en' ? (h(Fragment, null, h("gcds-sr-only", { tag: "span" }, I18N[lang].menuLabelHidden), I18N[lang].menuToggle)) : (h(Fragment, null, I18N[lang].menuToggle, h("gcds-sr-only", { tag: "span" }, I18N[lang].menuLabelHidden))), h("gcds-icon", { key: 'd58eaf62692b3cb1ea320432cd039abbd19161ed', name: "chevron-down", "margin-left": "100", size: "text-small" })), h("ul", { key: '9ea57afd155a5085be2dc684ef9da7caf08fdd23', role: "menu", "aria-orientation": "vertical", "data-top-menu": true, innerHTML: this.listItems, ref: element => (this.themeList = element) }))));
+        return (h(Host, { key: 'f57f3ad6fed21288c1dee157293a55838ed3f621' }, h("nav", { key: 'dca2b15071085e65059b7d885ca95187207c314a', class: "gcds-topic-menu", "aria-labelledby": "gcds-topic-menu__heading" }, h("gcds-sr-only", { key: 'aeec862fe3f79f7b6c6d6b6fc666081af9d13073', id: "gcds-topic-menu__heading", tag: "h2" }, I18N[lang].menuLabelFull), h("p", { key: '2e22bbe8d65a2ee5a4a61f31eaef95baea0ccee3', id: "gcds-topic-menu-desc", hidden: true }, I18N[lang].buttonLabel), h("button", { key: '293680fd663e42f65ae2844acebc1b68290b1c56', "aria-haspopup": "true", "aria-expanded": this.open.toString(), "aria-describedby": 'gcds-topic-menu-desc', onClick: async () => await this.toggleNav(), ref: element => (this.menuButton = element), class: home && 'gcds-topic-menu--home' }, this.lang == 'en' ? (h(Fragment, null, h("gcds-sr-only", { tag: "span" }, I18N[lang].menuLabelHidden), I18N[lang].menuToggle)) : (h(Fragment, null, I18N[lang].menuToggle, h("gcds-sr-only", { tag: "span" }, I18N[lang].menuLabelHidden))), h("gcds-icon", { key: '107b59d320ba4123c51474c45440a825bd433847', name: "chevron-down", "margin-left": "100", size: "text-small" })), h("ul", { key: '2fc64b82ca3ad4a57f10467d5532471d6000f858', role: "menu", "aria-orientation": "vertical", "data-top-menu": true, innerHTML: this.listItems, ref: element => (this.themeList = element) }))));
     }
     static get is() { return "gcds-topic-menu"; }
     static get encapsulation() { return "shadow"; }
@@ -349,7 +349,6 @@ export class GcdsTopicMenu {
         return {
             "home": {
                 "type": "boolean",
-                "attribute": "home",
                 "mutable": false,
                 "complexType": {
                     "original": "boolean",
@@ -365,6 +364,7 @@ export class GcdsTopicMenu {
                 "getter": false,
                 "setter": false,
                 "reflect": false,
+                "attribute": "home",
                 "defaultValue": "false"
             }
         };
@@ -489,4 +489,3 @@ export class GcdsTopicMenu {
             }];
     }
 }
-//# sourceMappingURL=gcds-topic-menu.js.map

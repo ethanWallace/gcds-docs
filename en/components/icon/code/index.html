@@ -12,7 +12,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Icon - GC Design System</title>
+    <title>Icon - Code - GC Design System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- GCDS CSS Shortcuts -->
@@ -27,6 +27,7 @@
     <script src="/gcds-docs/scripts/code-copy.js"></script>
     <script src="/gcds-docs/scripts/component-preview.js"></script>
     <script src="/gcds-docs/scripts/general.js"></script>
+    
     <link rel="icon" type="image/x-icon" sizes="96x96" href="/gcds-docs/favicon.ico">
 
     <!-- GC Design System  Components-->
@@ -761,15 +762,21 @@
     
       
       
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
 
         
 
-      
-    
-      
-      
-    
-      
       
     
       
@@ -1589,7 +1596,6 @@
 
 
 </gcds-header>
-
     <div class="content-wrapper">
       <gcds-grid columns="minmax(0, 1fr)" columns-desktop="320px minmax(0, 1fr)" tag="div" container="xl" alignment="center" class="xl:px-0 sm:px-600 px-225 general-layout">
         
@@ -1655,6 +1661,15 @@
     >
       Components overview
     </gcds-nav-link>
+  
+    <gcds-nav-link
+      href="/gcds-docs/en/components/alert/"
+      
+    >
+      Alert
+    </gcds-nav-link>
+  
+
   
     <gcds-nav-link
       href="/gcds-docs/en/components/breadcrumbs/"
@@ -1913,6 +1928,15 @@
       
     >
       Stepper
+    </gcds-nav-link>
+  
+
+  
+    <gcds-nav-link
+      href="/gcds-docs/en/components/table/"
+      
+    >
+      Table
     </gcds-nav-link>
   
 
@@ -2746,12 +2770,27 @@ Icon component preview
     </nav>
   
 
-  <h2 id="build-an-icon">Build an icon</h2>
-<p>Use an icon to emphasize an action or idea.</p>
+  <h2 id="on-this-page">On this page</h2>
+<ul class="list-disc mb-300"><li><a href="#coding-and-accessibility-for-icons">Coding and accessibility for icons</a></li>
+<li><a href="#section-examples">Examples</a></li>
+<li><a href="#code-builder">Code builder</a></li>
+</ul>
 <h2 id="coding-and-accessibility-for-icons">Coding and accessibility for icons</h2>
 <h3 id="select-a-relevant-icon">Select a relevant icon</h3>
 <p>Render an icon by changing the <code>name</code> attribute to a corresponding icon name.</p>
 <gcds-grid class="bg-light px-300 md:px-500 py-500 md:py-800 b-radius-lg" columns-desktop="repeat(4, 1fr)" columns-tablet="repeat(3, 1fr)" columns="1fr 1fr" tag="ul" gap="300" gap-tablet="450">
+  <li class="list-none text-center">
+    <gcds-icon size="h2" name="arrow-up" label="Arrow pointing up."></gcds-icon>
+    <p class="mb-0"><code>arrow-up</code></p>
+  </li>
+  <li class="list-none text-center">
+    <gcds-icon size="h2" name="arrow-down" label="Arrow pointing down."></gcds-icon>
+    <p class="mb-0"><code>arrow-down</code></p>
+  </li>
+  <li class="list-none text-center">
+    <gcds-icon size="h2" name="arrow-up-down" label="An arrow pointing up beside an arrow pointing down."></gcds-icon>
+    <p class="mb-0"><code>arrow-up-down</code></p>
+  </li>
   <li class="list-none text-center">
     <gcds-icon name="info-circle" size="h2" label="A filled-in circle with the letter “i” in the centre."></gcds-icon>
     <p class="mb-0"><code>info-circle</code></p>
@@ -2769,19 +2808,19 @@ Icon component preview
     <p class="mb-0"><code>checkmark-circle</code></p>
   </li>
   <li class="list-none text-center">
-    <gcds-icon name="chevron-left" size="h2" label="An arrow pointing left."></gcds-icon>
+    <gcds-icon name="chevron-left" size="h2" label="A chevron pointing left."></gcds-icon>
     <p class="mb-0"><code>chevron-left</code></p>
   </li>
   <li class="list-none text-center">
-    <gcds-icon name="chevron-right" size="h2" label="An arrow pointing right."></gcds-icon>
+    <gcds-icon name="chevron-right" size="h2" label="A chevron pointing right."></gcds-icon>
     <p class="mb-0"><code>chevron-right</code></p>
   </li>
   <li class="list-none text-center">
-    <gcds-icon name="chevron-up" size="h2" label="An arrow pointing up."></gcds-icon>
+    <gcds-icon name="chevron-up" size="h2" label="A chevron pointing up."></gcds-icon>
     <p class="mb-0"><code>chevron-up</code></p>
   </li>
   <li class="list-none text-center">
-    <gcds-icon name="chevron-down" size="h2" label="An arrow pointing down."></gcds-icon>
+    <gcds-icon name="chevron-down" size="h2" label="A chevron pointing down."></gcds-icon>
     <p class="mb-0"><code>chevron-down</code></p>
   </li>
   <li class="list-none text-center">
@@ -2801,12 +2840,24 @@ Icon component preview
     <p class="mb-0"><code>external</code></p>
   </li>
   <li class="list-none text-center">
+    <gcds-icon size="h2" name="filter" label="A funnel"></gcds-icon>
+    <p class="mb-0"><code>filter</code></p>
+  </li>
+  <li class="list-none text-center">
     <gcds-icon name="phone" size="h2" label="A telephone."></gcds-icon>
     <p class="mb-0"><code>phone</code></p>
   </li>
   <li class="list-none text-center">
     <gcds-icon name="search" size="h2" label="A magnifying glass."></gcds-icon>
     <p class="mb-0"><code>search</code></p>
+  </li>
+  <li class="list-none text-center">
+    <gcds-icon size="h2" name="sort" label="Four horizontal lines of different length."></gcds-icon>
+    <p class="mb-0"><code>sort</code></p>
+  </li>
+  <li class="list-none text-center">
+    <gcds-icon size="h2" name="tune" label="Three horizontal adjustment sliders."></gcds-icon>
+    <p class="mb-0"><code>tune</code></p>
   </li>
 </gcds-grid>
 <h3 id="specify-the-sizing-scale">Specify the sizing scale</h3>
@@ -2820,7 +2871,209 @@ Icon component preview
 <ul class="list-disc mb-300"><li>Use the label property for an icon with no accompanying text.</li>
 <li>You don’t need to use the label property if an icon is decorative.</li>
 </ul>
-<h3 id="get-your-code">Get your code</h3>
+<!-- ----- Examples ----- -->
+<p><div>
+<gcds-heading id="section-examples" tag="h2">
+Examples
+</gcds-heading>
+<gcds-text>Explore the different ways you can configure the component. Each example shows a working implementation and ready-to-copy code.</gcds-text>
+</div></p>
+<h3 id="in-this-section">In this section</h3>
+<ul class="list-disc mb-300"><li><a href="#section-essential">Essential attributes</a></li>
+<li><a href="#section-optional">Optional attributes</a></li>
+</ul>
+<!-- Required section -->
+<p><div>
+<gcds-heading id="section-essential" tag="h3">
+Essential attributes
+</gcds-heading>
+<gcds-text>These attributes are needed for the component to function correctly.</gcds-text>
+</div></p>
+<h4 id="name"><code>name</code></h4>
+<p>The <code>name</code> attribute defines the name of a specific icon.</p>
+<p><div class="b-md shortcut-preview">
+<iframe
+            class="preview-iframe"
+            title="Component preview"
+            sandbox="allow-scripts allow-same-origin allow-forms"
+            frameborder="0"
+            width="100%"
+            height="100"
+            srcdoc="
+        <!DOCTYPE html>
+        <html lang=&quot;en&quot; dir=&quot;ltr&quot;>
+          <head>
+            <meta charset=&quot;utf-8&quot;>
+            <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/gcds-css-shortcuts.min.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/components/dist/gcds/gcds.css&quot;>
+            <script type=&quot;module&quot; src=&quot;/components/dist/gcds/gcds.esm.js&quot;></script>
+          </head>
+          <body class=&quot; shortcut-preview examples-preview&quot;>
+            <div class=&quot;preview-demo p-300 d-grid gap-300&quot;>
+              <gcds-icon name=&quot;close&quot;></gcds-icon>
+            </div>
+            <script>
+              document.addEventListener('click', function(e) {const path = e.composedPath(); const link = path.find(el => el instanceof HTMLAnchorElement); if (link) {e.preventDefault();}});
+              document.addEventListener('DOMContentLoaded', () => {document.querySelectorAll('[autofocus]').forEach(el => el.autofocus = false);});
+            </script>
+          </body>
+        </html>
+      ">
+</iframe>
+<pre class=""><code class="language-html font-size-text-small">&lt;gcds-icon name=&quot;close&quot;&gt;&lt;/gcds-icon&gt;</code></pre>
+</div></p>
+<!-- Optional section -->
+<p><div>
+<gcds-heading id="section-optional" tag="h3">
+Optional attributes
+</gcds-heading>
+<gcds-text>These attributes allow you to customize or extend the component’s behaviour and presentation.</gcds-text>
+</div></p>
+<h4 id="label"><code>label</code></h4>
+<p>The <code>label</code> attribute defines the icon description for non-decorative icons.</p>
+<p><div class="b-md shortcut-preview">
+<iframe
+            class="preview-iframe"
+            title="Component preview"
+            sandbox="allow-scripts allow-same-origin allow-forms"
+            frameborder="0"
+            width="100%"
+            height="100"
+            srcdoc="
+        <!DOCTYPE html>
+        <html lang=&quot;en&quot; dir=&quot;ltr&quot;>
+          <head>
+            <meta charset=&quot;utf-8&quot;>
+            <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/gcds-css-shortcuts.min.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/components/dist/gcds/gcds.css&quot;>
+            <script type=&quot;module&quot; src=&quot;/components/dist/gcds/gcds.esm.js&quot;></script>
+          </head>
+          <body class=&quot; shortcut-preview examples-preview&quot;>
+            <div class=&quot;preview-demo p-300 d-grid gap-300&quot;>
+              <gcds-icon label=&quot;Clicking this icon will close the element.&quot; name=&quot;close&quot;></gcds-icon>
+            </div>
+            <script>
+              document.addEventListener('click', function(e) {const path = e.composedPath(); const link = path.find(el => el instanceof HTMLAnchorElement); if (link) {e.preventDefault();}});
+              document.addEventListener('DOMContentLoaded', () => {document.querySelectorAll('[autofocus]').forEach(el => el.autofocus = false);});
+            </script>
+          </body>
+        </html>
+      ">
+</iframe>
+<pre class=""><code class="language-html font-size-text-small">&lt;gcds-icon label=&quot;Clicking this icon will close the element.&quot; name=&quot;close&quot;&gt;
+&lt;/gcds-icon&gt;</code></pre>
+</div></p>
+<h4 id="marginleft"><code>margin-left</code></h4>
+<p>The <code>margin-left</code> attribute sets the margin to the left of the icon.</p>
+<p><div class="b-md shortcut-preview">
+<iframe
+            class="preview-iframe"
+            title="Component preview"
+            sandbox="allow-scripts allow-same-origin allow-forms"
+            frameborder="0"
+            width="100%"
+            height="100"
+            srcdoc="
+        <!DOCTYPE html>
+        <html lang=&quot;en&quot; dir=&quot;ltr&quot;>
+          <head>
+            <meta charset=&quot;utf-8&quot;>
+            <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/gcds-css-shortcuts.min.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/components/dist/gcds/gcds.css&quot;>
+            <script type=&quot;module&quot; src=&quot;/components/dist/gcds/gcds.esm.js&quot;></script>
+          </head>
+          <body class=&quot; shortcut-preview examples-preview&quot;>
+            <div class=&quot;preview-demo p-300 d-grid gap-300&quot;>
+              <gcds-icon name=&quot;close&quot; margin-left=&quot;50&quot;></gcds-icon>
+            </div>
+            <script>
+              document.addEventListener('click', function(e) {const path = e.composedPath(); const link = path.find(el => el instanceof HTMLAnchorElement); if (link) {e.preventDefault();}});
+              document.addEventListener('DOMContentLoaded', () => {document.querySelectorAll('[autofocus]').forEach(el => el.autofocus = false);});
+            </script>
+          </body>
+        </html>
+      ">
+</iframe>
+<pre class=""><code class="language-html font-size-text-small">&lt;gcds-icon name=&quot;close&quot; margin-left=&quot;50&quot;&gt;&lt;/gcds-icon&gt;</code></pre>
+</div></p>
+<h4 id="marginright"><code>margin-right</code></h4>
+<p>The <code>margin-right</code> attribute sets the margin to the right of the icon.</p>
+<p><div class="b-md shortcut-preview">
+<iframe
+            class="preview-iframe"
+            title="Component preview"
+            sandbox="allow-scripts allow-same-origin allow-forms"
+            frameborder="0"
+            width="100%"
+            height="100"
+            srcdoc="
+        <!DOCTYPE html>
+        <html lang=&quot;en&quot; dir=&quot;ltr&quot;>
+          <head>
+            <meta charset=&quot;utf-8&quot;>
+            <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/gcds-css-shortcuts.min.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/components/dist/gcds/gcds.css&quot;>
+            <script type=&quot;module&quot; src=&quot;/components/dist/gcds/gcds.esm.js&quot;></script>
+          </head>
+          <body class=&quot; shortcut-preview examples-preview&quot;>
+            <div class=&quot;preview-demo p-300 d-grid gap-300&quot;>
+              <gcds-icon name=&quot;close&quot; margin-right=&quot;50&quot;></gcds-icon>
+            </div>
+            <script>
+              document.addEventListener('click', function(e) {const path = e.composedPath(); const link = path.find(el => el instanceof HTMLAnchorElement); if (link) {e.preventDefault();}});
+              document.addEventListener('DOMContentLoaded', () => {document.querySelectorAll('[autofocus]').forEach(el => el.autofocus = false);});
+            </script>
+          </body>
+        </html>
+      ">
+</iframe>
+<pre class=""><code class="language-html font-size-text-small">&lt;gcds-icon name=&quot;close&quot; margin-right=&quot;50&quot;&gt;&lt;/gcds-icon&gt;</code></pre>
+</div></p>
+<h4 id="size"><code>size</code></h4>
+<p>The <code>size</code> attribute sets the size of the icon.</p>
+<p><div class="b-md shortcut-preview">
+<iframe
+            class="preview-iframe"
+            title="Component preview"
+            sandbox="allow-scripts allow-same-origin allow-forms"
+            frameborder="0"
+            width="100%"
+            height="100"
+            srcdoc="
+        <!DOCTYPE html>
+        <html lang=&quot;en&quot; dir=&quot;ltr&quot;>
+          <head>
+            <meta charset=&quot;utf-8&quot;>
+            <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/gcds-css-shortcuts.min.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/components/dist/gcds/gcds.css&quot;>
+            <script type=&quot;module&quot; src=&quot;/components/dist/gcds/gcds.esm.js&quot;></script>
+          </head>
+          <body class=&quot; shortcut-preview examples-preview&quot;>
+            <div class=&quot;preview-demo p-300 d-grid gap-300&quot;>
+              <gcds-icon name=&quot;close&quot; size=&quot;h3&quot;></gcds-icon>
+            </div>
+            <script>
+              document.addEventListener('click', function(e) {const path = e.composedPath(); const link = path.find(el => el instanceof HTMLAnchorElement); if (link) {e.preventDefault();}});
+              document.addEventListener('DOMContentLoaded', () => {document.querySelectorAll('[autofocus]').forEach(el => el.autofocus = false);});
+            </script>
+          </body>
+        </html>
+      ">
+</iframe>
+<pre class=""><code class="language-html font-size-text-small">&lt;gcds-icon name=&quot;close&quot; size=&quot;h3&quot;&gt;&lt;/gcds-icon&gt;</code></pre>
+</div></p>
+<!-- ----- Code builder ----- -->
+<h3 id="code-builder">Code builder</h3>
 <p>Generate an instance of the component you need by selecting its code properties.</p>
 <ol class="list-decimal mb-300"><li>
 <p>Explore by choosing different code values to generate the instance you want.</p>
@@ -2876,7 +3129,7 @@ Icon component preview
 
 
           <gcds-date-modified class="mb-300">
-            2026-05-11
+            2026-10-21
           </gcds-date-modified>
         </main>
       </gcds-grid>

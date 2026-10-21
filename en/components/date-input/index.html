@@ -12,7 +12,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Date input - GC Design System</title>
+    <title>Date input - Use case - GC Design System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- GCDS CSS Shortcuts -->
@@ -27,6 +27,7 @@
     <script src="/gcds-docs/scripts/code-copy.js"></script>
     <script src="/gcds-docs/scripts/component-preview.js"></script>
     <script src="/gcds-docs/scripts/general.js"></script>
+    
     <link rel="icon" type="image/x-icon" sizes="96x96" href="/gcds-docs/favicon.ico">
 
     <!-- GC Design System  Components-->
@@ -674,15 +675,21 @@
     
       
       
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
 
         
 
-      
-    
-      
-      
-    
-      
       
     
       
@@ -1589,7 +1596,6 @@
 
 
 </gcds-header>
-
     <div class="content-wrapper">
       <gcds-grid columns="minmax(0, 1fr)" columns-desktop="320px minmax(0, 1fr)" tag="div" container="xl" alignment="center" class="xl:px-0 sm:px-600 px-225 general-layout">
         
@@ -1655,6 +1661,15 @@
     >
       Components overview
     </gcds-nav-link>
+  
+    <gcds-nav-link
+      href="/gcds-docs/en/components/alert/"
+      
+    >
+      Alert
+    </gcds-nav-link>
+  
+
   
     <gcds-nav-link
       href="/gcds-docs/en/components/breadcrumbs/"
@@ -1913,6 +1928,15 @@
       
     >
       Stepper
+    </gcds-nav-link>
+  
+
+  
+    <gcds-nav-link
+      href="/gcds-docs/en/components/table/"
+      
+    >
+      Table
     </gcds-nav-link>
   
 
@@ -2761,14 +2785,21 @@ Date input component preview
 <p><a href="/en/components/select">Select</a> when you want someone to input only a month.</p>
 <p>Date picker when you want someone to choose a not-yet-known date, like for appointment scheduling.</p>
 <hr class="mt-600"/>
-<h2 id="component-types">Component types</h2>
-<h3 id="day-month-year-format">Day, month, year format</h3>
-<ul class="list-disc mb-300"><li>For a specific date the person will know or can easily find.</li>
+<h2 id="component-formats">Component formats</h2>
+<h3 id="month-day-year-english-only">Month, day, year (English only)</h3>
+<ul class="list-disc mb-300"><li>A specific date the person will know or can easily find.</li>
+<li>Used in English for written dates.</li>
 </ul>
-<h3 id="month-year-format">Month, year format</h3>
-<ul class="list-disc mb-300"><li>For a date that does not have a day, like a driver’s licence expiry date.</li>
-<li>For an approximate date, like the date they lost their ID card  (month and year).</li>
-<li>For a date the person may not know the exact day of.</li>
+<h3 id="day-month-year-french-only">Day, month, year (French only)</h3>
+<ul class="list-disc mb-300"><li>A specific date the person will know or can easily find.</li>
+<li>Used in French for written dates.</li>
+</ul>
+<h3 id="year-month-day">Year, month, day</h3>
+<ul class="list-disc mb-300"><li>A specific date the person will know or can easily find.</li>
+<li>Used internationally for numeric dates.</li>
+</ul>
+<h3 id="month-year">Month, year</h3>
+<ul class="list-disc mb-300"><li>For an approximate date.</li>
 </ul>
 
 
@@ -2804,7 +2835,7 @@ Date input component preview
 
 
           <gcds-date-modified class="mb-300">
-            2026-05-11
+            2026-10-21
           </gcds-date-modified>
         </main>
       </gcds-grid>

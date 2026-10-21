@@ -12,7 +12,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>File uploader - GC Design System</title>
+    <title>File uploader - Code - GC Design System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- GCDS CSS Shortcuts -->
@@ -27,6 +27,7 @@
     <script src="/gcds-docs/scripts/code-copy.js"></script>
     <script src="/gcds-docs/scripts/component-preview.js"></script>
     <script src="/gcds-docs/scripts/general.js"></script>
+    
     <link rel="icon" type="image/x-icon" sizes="96x96" href="/gcds-docs/favicon.ico">
 
     <!-- GC Design System  Components-->
@@ -869,24 +870,30 @@
     
       
       
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
 
         
 
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
       
     
       
@@ -1589,7 +1596,6 @@
 
 
 </gcds-header>
-
     <div class="content-wrapper">
       <gcds-grid columns="minmax(0, 1fr)" columns-desktop="320px minmax(0, 1fr)" tag="div" container="xl" alignment="center" class="xl:px-0 sm:px-600 px-225 general-layout">
         
@@ -1655,6 +1661,15 @@
     >
       Components overview
     </gcds-nav-link>
+  
+    <gcds-nav-link
+      href="/gcds-docs/en/components/alert/"
+      
+    >
+      Alert
+    </gcds-nav-link>
+  
+
   
     <gcds-nav-link
       href="/gcds-docs/en/components/breadcrumbs/"
@@ -1913,6 +1928,15 @@
       
     >
       Stepper
+    </gcds-nav-link>
+  
+
+  
+    <gcds-nav-link
+      href="/gcds-docs/en/components/table/"
+      
+    >
+      Table
     </gcds-nav-link>
   
 
@@ -2746,44 +2770,532 @@ File uploader component preview
     </nav>
   
 
-  <h2 id="build-a-file-uploader">Build a file uploader</h2>
-<p>Use the file uploader to allow a person to select and review files they’d like to include with their submission.</p>
-<h2 id="code-and-accessibility-for-file-uploader">Code and accessibility for file uploader</h2>
+  <h2 id="on-this-page">On this page</h2>
+<ul class="list-disc mb-300"><li><a href="#coding-and-accessibility-for-file-uploader">Coding and accessibility for file uploader</a></li>
+<li><a href="#section-examples">Examples</a></li>
+<li><a href="#code-builder">Code builder</a></li>
+</ul>
+<h2 id="coding-and-accessibility-for-file-uploader">Coding and accessibility for file uploader</h2>
 <h3 id="apply-required-attributes">Apply required attributes</h3>
-<p>For the file uploader to function properly, always use the following attributes with <code>&lt;gcds-file-uploader&gt;</code>:</p>
+<p>Always use the following required attributes with <code>gcds-file-uploader</code>:</p>
 <ul class="list-disc mb-300"><li><code>name</code></li>
 <li><code>label</code></li>
 <li><code>uploader-id</code></li>
 </ul>
-<h3 id="handle-error-messages-and-validation">Handle error messages and validation</h3>
+<h3 id="allow-multiple-files">Allow multiple files</h3>
+<p>Use the <code>multiple</code> attribute to allow the selection of more than one file.</p>
+<h3 id="define-file-types">Define file types</h3>
+<p>Use the <code>accept</code> attribute to define the file types that the file uploader can accept.</p>
+<h3 id="add-hint-text">Add hint text</h3>
+<p>Use the <code>hint</code> attribute to add hint text.</p>
+<h3 id="hide-the-label">Hide the label</h3>
 <ul class="list-disc mb-300"><li>
-<p>Use the <code>required</code> attribute to activate the required validator. Validation will happen by default on the <code>onBlur</code> event. A missing or invalid entry will prompt an inline error message with preset text.</p>
+<p>Set the <code>hide-label</code> attribute to true to visually hide the label while maintaining it for assistive technologies.</p>
 </li>
 <li>
-<p>If you need to change the validation event, use the <code>validate-on</code> attribute. Validation can happen on blur, when the element loses focus, or manually with the <code>validate()</code> method.</p>
-</li>
-<li>
-<p>Use the <code>required</code> attribute for fields that must be filled in. This places &quot;required&quot; at the end of the label.</p>
-</li>
-<li>
-<p>Use the <code>error-message</code> attribute to include an error message text for all required inputs. Avoid using error messages for optional ones.</p>
-</li>
-<li>
-<p>For optional fields, avoid adding the <code>error-message</code> attribute.</p>
-</li>
-<li>
-<p>For an optional field that needs validation based on user input (like validating an email address format), opt to add custom validation with a custom error message.</p>
+<p>Avoid adding hint text when the label is hidden.</p>
 </li>
 </ul>
-<h3 id="upload-multiple-files">Upload multiple files</h3>
-<p>Allow the selection of more than one file using the <code>multiple</code> attribute.</p>
-<h3 id="validate-file-types-for-upload">Validate file types for upload</h3>
-<p>Define the file types the file uploader accepts using the <code>accept</code> attribute.</p>
-<h3 id="hide-the-file-uploader-label">Hide the file uploader label</h3>
-<ul class="list-disc mb-300"><li>Set the <code>hide-label</code> attribute to true to visually hide the label while maintaining it for assistive technologies.</li>
-<li>Avoid adding hint text when you’re hiding the label or else provide an empty hint string.</li>
+<h3 id="add-validation-and-error-messages">Add validation and error messages</h3>
+<ul class="list-disc mb-300"><li>Use the <code>required</code> attribute to activate the <gcds-link href="/en/components/validate-form-components/#builtin-validation-and-error-messages">built-in error messages and validation</gcds-link> for  file uploader.</li>
+<li>Fields with specific input requirements will validate if the entry is invalid, even if it is not required.</li>
+<li>For optional fields that need validation, like email address formats, add <gcds-link href="/en/components/validate-form-components/#customize-validation-and-error-messages">custom validation with a custom error message</gcds-link>.</li>
 </ul>
-<h3 id="get-your-code">Get your code</h3>
+<!-- ----- Examples ----- -->
+<p><div>
+<gcds-heading id="section-examples" tag="h2">
+Examples
+</gcds-heading>
+<gcds-text>Explore the different ways you can configure the component. Each example shows a working implementation and ready-to-copy code.</gcds-text>
+</div></p>
+<h3 id="in-this-section">In this section</h3>
+<ul class="list-disc mb-300"><li><a href="#section-essential">Essential attributes</a></li>
+<li><a href="#section-optional">Optional attributes</a></li>
+</ul>
+<!-- Required section -->
+<p><div>
+<gcds-heading id="section-essential" tag="h3">
+Essential attributes
+</gcds-heading>
+<gcds-text>These attributes are needed for the component to function correctly.</gcds-text>
+</div></p>
+<h4 id="label"><code>label</code></h4>
+<p>The <code>label</code> attribute defines the label for the file uploader.</p>
+<p><div class="b-md shortcut-preview">
+<iframe
+            class="preview-iframe"
+            title="Component preview"
+            sandbox="allow-scripts allow-same-origin allow-forms"
+            frameborder="0"
+            width="100%"
+            height="160"
+            srcdoc="
+        <!DOCTYPE html>
+        <html lang=&quot;en&quot; dir=&quot;ltr&quot;>
+          <head>
+            <meta charset=&quot;utf-8&quot;>
+            <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/gcds-css-shortcuts.min.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/components/dist/gcds/gcds.css&quot;>
+            <script type=&quot;module&quot; src=&quot;/components/dist/gcds/gcds.esm.js&quot;></script>
+          </head>
+          <body class=&quot; shortcut-preview examples-preview&quot;>
+            <div class=&quot;preview-demo p-300 d-grid gap-300&quot;>
+              <gcds-file-uploader uploader-id=&quot;file-uploader-preview&quot; label=&quot;Label&quot; name=&quot;file-uploader-preview&quot;></gcds-file-uploader>
+            </div>
+            <script>
+              document.addEventListener('click', function(e) {const path = e.composedPath(); const link = path.find(el => el instanceof HTMLAnchorElement); if (link) {e.preventDefault();}});
+              document.addEventListener('DOMContentLoaded', () => {document.querySelectorAll('[autofocus]').forEach(el => el.autofocus = false);});
+            </script>
+          </body>
+        </html>
+      ">
+</iframe>
+<pre class=""><code class="language-html font-size-text-small">&lt;gcds-file-uploader uploader-id=&quot;file-uploader-preview&quot; label=&quot;Label&quot; name=&quot;file-uploader-preview&quot;&gt;
+&lt;/gcds-file-uploader&gt;</code></pre>
+</div></p>
+<h4 id="name"><code>name</code></h4>
+<p>The <code>name</code> attribute identifies the file uploader component within a form. It is used to reference the uploaded files when a form is submitted.</p>
+<p><div class="b-md shortcut-preview">
+<iframe
+            class="preview-iframe"
+            title="Component preview"
+            sandbox="allow-scripts allow-same-origin allow-forms"
+            frameborder="0"
+            width="100%"
+            height="160"
+            srcdoc="
+        <!DOCTYPE html>
+        <html lang=&quot;en&quot; dir=&quot;ltr&quot;>
+          <head>
+            <meta charset=&quot;utf-8&quot;>
+            <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/gcds-css-shortcuts.min.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/components/dist/gcds/gcds.css&quot;>
+            <script type=&quot;module&quot; src=&quot;/components/dist/gcds/gcds.esm.js&quot;></script>
+          </head>
+          <body class=&quot; shortcut-preview examples-preview&quot;>
+            <div class=&quot;preview-demo p-300 d-grid gap-300&quot;>
+              <gcds-file-uploader uploader-id=&quot;file-uploader-preview&quot; label=&quot;Label&quot; name=&quot;file-uploader-preview&quot;></gcds-file-uploader>
+            </div>
+            <script>
+              document.addEventListener('click', function(e) {const path = e.composedPath(); const link = path.find(el => el instanceof HTMLAnchorElement); if (link) {e.preventDefault();}});
+              document.addEventListener('DOMContentLoaded', () => {document.querySelectorAll('[autofocus]').forEach(el => el.autofocus = false);});
+            </script>
+          </body>
+        </html>
+      ">
+</iframe>
+<pre class=""><code class="language-html font-size-text-small">&lt;gcds-file-uploader uploader-id=&quot;file-uploader-preview&quot; label=&quot;Label&quot; name=&quot;file-uploader-preview&quot;&gt;
+&lt;/gcds-file-uploader&gt;</code></pre>
+</div></p>
+<h4 id="uploaderid"><code>uploader-id</code></h4>
+<p>The <code>uploader-id</code> attribute specifies the unique identifier for the file uploader.</p>
+<p><div class="b-md shortcut-preview">
+<iframe
+            class="preview-iframe"
+            title="Component preview"
+            sandbox="allow-scripts allow-same-origin allow-forms"
+            frameborder="0"
+            width="100%"
+            height="160"
+            srcdoc="
+        <!DOCTYPE html>
+        <html lang=&quot;en&quot; dir=&quot;ltr&quot;>
+          <head>
+            <meta charset=&quot;utf-8&quot;>
+            <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/gcds-css-shortcuts.min.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/components/dist/gcds/gcds.css&quot;>
+            <script type=&quot;module&quot; src=&quot;/components/dist/gcds/gcds.esm.js&quot;></script>
+          </head>
+          <body class=&quot; shortcut-preview examples-preview&quot;>
+            <div class=&quot;preview-demo p-300 d-grid gap-300&quot;>
+              <gcds-file-uploader uploader-id=&quot;file-uploader-preview&quot; label=&quot;Label&quot; name=&quot;file-uploader-preview&quot;></gcds-file-uploader>
+            </div>
+            <script>
+              document.addEventListener('click', function(e) {const path = e.composedPath(); const link = path.find(el => el instanceof HTMLAnchorElement); if (link) {e.preventDefault();}});
+              document.addEventListener('DOMContentLoaded', () => {document.querySelectorAll('[autofocus]').forEach(el => el.autofocus = false);});
+            </script>
+          </body>
+        </html>
+      ">
+</iframe>
+<pre class=""><code class="language-html font-size-text-small">&lt;gcds-file-uploader uploader-id=&quot;file-uploader-preview&quot; label=&quot;Label&quot; name=&quot;file-uploader-preview&quot;&gt;
+&lt;/gcds-file-uploader&gt;</code></pre>
+</div></p>
+<!-- Optional section -->
+<p><div>
+<gcds-heading id="section-optional" tag="h3">
+Optional attributes
+</gcds-heading>
+<gcds-text>These attributes allow you to customize or extend the component’s behaviour and presentation.</gcds-text>
+</div></p>
+<h4 id="accept"><code>accept</code></h4>
+<p>The <code>accept</code> attribute defines the file types the file uploader accepts.</p>
+<p><div class="b-md shortcut-preview">
+<iframe
+            class="preview-iframe"
+            title="Component preview"
+            sandbox="allow-scripts allow-same-origin allow-forms"
+            frameborder="0"
+            width="100%"
+            height="160"
+            srcdoc="
+        <!DOCTYPE html>
+        <html lang=&quot;en&quot; dir=&quot;ltr&quot;>
+          <head>
+            <meta charset=&quot;utf-8&quot;>
+            <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/gcds-css-shortcuts.min.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/components/dist/gcds/gcds.css&quot;>
+            <script type=&quot;module&quot; src=&quot;/components/dist/gcds/gcds.esm.js&quot;></script>
+          </head>
+          <body class=&quot; shortcut-preview examples-preview&quot;>
+            <div class=&quot;preview-demo p-300 d-grid gap-300&quot;>
+              <gcds-file-uploader accept=&quot;image/*&quot; uploader-id=&quot;file-uploader-preview&quot; label=&quot;Label&quot; name=&quot;file-uploader-preview&quot;></gcds-file-uploader>
+            </div>
+            <script>
+              document.addEventListener('click', function(e) {const path = e.composedPath(); const link = path.find(el => el instanceof HTMLAnchorElement); if (link) {e.preventDefault();}});
+              document.addEventListener('DOMContentLoaded', () => {document.querySelectorAll('[autofocus]').forEach(el => el.autofocus = false);});
+            </script>
+          </body>
+        </html>
+      ">
+</iframe>
+<pre class=""><code class="language-html font-size-text-small">&lt;gcds-file-uploader accept=&quot;image/*&quot; uploader-id=&quot;file-uploader-preview&quot; label=&quot;Label&quot; name=&quot;file-uploader-preview&quot;&gt;
+&lt;/gcds-file-uploader&gt;</code></pre>
+</div></p>
+<h4 id="autofocus"><code>autofocus</code></h4>
+<p>The <code>autofocus</code> attribute controls whether the file uploader will be focused automatically when the page loads. By default, it is set to <code>false</code>. When set to <code>true</code>, the file uploader is focused on render.</p>
+<p><div class="b-md shortcut-preview">
+<iframe
+            class="preview-iframe"
+            title="Component preview"
+            sandbox="allow-scripts allow-same-origin allow-forms"
+            frameborder="0"
+            width="100%"
+            height="160"
+            srcdoc="
+        <!DOCTYPE html>
+        <html lang=&quot;en&quot; dir=&quot;ltr&quot;>
+          <head>
+            <meta charset=&quot;utf-8&quot;>
+            <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/gcds-css-shortcuts.min.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/components/dist/gcds/gcds.css&quot;>
+            <script type=&quot;module&quot; src=&quot;/components/dist/gcds/gcds.esm.js&quot;></script>
+          </head>
+          <body class=&quot; shortcut-preview examples-preview&quot;>
+            <div class=&quot;preview-demo p-300 d-grid gap-300&quot;>
+              <gcds-file-uploader autofocus uploader-id=&quot;file-uploader-preview&quot; label=&quot;Label&quot; name=&quot;file-uploader-preview&quot;></gcds-file-uploader>
+            </div>
+            <script>
+              document.addEventListener('click', function(e) {const path = e.composedPath(); const link = path.find(el => el instanceof HTMLAnchorElement); if (link) {e.preventDefault();}});
+              document.addEventListener('DOMContentLoaded', () => {document.querySelectorAll('[autofocus]').forEach(el => el.autofocus = false);});
+            </script>
+          </body>
+        </html>
+      ">
+</iframe>
+<pre class=""><code class="language-html font-size-text-small">&lt;gcds-file-uploader autofocus uploader-id=&quot;file-uploader-preview&quot; label=&quot;Label&quot; name=&quot;file-uploader-preview&quot;&gt;
+&lt;/gcds-file-uploader&gt;</code></pre>
+</div></p>
+<h4 id="disabled"><code>disabled</code></h4>
+<p>The <code>disabled</code> attribute controls whether the file uploader is disabled or not. By default, it is set to <code>false</code>.</p>
+<p><div class="b-md shortcut-preview">
+<iframe
+            class="preview-iframe"
+            title="Component preview"
+            sandbox="allow-scripts allow-same-origin allow-forms"
+            frameborder="0"
+            width="100%"
+            height="160"
+            srcdoc="
+        <!DOCTYPE html>
+        <html lang=&quot;en&quot; dir=&quot;ltr&quot;>
+          <head>
+            <meta charset=&quot;utf-8&quot;>
+            <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/gcds-css-shortcuts.min.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/components/dist/gcds/gcds.css&quot;>
+            <script type=&quot;module&quot; src=&quot;/components/dist/gcds/gcds.esm.js&quot;></script>
+          </head>
+          <body class=&quot; shortcut-preview examples-preview&quot;>
+            <div class=&quot;preview-demo p-300 d-grid gap-300&quot;>
+              <gcds-file-uploader disabled uploader-id=&quot;file-uploader-preview&quot; label=&quot;Label&quot; name=&quot;file-uploader-preview&quot;></gcds-file-uploader>
+            </div>
+            <script>
+              document.addEventListener('click', function(e) {const path = e.composedPath(); const link = path.find(el => el instanceof HTMLAnchorElement); if (link) {e.preventDefault();}});
+              document.addEventListener('DOMContentLoaded', () => {document.querySelectorAll('[autofocus]').forEach(el => el.autofocus = false);});
+            </script>
+          </body>
+        </html>
+      ">
+</iframe>
+<pre class=""><code class="language-html font-size-text-small">&lt;gcds-file-uploader disabled uploader-id=&quot;file-uploader-preview&quot; label=&quot;Label&quot; name=&quot;file-uploader-preview&quot;&gt;
+&lt;/gcds-file-uploader&gt;</code></pre>
+</div></p>
+<h4 id="errormessage"><code>error-message</code></h4>
+<p>The <code>error-message</code> attribute defines the error message to display for an invalid file input.</p>
+<p><div class="b-md shortcut-preview">
+<iframe
+            class="preview-iframe"
+            title="Component preview"
+            sandbox="allow-scripts allow-same-origin allow-forms"
+            frameborder="0"
+            width="100%"
+            height="200"
+            srcdoc="
+        <!DOCTYPE html>
+        <html lang=&quot;en&quot; dir=&quot;ltr&quot;>
+          <head>
+            <meta charset=&quot;utf-8&quot;>
+            <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/gcds-css-shortcuts.min.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/components/dist/gcds/gcds.css&quot;>
+            <script type=&quot;module&quot; src=&quot;/components/dist/gcds/gcds.esm.js&quot;></script>
+          </head>
+          <body class=&quot; shortcut-preview examples-preview&quot;>
+            <div class=&quot;preview-demo p-300 d-grid gap-300&quot;>
+              <gcds-file-uploader error-message=&quot;Error message&quot; uploader-id=&quot;file-uploader-preview&quot; label=&quot;Label&quot; name=&quot;file-uploader-preview&quot;></gcds-file-uploader>
+            </div>
+            <script>
+              document.addEventListener('click', function(e) {const path = e.composedPath(); const link = path.find(el => el instanceof HTMLAnchorElement); if (link) {e.preventDefault();}});
+              document.addEventListener('DOMContentLoaded', () => {document.querySelectorAll('[autofocus]').forEach(el => el.autofocus = false);});
+            </script>
+          </body>
+        </html>
+      ">
+</iframe>
+<pre class=""><code class="language-html font-size-text-small">&lt;gcds-file-uploader error-message=&quot;Error message&quot; uploader-id=&quot;file-uploader-preview&quot; label=&quot;Label&quot; name=&quot;file-uploader-preview&quot;&gt;
+&lt;/gcds-file-uploader&gt;</code></pre>
+</div></p>
+<h4 id="form"><code>form</code></h4>
+<p>The <code>form</code> attribute specifies the ID of the form that the file uploader belongs to.</p>
+<p><div class="b-md shortcut-preview">
+<iframe
+            class="preview-iframe"
+            title="Component preview"
+            sandbox="allow-scripts allow-same-origin allow-forms"
+            frameborder="0"
+            width="100%"
+            height="160"
+            srcdoc="
+        <!DOCTYPE html>
+        <html lang=&quot;en&quot; dir=&quot;ltr&quot;>
+          <head>
+            <meta charset=&quot;utf-8&quot;>
+            <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/gcds-css-shortcuts.min.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/components/dist/gcds/gcds.css&quot;>
+            <script type=&quot;module&quot; src=&quot;/components/dist/gcds/gcds.esm.js&quot;></script>
+          </head>
+          <body class=&quot; shortcut-preview examples-preview&quot;>
+            <div class=&quot;preview-demo p-300 d-grid gap-300&quot;>
+              <gcds-file-uploader form=&quot;form-id&quot; uploader-id=&quot;file-uploader-preview&quot; label=&quot;Label&quot; name=&quot;file-uploader-preview&quot;></gcds-file-uploader>
+            </div>
+            <script>
+              document.addEventListener('click', function(e) {const path = e.composedPath(); const link = path.find(el => el instanceof HTMLAnchorElement); if (link) {e.preventDefault();}});
+              document.addEventListener('DOMContentLoaded', () => {document.querySelectorAll('[autofocus]').forEach(el => el.autofocus = false);});
+            </script>
+          </body>
+        </html>
+      ">
+</iframe>
+<pre class=""><code class="language-html font-size-text-small">&lt;gcds-file-uploader form=&quot;form-id&quot; uploader-id=&quot;file-uploader-preview&quot; label=&quot;Label&quot; name=&quot;file-uploader-preview&quot;&gt;
+&lt;/gcds-file-uploader&gt;</code></pre>
+</div></p>
+<h4 id="hidelabel"><code>hide-label</code></h4>
+<p>The <code>hide-label</code> attribute controls whether the label is hidden or not.</p>
+<p><div class="b-md shortcut-preview">
+<iframe
+            class="preview-iframe"
+            title="Component preview"
+            sandbox="allow-scripts allow-same-origin allow-forms"
+            frameborder="0"
+            width="100%"
+            height="120"
+            srcdoc="
+        <!DOCTYPE html>
+        <html lang=&quot;en&quot; dir=&quot;ltr&quot;>
+          <head>
+            <meta charset=&quot;utf-8&quot;>
+            <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/gcds-css-shortcuts.min.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/components/dist/gcds/gcds.css&quot;>
+            <script type=&quot;module&quot; src=&quot;/components/dist/gcds/gcds.esm.js&quot;></script>
+          </head>
+          <body class=&quot; shortcut-preview examples-preview&quot;>
+            <div class=&quot;preview-demo p-300 d-grid gap-300&quot;>
+              <gcds-file-uploader hide-label uploader-id=&quot;file-uploader-preview&quot; label=&quot;Label&quot; name=&quot;file-uploader-preview&quot;></gcds-file-uploader>
+            </div>
+            <script>
+              document.addEventListener('click', function(e) {const path = e.composedPath(); const link = path.find(el => el instanceof HTMLAnchorElement); if (link) {e.preventDefault();}});
+              document.addEventListener('DOMContentLoaded', () => {document.querySelectorAll('[autofocus]').forEach(el => el.autofocus = false);});
+            </script>
+          </body>
+        </html>
+      ">
+</iframe>
+<pre class=""><code class="language-html font-size-text-small">&lt;gcds-file-uploader hide-label uploader-id=&quot;file-uploader-preview&quot; label=&quot;Label&quot; name=&quot;file-uploader-preview&quot;&gt;
+&lt;/gcds-file-uploader&gt;</code></pre>
+</div></p>
+<h4 id="hint"><code>hint</code></h4>
+<p>The <code>hint</code> attribute defines the hint text displayed under the label.</p>
+<p><div class="b-md shortcut-preview">
+<iframe
+            class="preview-iframe"
+            title="Component preview"
+            sandbox="allow-scripts allow-same-origin allow-forms"
+            frameborder="0"
+            width="100%"
+            height="200"
+            srcdoc="
+        <!DOCTYPE html>
+        <html lang=&quot;en&quot; dir=&quot;ltr&quot;>
+          <head>
+            <meta charset=&quot;utf-8&quot;>
+            <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/gcds-css-shortcuts.min.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/components/dist/gcds/gcds.css&quot;>
+            <script type=&quot;module&quot; src=&quot;/components/dist/gcds/gcds.esm.js&quot;></script>
+          </head>
+          <body class=&quot; shortcut-preview examples-preview&quot;>
+            <div class=&quot;preview-demo p-300 d-grid gap-300&quot;>
+              <gcds-file-uploader hint=&quot;Hint / Example message.&quot; uploader-id=&quot;file-uploader-preview&quot; label=&quot;Label&quot; name=&quot;file-uploader-preview&quot;></gcds-file-uploader>
+            </div>
+            <script>
+              document.addEventListener('click', function(e) {const path = e.composedPath(); const link = path.find(el => el instanceof HTMLAnchorElement); if (link) {e.preventDefault();}});
+              document.addEventListener('DOMContentLoaded', () => {document.querySelectorAll('[autofocus]').forEach(el => el.autofocus = false);});
+            </script>
+          </body>
+        </html>
+      ">
+</iframe>
+<pre class=""><code class="language-html font-size-text-small">&lt;gcds-file-uploader hint=&quot;Hint / Example message.&quot; uploader-id=&quot;file-uploader-preview&quot; label=&quot;Label&quot; name=&quot;file-uploader-preview&quot;&gt;
+&lt;/gcds-file-uploader&gt;</code></pre>
+</div></p>
+<h4 id="multiple"><code>multiple</code></h4>
+<p>The <code>multiple</code> attribute controls whether the user is allowed to select more than one file.</p>
+<p><div class="b-md shortcut-preview">
+<iframe
+            class="preview-iframe"
+            title="Component preview"
+            sandbox="allow-scripts allow-same-origin allow-forms"
+            frameborder="0"
+            width="100%"
+            height="160"
+            srcdoc="
+        <!DOCTYPE html>
+        <html lang=&quot;en&quot; dir=&quot;ltr&quot;>
+          <head>
+            <meta charset=&quot;utf-8&quot;>
+            <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/gcds-css-shortcuts.min.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/components/dist/gcds/gcds.css&quot;>
+            <script type=&quot;module&quot; src=&quot;/components/dist/gcds/gcds.esm.js&quot;></script>
+          </head>
+          <body class=&quot; shortcut-preview examples-preview&quot;>
+            <div class=&quot;preview-demo p-300 d-grid gap-300&quot;>
+              <gcds-file-uploader multiple uploader-id=&quot;file-uploader-preview&quot; label=&quot;Label&quot; name=&quot;file-uploader-preview&quot;></gcds-file-uploader>
+            </div>
+            <script>
+              document.addEventListener('click', function(e) {const path = e.composedPath(); const link = path.find(el => el instanceof HTMLAnchorElement); if (link) {e.preventDefault();}});
+              document.addEventListener('DOMContentLoaded', () => {document.querySelectorAll('[autofocus]').forEach(el => el.autofocus = false);});
+            </script>
+          </body>
+        </html>
+      ">
+</iframe>
+<pre class=""><code class="language-html font-size-text-small">&lt;gcds-file-uploader multiple uploader-id=&quot;file-uploader-preview&quot; label=&quot;Label&quot; name=&quot;file-uploader-preview&quot;&gt;
+&lt;/gcds-file-uploader&gt;</code></pre>
+</div></p>
+<h4 id="required"><code>required</code></h4>
+<p>The <code>required</code> attribute controls whether the file input is required or not. When set to <code>true</code>, it adds “required” after the label, and activates the required validator.</p>
+<p><div class="b-md shortcut-preview">
+<iframe
+            class="preview-iframe"
+            title="Component preview"
+            sandbox="allow-scripts allow-same-origin allow-forms"
+            frameborder="0"
+            width="100%"
+            height="200"
+            srcdoc="
+        <!DOCTYPE html>
+        <html lang=&quot;en&quot; dir=&quot;ltr&quot;>
+          <head>
+            <meta charset=&quot;utf-8&quot;>
+            <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/gcds-css-shortcuts.min.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/components/dist/gcds/gcds.css&quot;>
+            <script type=&quot;module&quot; src=&quot;/components/dist/gcds/gcds.esm.js&quot;></script>
+          </head>
+          <body class=&quot; shortcut-preview examples-preview&quot;>
+            <div class=&quot;preview-demo p-300 d-grid gap-300&quot;>
+              <gcds-file-uploader required uploader-id=&quot;file-uploader-preview&quot; label=&quot;Label&quot; name=&quot;file-uploader-preview&quot;></gcds-file-uploader>
+            </div>
+            <script>
+              document.addEventListener('click', function(e) {const path = e.composedPath(); const link = path.find(el => el instanceof HTMLAnchorElement); if (link) {e.preventDefault();}});
+              document.addEventListener('DOMContentLoaded', () => {document.querySelectorAll('[autofocus]').forEach(el => el.autofocus = false);});
+            </script>
+          </body>
+        </html>
+      ">
+</iframe>
+<pre class=""><code class="language-html font-size-text-small">&lt;gcds-file-uploader required uploader-id=&quot;file-uploader-preview&quot; label=&quot;Label&quot; name=&quot;file-uploader-preview&quot;&gt;
+&lt;/gcds-file-uploader&gt;</code></pre>
+</div></p>
+<h4 id="validateon"><code>validate-on</code></h4>
+<p>The <code>validate-on</code> attribute defines the validation event for the file uploader.</p>
+<p><div class="b-md shortcut-preview">
+<iframe
+            class="preview-iframe"
+            title="Component preview"
+            sandbox="allow-scripts allow-same-origin allow-forms"
+            frameborder="0"
+            width="100%"
+            height="160"
+            srcdoc="
+        <!DOCTYPE html>
+        <html lang=&quot;en&quot; dir=&quot;ltr&quot;>
+          <head>
+            <meta charset=&quot;utf-8&quot;>
+            <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/gcds-css-shortcuts.min.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot;>
+            <link rel=&quot;stylesheet&quot; href=&quot;/components/dist/gcds/gcds.css&quot;>
+            <script type=&quot;module&quot; src=&quot;/components/dist/gcds/gcds.esm.js&quot;></script>
+          </head>
+          <body class=&quot; shortcut-preview examples-preview&quot;>
+            <div class=&quot;preview-demo p-300 d-grid gap-300&quot;>
+              <gcds-file-uploader validate-on=&quot;other&quot; required uploader-id=&quot;file-uploader-preview&quot; label=&quot;Label&quot; name=&quot;file-uploader-preview&quot;></gcds-file-uploader>
+            </div>
+            <script>
+              document.addEventListener('click', function(e) {const path = e.composedPath(); const link = path.find(el => el instanceof HTMLAnchorElement); if (link) {e.preventDefault();}});
+              document.addEventListener('DOMContentLoaded', () => {document.querySelectorAll('[autofocus]').forEach(el => el.autofocus = false);});
+            </script>
+          </body>
+        </html>
+      ">
+</iframe>
+<pre class=""><code class="language-html font-size-text-small">&lt;gcds-file-uploader validate-on=&quot;other&quot; required uploader-id=&quot;file-uploader-preview&quot; label=&quot;Label&quot; name=&quot;file-uploader-preview&quot;&gt;
+&lt;/gcds-file-uploader&gt;</code></pre>
+</div></p>
+<!-- ----- Code builder ----- -->
+<h3 id="code-builder">Code builder</h3>
 <p>Generate an instance of the component you need by selecting its code properties.</p>
 <ol class="list-decimal mb-300"><li>
 <p>Explore by choosing different code values to generate the instance you want.</p>
@@ -2839,7 +3351,7 @@ File uploader component preview
 
 
           <gcds-date-modified class="mb-300">
-            2026-05-11
+            2026-10-21
           </gcds-date-modified>
         </main>
       </gcds-grid>

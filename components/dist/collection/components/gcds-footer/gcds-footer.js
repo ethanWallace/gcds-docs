@@ -82,12 +82,12 @@ export class GcdsFooter {
         const siteNav = I18N[lang].site.menu;
         let contextualLinkCount = 0;
         let subLinkCount = 0;
-        return (h(Host, { key: '6a0f9c4059caa2e30ef02a4bb51a552152c2bc4e', role: "contentinfo", "aria-label": "Footer" }, h("gcds-sr-only", { key: 'c6303a1cec09909530a3301fa5e5b2ef991a41d1', tag: "h2" }, I18N[lang].about), contextualLinksObject && contextualHeading && (h("div", { key: '07b21b1d7d83972f74c8bb0ab78a9e54f84c87eb', class: "gcds-footer__contextual" }, h("div", { key: '64417ee815a86dbf4871972bcfd138721dfdc497', class: "contextual__container" }, h("nav", { key: '4de71bc121ab044532922ce8e21278dc2d9329df', "aria-labelledby": "contextual__heading" }, h("h3", { key: '1ddcfa84c72e86ffb9c1558988dbc70c940e6c98', id: "contextual__heading", class: "contextual__heading" }, contextualHeading), h("ul", { key: '10f038c6286ca9e9e0ec1892797bd22d5cd7c1cf', class: "contextual__list" }, Object.keys(contextualLinksObject).map(key => {
+        return (h(Host, { key: 'b131f28d3831950f2bc599433105f3302d80a2a5', role: "contentinfo", "aria-label": "Footer" }, h("gcds-sr-only", { key: '9c2f6e61a77d296cbaf8dd8a544c5c87f595f132', tag: "h2" }, I18N[lang].about), contextualLinksObject && contextualHeading && (h("div", { key: '584fa9606735292f383c0635adae0eced4b0aebc', class: "gcds-footer__contextual" }, h("div", { key: 'd3842bcd6bfbdd6d33bfaa08740b83539b78e7f4', class: "contextual__container" }, h("nav", { key: 'd52ab70ee2bf93cb066e017cc40c03c54b62f5b5', "aria-labelledby": "contextual__heading" }, h("h3", { key: '8872fa024aed2955472e180265d8e22e424a047b', id: "contextual__heading", class: "contextual__heading" }, contextualHeading), h("ul", { key: '7a63fd2f7b96b6e8bef05e2a6cc7c3c24cdf92c2', class: "contextual__list" }, Object.keys(contextualLinksObject).map(key => {
             if (contextualLinkCount < 3) {
                 contextualLinkCount++;
                 return (h("li", null, h("gcds-link", { size: "small", href: contextualLinksObject[key] }, key)));
             }
-        })))))), display === 'full' ? (h("div", { class: "gcds-footer__main" }, h("div", { class: "main__container" }, h("nav", { class: "main__govnav", "aria-labelledby": "govnav__heading" }, h("h3", { id: "govnav__heading" }, I18N[lang].gov.heading), h("ul", { class: "govnav__list" }, Object.keys(govNav).map(value => (h("li", null, h("gcds-link", { size: "small", href: govNav[value].link }, govNav[value].text)))))), h("nav", { class: "main__themenav", "aria-labelledby": "themenav__heading" }, h("gcds-sr-only", { tag: "h4", id: "themenav__heading" }, I18N[lang].themes.heading), h("ul", { class: "themenav__list" }, Object.keys(themeNav).map(value => (h("li", null, h("gcds-link", { size: "small", href: themeNav[value].link }, themeNav[value].text))))))))) : null, h("div", { key: '4909ad3592fd2304df8353e11947eca69aaa56aa', class: "gcds-footer__sub" }, h("div", { key: '3c4d3282dd8ead4b87df28591d94d6e6d327ef8d', class: "sub__container" }, h("nav", { key: 'ee1baa7d6ea78245af3451f128182683b51649a8', "aria-labelledby": "sub__heading" }, h("gcds-sr-only", { key: 'fa65fa21472446b67ea15179f27394ff95f238bf', tag: "h3", id: "sub__heading" }, I18N[lang].site.heading), h("ul", { key: '630f20304416893db2c67a6cda4400205a822a4b' }, subLinks
+        })))))), display === 'full' ? (h("div", { class: "gcds-footer__main" }, h("div", { class: "main__container" }, h("nav", { class: "main__govnav", "aria-labelledby": "govnav__heading" }, h("h3", { id: "govnav__heading" }, I18N[lang].gov.heading), h("ul", { class: "govnav__list" }, Object.keys(govNav).map(value => (h("li", null, h("gcds-link", { size: "small", href: govNav[value].link }, govNav[value].text)))))), h("nav", { class: "main__themenav", "aria-labelledby": "themenav__heading" }, h("gcds-sr-only", { tag: "h4", id: "themenav__heading" }, I18N[lang].themes.heading), h("ul", { class: "themenav__list" }, Object.keys(themeNav).map(value => (h("li", null, h("gcds-link", { size: "small", href: themeNav[value].link }, themeNav[value].text))))))))) : null, h("div", { key: 'de5feadad5a38d3a61fd77105c82dfbfcf8dd652', class: "gcds-footer__sub" }, h("div", { key: '9141390e53f03f5fa588a196fccc20d6a2d00d15', class: "sub__container" }, h("nav", { key: 'fdedf47273cd546dc4c62494a241e51c69103b6b', "aria-labelledby": "sub__heading" }, h("gcds-sr-only", { key: '3fbe94458ff550137e5c8a3c301c66e40d01c30a', tag: "h3", id: "sub__heading" }, I18N[lang].site.heading), h("ul", { key: 'fa18c415569448b28498715f94ce16b8310ffa4a' }, subLinks
             ? Object.keys(subLinksObject).map(key => {
                 if (subLinkCount < 5) {
                     subLinkCount++;
@@ -114,7 +114,6 @@ export class GcdsFooter {
         return {
             "display": {
                 "type": "string",
-                "attribute": "display",
                 "mutable": true,
                 "complexType": {
                     "original": "'compact' | 'full'",
@@ -130,11 +129,11 @@ export class GcdsFooter {
                 "getter": false,
                 "setter": false,
                 "reflect": true,
+                "attribute": "display",
                 "defaultValue": "'compact'"
             },
             "contextualHeading": {
                 "type": "string",
-                "attribute": "contextual-heading",
                 "mutable": false,
                 "complexType": {
                     "original": "string",
@@ -149,11 +148,11 @@ export class GcdsFooter {
                 },
                 "getter": false,
                 "setter": false,
-                "reflect": false
+                "reflect": false,
+                "attribute": "contextual-heading"
             },
             "contextualLinks": {
                 "type": "string",
-                "attribute": "contextual-links",
                 "mutable": true,
                 "complexType": {
                     "original": "string | object",
@@ -168,11 +167,11 @@ export class GcdsFooter {
                 },
                 "getter": false,
                 "setter": false,
-                "reflect": false
+                "reflect": false,
+                "attribute": "contextual-links"
             },
             "subLinks": {
                 "type": "string",
-                "attribute": "sub-links",
                 "mutable": true,
                 "complexType": {
                     "original": "string | object",
@@ -187,7 +186,8 @@ export class GcdsFooter {
                 },
                 "getter": false,
                 "setter": false,
-                "reflect": false
+                "reflect": false,
+                "attribute": "sub-links"
             }
         };
     }
@@ -255,4 +255,3 @@ export class GcdsFooter {
             }];
     }
 }
-//# sourceMappingURL=gcds-footer.js.map

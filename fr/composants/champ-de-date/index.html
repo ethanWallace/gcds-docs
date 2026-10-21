@@ -12,7 +12,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Champ de date - Système de design GC</title>
+    <title>Champ de date - Cas d&#39;utilisation - Système de design GC</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- GCDS CSS Shortcuts -->
@@ -27,6 +27,7 @@
     <script src="/gcds-docs/scripts/code-copy.js"></script>
     <script src="/gcds-docs/scripts/component-preview.js"></script>
     <script src="/gcds-docs/scripts/general.js"></script>
+    
     <link rel="icon" type="image/x-icon" sizes="96x96" href="/gcds-docs/favicon.ico">
 
     <!-- GC Design System  Components-->
@@ -1549,6 +1550,12 @@
       
       
     
+      
+      
+    
+      
+      
+    
   
 
   
@@ -1589,7 +1596,6 @@
 
 
 </gcds-header>
-
     <div class="content-wrapper">
       <gcds-grid columns="minmax(0, 1fr)" columns-desktop="320px minmax(0, 1fr)" tag="div" container="xl" alignment="center" class="xl:px-0 sm:px-600 px-225 general-layout">
         
@@ -1655,6 +1661,15 @@
     >
       Aperçu des composants
     </gcds-nav-link>
+  
+    <gcds-nav-link
+      href="/gcds-docs/fr/composants/alerte/"
+      
+    >
+      Alerte
+    </gcds-nav-link>
+  
+
   
     <gcds-nav-link
       href="/gcds-docs/fr/composants/avis/"
@@ -1913,6 +1928,15 @@
       
     >
       Sélection
+    </gcds-nav-link>
+  
+
+  
+    <gcds-nav-link
+      href="/gcds-docs/fr/composants/tableau/"
+      
+    >
+      Tableau
     </gcds-nav-link>
   
 
@@ -2761,14 +2785,21 @@ Aperçu du composant de champ de date
 <p><a href="/fr/composants/selection">Sélection</a> : lorsque vous voulez que la personne saisisse seulement un mois.</p>
 <p>Sélecteur de date : lorsque vous voulez que la personne choisisse une date qui n’est pas encore connue, par exemple pour planifier un rendez-vous.</p>
 <hr class="mt-600" />
-<h2 id="types-du-composant">Types du composant</h2>
-<h3 id="format-jour-mois-annee">Format Jour, Mois, Année</h3>
-<ul class="list-disc mb-300"><li>Pour une date précise que la personne connaît ou peut facilement trouver.</li>
+<h2 id="formats-du-composant">Formats du composant</h2>
+<h3 id="mois-jour-annee-anglais-seulement">Mois, Jour, Année (anglais seulement)</h3>
+<ul class="list-disc mb-300"><li>Une date précise que la personne connaît ou peut facilement trouver.</li>
+<li>Utilisé en anglais pour les dates écrites au long.</li>
 </ul>
-<h3 id="format-mois-annee">Format Mois, Année</h3>
-<ul class="list-disc mb-300"><li>Pour une date qui n’inclut pas de jour, comme la date d’expiration d’un permis de conduire.</li>
-<li>Pour une date approximative, comme la date où une carte d’identité a été perdue (mois et année).</li>
-<li>Pour une date dont la personne risque d’ignorer le jour exact.</li>
+<h3 id="jour-mois-annee-francais-seulement">Jour, Mois, Année (français seulement)</h3>
+<ul class="list-disc mb-300"><li>Une date précise que la personne connaît ou peut facilement trouver.</li>
+<li>Utilisé en français pour les dates écrites au long.</li>
+</ul>
+<h3 id="annee-mois-jour">Année, Mois, Jour</h3>
+<ul class="list-disc mb-300"><li>Une date précise que la personne connaît ou peut facilement trouver.</li>
+<li>Utilisé sur le plan international pour les dates au format numérique.</li>
+</ul>
+<h3 id="mois-annee">Mois, Année</h3>
+<ul class="list-disc mb-300"><li>Une date approximative.</li>
 </ul>
 
 
@@ -2804,7 +2835,7 @@ Aperçu du composant de champ de date
 
 
           <gcds-date-modified class="mb-300">
-            2026-05-11
+            2026-10-21
           </gcds-date-modified>
         </main>
       </gcds-grid>

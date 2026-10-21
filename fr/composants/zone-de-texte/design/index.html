@@ -12,7 +12,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Zone de texte - Système de design GC</title>
+    <title>Zone de texte - Design - Système de design GC</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- GCDS CSS Shortcuts -->
@@ -27,6 +27,7 @@
     <script src="/gcds-docs/scripts/code-copy.js"></script>
     <script src="/gcds-docs/scripts/component-preview.js"></script>
     <script src="/gcds-docs/scripts/general.js"></script>
+    
     <link rel="icon" type="image/x-icon" sizes="96x96" href="/gcds-docs/favicon.ico">
 
     <!-- GC Design System  Components-->
@@ -323,12 +324,18 @@
     
       
       
-
-        
-
+    
+      
       
     
       
+      
+    
+      
+      
+
+        
+
       
     
       
@@ -1589,7 +1596,6 @@
 
 
 </gcds-header>
-
     <div class="content-wrapper">
       <gcds-grid columns="minmax(0, 1fr)" columns-desktop="320px minmax(0, 1fr)" tag="div" container="xl" alignment="center" class="xl:px-0 sm:px-600 px-225 general-layout">
         
@@ -1655,6 +1661,15 @@
     >
       Aperçu des composants
     </gcds-nav-link>
+  
+    <gcds-nav-link
+      href="/gcds-docs/fr/composants/alerte/"
+      
+    >
+      Alerte
+    </gcds-nav-link>
+  
+
   
     <gcds-nav-link
       href="/gcds-docs/fr/composants/avis/"
@@ -1913,6 +1928,15 @@
       
     >
       Sélection
+    </gcds-nav-link>
+  
+
+  
+    <gcds-nav-link
+      href="/gcds-docs/fr/composants/tableau/"
+      
+    >
+      Tableau
     </gcds-nav-link>
   
 
@@ -2749,8 +2773,9 @@ Aperçu du composant de zone de texte
   <h2 id="structure-dune-zone-de-texte">Structure d'une zone de texte</h2>
 <ol class="anatomy-list">
   <li>L'<strong>étiquette</strong> indique les renseignements que l'utilisateur doit saisir dans le champ.</li>
-  <li>Le <strong>texte explicatif</strong> précise les exigences spécifiques pour chaque zone de texte afin de favoriser la réussite de la tâche.</li>
+  <li>Le <strong>texte explicatif</strong> (facultatif) précise les exigences spécifiques pour chaque zone de texte afin de favoriser la réussite de la tâche.</li>
   <li>Le <strong>champ</strong> est le conteneur avec lequel l'utilisateur·rice interagit pour fournir sa réponse.</li>
+  <li>L’indicateur du <strong>nombre de caractères</strong> (facultatif) indique la limite de caractères pouvant être saisis dans la zone de texte.</li>
 </ol>
 <img class="b-sm b-default p-300" src="/images/fr/components/anatomy/gcds-textarea-anatomy.svg" alt="L'anatomie de la zone de texte identifiant l'étiquette, le message d'aide et le champ qui forme le composant" />
 <h2 id="conception-et-accessibilite-des-zones-de-texte">Conception et accessibilité des zones de texte</h2>
@@ -2777,6 +2802,10 @@ Aperçu du composant de zone de texte
 <h3 id="favorisez-la-reussite-de-la-tache-en-ajoutant-du-texte-explicatif">Favorisez la réussite de la tâche en ajoutant du texte explicatif</h3>
 <ul class="list-disc mb-300"><li>Ajoutez du texte explicatif pour aider l'utilisateur·rice à fournir une valeur valide dans la zone de texte.</li>
 <li>Rédigez un texte explicatif qui est instructif, court et précis.</li>
+</ul>
+<h3 id="ajoutez-un-indicateur-du-nombre-de-caracteres-pour-guider-les-attentes-quant-a-la-longueur-du-texte">Ajoutez un indicateur du nombre de caractères pour guider les attentes quant à la longueur du texte</h3>
+<ul class="list-disc mb-300"><li>Ajoutez un indicateur du nombre de caractères pour limiter le nombre de caractères pouvant être saisis dans la zone de texte.</li>
+<li>L’indicateur du nombre de caractères indique le nombre de caractères restants au fur et à mesure de la saisie, ce qui permet de définir les attentes et d’aider les personnes à fournir le niveau de détail approprié.</li>
 </ul>
 <h3 id="ecrivez-des-messages-derreur-pour-les-zones-de-texte-obligatoires">Écrivez des messages d'erreur pour les zones de texte obligatoires</h3>
 <ul class="list-disc mb-300"><li>Utilisez les <a href="/fr/composants/message-derreur/">messages d'erreur</a> pour traiter les saisies manquantes ou non valides.</li>
@@ -2817,7 +2846,7 @@ Aperçu du composant de zone de texte
 
 
           <gcds-date-modified class="mb-300">
-            2026-05-11
+            2026-10-21
           </gcds-date-modified>
         </main>
       </gcds-grid>

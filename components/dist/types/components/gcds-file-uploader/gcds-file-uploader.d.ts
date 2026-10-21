@@ -7,6 +7,7 @@ export declare class GcdsFileUploader {
     el: HTMLElement;
     internals: ElementInternals;
     private shadowElement?;
+    private uploadedFiles;
     private inputTitle;
     _validator: Validator<unknown>;
     /**
@@ -93,6 +94,10 @@ export declare class GcdsFileUploader {
      * Set additional HTML attributes not available in component properties
      */
     inheritedAttributes: Object;
+    /**
+     * Message announced to assistive technology when a file is removed.
+     */
+    removedFileMessage: string;
     /**
      * Language of rendered component
      */
