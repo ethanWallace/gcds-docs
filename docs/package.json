@@ -13,6 +13,7 @@
     "cy:open": "cypress open",
     "cy:run": "npx cypress run",
     "cy:build": "npm run build && astro preview",
+    "preview:ci": "astro preview --host 0.0.0.0 --port 4321",
     "test": "start-server-and-test cy:build http://localhost:4321/sitemap-index.xml cy:run"
   },
   "dependencies": {
